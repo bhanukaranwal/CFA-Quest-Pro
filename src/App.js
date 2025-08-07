@@ -6,7 +6,8 @@ import ExamInterface from './components/ExamInterface';
 import Dashboard from './components/Dashboard';
 import Achievements from './components/Achievements';
 import FormulaSheets from './components/FormulaSheets';
-import StudyPlanner from './components/StudyPlanner';
+// This import requires the file to be named exactly 'StudyPlanner.js'
+import StudyPlanner from './components/StudyPlanner'; 
 import Settings from './components/Settings';
 
 function App() {
