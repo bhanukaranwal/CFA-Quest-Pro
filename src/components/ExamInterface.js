@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { FaCheckCircle, FaTimesCircle, FaClock, FaFlag, FaLightbulb } from 'react-icons/fa';
+import { FaCheckCircle, FaTimesCircle, FaClock, FaFlag } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AppContext } from '../contexts/AppContext';
 import questionsData from '../data/questions.json';
 import topicsData from '../data/topics.json';
 
-// This component can be launched normally or in "review mode" by passing specific questions.
 function ExamInterface({ reviewQuestions = null, reviewTitle = "Review Session" }) {
   const { addExamResult } = useContext(AppContext);
 
@@ -124,13 +123,78 @@ function ExamInterface({ reviewQuestions = null, reviewTitle = "Review Session" 
     setExamStarted(false);
   };
 
-  // ... JSX Rendering for all three states: Setup, Active Exam, and Results ...
-  // This is a simplified representation. The full code would be much larger.
-  // The logic above is the most important part of this upgraded component.
-  
   if (!examStarted) {
-     // Return JSX for Exam Setup Screen or Results Screen
-     return <div>...</div>
+    if (showResults) {
+      const { score, total, percentage, answeredQuestions } = examHistory[examHistory.length - 1];
+      return (
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="container mx-auto max-w-4xl p-6 sm:p-8 mt-10">
+          <div className="bg-surface dark:bg-dark-surface p-8 rounded-xl shadow-lg">
+            <h2 className="text-3xl font-bold text-text-primary dark:text-dark-text-primary mb-4 text-center">Exam Results</h2>
+            <div className="text-center mb-8 p-6 bg-background dark:bg-dark-background rounded-lg">
+              <p className="text-xl text-text-secondary dark:text-dark-text-secondary">Your Score</p>
+              <p className={`text-5xl font-extrabold ${percentage >= 70 ? 'text-success' : 'text-danger'}`}>{percentage.toFixed(1)}%</p>
+              <p className="text-text-secondary dark:text-dark-text-secondary mt-2">({score} out of {total} correct)</p>
+            </div>
+            <h3 className="text-2xl font-bold text-text-primary dark:text-dark-text-primary mb-4">Mistake Review</h3>
+            <div className="space-y-6">
+              {answeredQuestions.filter(q => !q.isCorrect).map(q => (
+                <div key={q.id} className="p-4 rounded-lg border-l-4 border-danger bg-red-50 dark:bg-opacity-10">
+                  <p className="font-semibold text-text-primary dark:text-dark-text-primary">{q.question}</p>
+                  <p className="mt-2 font-medium flex items-center text-red-800 dark:text-danger"><FaTimesCircle className="mr-2" />Your answer: {q.userAnswer}</p>
+                  <p className="mt-1 font-medium text-green-800 dark:text-success flex items-center"><FaCheckCircle className="mr-2" />Correct answer: {q.correctAnswer}</p>
+                  <p className="mt-3 text-sm text-text-secondary dark:text-dark-text-secondary italic bg-gray-100 dark:bg-dark-surface p-2 rounded">{q.explanation}</p>
+                </div>
+              ))}
+            </div>
+            <button onClick={() => { setShowResults(false); setExamStarted(false); }} className="w-full mt-8 bg-primary dark:bg-dark-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover dark:hover:bg-dark-primary-hover transition duration-300">
+              Back to Exam Setup
+            </button>
+          </div>
+        </motion.div>
+      );
+    }
+
+    return (
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="container mx-auto max-w-2xl p-6 sm:p-8 mt-10">
+        <div className="bg-surface dark:bg-dark-surface p-8 rounded-xl shadow-lg">
+          <h2 className="text-3xl font-bold text-text-primary dark:text-dark-text-primary mb-2 text-center">Configure Your Practice Exam</h2>
+          <p className="text-center text-text-secondary dark:text-dark-text-secondary mb-8">Customize your session to focus on what matters most.</p>
+          <div className="space-y-6">
+            <div>
+              <label className="block text-sm font-medium text-text-secondary dark:text-dark-text-secondary mb-2">CFA Level:</label>
+              <select onChange={(e) => setLevel(e.target.value)} value={level} className="w-full border-gray-300 dark:border-gray-600 bg-background dark:bg-dark-background p-3 rounded-lg shadow-sm focus:ring-accent focus:border-accent">
+                <option>Level I</option>
+                <option>Level II</option>
+                <option>Level III</option>
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-text-secondary dark:text-dark-text-secondary mb-2">Topic:</label>
+              <select onChange={(e) => setTopic(e.target.value)} value={topic} className="w-full border-gray-300 dark:border-gray-600 bg-background dark:bg-dark-background p-3 rounded-lg shadow-sm focus:ring-accent focus:border-accent">
+                <option>All</option>
+                {topicsData.map(t => <option key={t.name}>{t.name}</option>)}
+              </select>
+            </div>
+            {availableSubtopics.length > 0 && (
+              <div>
+                <label className="block text-sm font-medium text-text-secondary dark:text-dark-text-secondary mb-2">Sub-Topic:</label>
+                <select onChange={(e) => setSubtopic(e.target.value)} value={subtopic} className="w-full border-gray-300 dark:border-gray-600 bg-background dark:bg-dark-background p-3 rounded-lg shadow-sm focus:ring-accent focus:border-accent">
+                  <option>All</option>
+                  {availableSubtopics.map(st => <option key={st}>{st}</option>)}
+                </select>
+              </div>
+            )}
+             <div>
+              <label className="block text-sm font-medium text-text-secondary dark:text-dark-text-secondary mb-2">Number of Questions: {numQuestions}</label>
+              <input type="range" min="5" max="50" step="5" value={numQuestions} onChange={(e) => setNumQuestions(e.target.value)} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 accent-accent" />
+            </div>
+          </div>
+          <button onClick={startExam} className="w-full mt-8 bg-accent dark:bg-dark-accent text-white font-bold py-3 px-6 rounded-lg hover:bg-accent-hover dark:hover:bg-dark-accent-hover transition duration-300 transform hover:scale-105 shadow-md">
+            Start Exam
+          </button>
+        </div>
+      </motion.div>
+    );
   }
 
   const currentQuestion = examQuestions[currentQuestionIndex];
@@ -139,10 +203,9 @@ function ExamInterface({ reviewQuestions = null, reviewTitle = "Review Session" 
   return (
     <div className="container mx-auto max-w-4xl p-6 sm:p-8 mt-10">
       <div className="bg-surface dark:bg-dark-surface p-8 rounded-xl shadow-lg">
-        {/* Progress Bar and Timer */}
         <div className="mb-4">
           <div className="flex justify-between items-center mb-2">
-            <h2 className="text-xl font-bold text-text-primary dark:text-dark-text-primary">Question {currentQuestionIndex + 1} of {examQuestions.length}</h2>
+            <h2 className="text-xl font-bold text-text-primary dark:text-dark-text-primary">Question {currentQuestionIndex + 1} <span className="text-text-secondary dark:text-dark-text-secondary font-normal">of {examQuestions.length}</span></h2>
             <div className="flex items-center text-lg font-semibold text-danger">
               <FaClock className="mr-2" />
               <span>{Math.floor(timeLeft / 60)}:{('0' + timeLeft % 60).slice(-2)}</span>
@@ -157,7 +220,6 @@ function ExamInterface({ reviewQuestions = null, reviewTitle = "Review Session" 
           </div>
         </div>
         
-        {/* Question and Answer Options */}
         <AnimatePresence mode="wait">
           <motion.div
             key={currentQuestion.id}
@@ -181,7 +243,6 @@ function ExamInterface({ reviewQuestions = null, reviewTitle = "Review Session" 
           </motion.div>
         </AnimatePresence>
 
-        {/* Confidence and Review Tools */}
         <div className="mt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-2">
             <span className="text-sm font-medium text-text-secondary dark:text-dark-text-secondary">Confidence:</span>
@@ -201,7 +262,6 @@ function ExamInterface({ reviewQuestions = null, reviewTitle = "Review Session" 
           </button>
         </div>
 
-        {/* Navigation */}
         <div className="flex justify-end mt-8">
           <button onClick={handleNextQuestion} className="bg-primary dark:bg-dark-primary text-white font-bold py-2 px-10 rounded-lg hover:bg-primary-hover dark:hover:bg-dark-primary-hover transition duration-300 shadow-md">
             {currentQuestionIndex < examQuestions.length - 1 ? 'Next' : 'Finish'}
@@ -213,97 +273,3 @@ function ExamInterface({ reviewQuestions = null, reviewTitle = "Review Session" 
 }
 
 export default ExamInterface;
-```
-
-***
-
-### 9. `src/components/Dashboard.js`
-
-The `Dashboard` is completely overhauled to be data-driven, pulling from the new `AppContext`. It now features performance trend charts, a topic heatmap, and detailed analytics.
-
-
-```javascript
-import React, { useContext, useMemo } from 'react';
-import { Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title, LineElement, PointElement } from 'chart.js';
-import { Pie, Bar, Line } from 'react-chartjs-2';
-import { motion } from 'framer-motion';
-import { AppContext } from '../contexts/AppContext';
-
-ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title, LineElement, PointElement);
-
-function Dashboard() {
-    const { examHistory } = useContext(AppContext);
-
-    // Memoize complex calculations to prevent re-running on every render
-    const analytics = useMemo(() => {
-        if (examHistory.length === 0) {
-            return {
-                totalQuestions: 0,
-                correctAnswers: 0,
-                incorrectAnswers: 0,
-                topicPerformance: {},
-                performanceOverTime: [],
-                confidenceAnalysis: { High: { correct: 0, total: 0 }, Medium: { correct: 0, total: 0 }, Low: { correct: 0, total: 0 } },
-            };
-        }
-
-        let totalQuestions = 0;
-        let correctAnswers = 0;
-        const topicPerformance = {};
-        const confidenceAnalysis = { High: { correct: 0, total: 0 }, Medium: { correct: 0, total: 0 }, Low: { correct: 0, total: 0 } };
-
-        examHistory.forEach(exam => {
-            exam.answeredQuestions.forEach(q => {
-                totalQuestions++;
-                if (q.isCorrect) correctAnswers++;
-
-                // Topic Performance
-                if (!topicPerformance[q.topic]) topicPerformance[q.topic] = { correct: 0, total: 0 };
-                topicPerformance[q.topic].total++;
-                if (q.isCorrect) topicPerformance[q.topic].correct++;
-
-                // Confidence Analysis
-                if (q.confidence && confidenceAnalysis[q.confidence]) {
-                    confidenceAnalysis[q.confidence].total++;
-                    if (q.isCorrect) confidenceAnalysis[q.confidence].correct++;
-                }
-            });
-        });
-
-        const performanceOverTime = examHistory.map(exam => ({
-            date: new Date(exam.date).toLocaleDateString(),
-            score: exam.percentage,
-        }));
-
-        return {
-            totalQuestions,
-            correctAnswers,
-            incorrectAnswers: totalQuestions - correctAnswers,
-            topicPerformance,
-            performanceOverTime,
-            confidenceAnalysis,
-        };
-    }, [examHistory]);
-
-    // ... (Chart data and options setup based on the 'analytics' object)
-    // This part would also be very long but is derived from the analytics above.
-
-    if (examHistory.length === 0) {
-        return (
-            <div className="text-center p-10">
-                <h2 className="text-2xl font-bold text-text-primary dark:text-dark-text-primary">No Data Yet</h2>
-                <p className="text-text-secondary dark:text-dark-text-secondary mt-2">Complete a practice exam to see your performance analytics.</p>
-            </div>
-        );
-    }
-    
-    return (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="container mx-auto p-6 sm:p-8">
-            <h1 className="text-4xl font-extrabold text-text-primary dark:text-dark-text-primary mb-8">Your Performance Dashboard</h1>
-            {/* ... JSX for rendering Pie, Bar, and Line charts using the analytics data ... */}
-            <div>... Charts and detailed analytics UI ...</div>
-        </motion.div>
-    );
-}
-
-export default Dashboard;
