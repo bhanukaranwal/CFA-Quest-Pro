@@ -6,9 +6,9 @@ import ExamInterface from './components/ExamInterface';
 import Dashboard from './components/Dashboard';
 import Achievements from './components/Achievements';
 import FormulaSheets from './components/FormulaSheets';
-// This import requires the file to be named exactly 'StudyPlanner.js'
-import StudyPlanner from './components/StudyPlanner'; 
+import StudyPlanner from './components/StudyPlanner';
 import Settings from './components/Settings';
+import ReviewMode from './components/ReviewMode';
 
 function App() {
   return (
@@ -24,6 +24,7 @@ function App() {
               <Route path="/formula-sheets" element={<FormulaSheets />} />
               <Route path="/study-planner" element={<StudyPlanner />} />
               <Route path="/settings" element={<Settings />} />
+              <Route path="/review" element={<ReviewMode />} />
             </Routes>
           </main>
         </div>
