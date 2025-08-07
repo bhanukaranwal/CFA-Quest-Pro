@@ -5,6 +5,7 @@ import Home from './components/Home';
 import ExamInterface from './components/ExamInterface';
 import Dashboard from './components/Dashboard';
 import Achievements from './components/Achievements';
+import FormulaSheets from './components/FormulaSheets';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
               <Route path="/exam" element={<ExamInterface />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/achievements" element={<Achievements />} />
+              <Route path="/formula-sheets" element={<FormulaSheets />} />
             </Routes>
           </main>
         </div>
