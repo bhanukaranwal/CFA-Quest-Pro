@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaFire, FaCheckCircle, FaBrain, FaStar } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { AppContext } from '../contexts/AppContext';
 
 function Achievements() {
-    const achievements = [
-        { icon: <FaFire />, title: "5-Day Streak", description: "You've studied 5 days in a row!", unlocked: true },
-        { icon: <FaCheckCircle />, title: "Ethics Master", description: "Answered 20 Ethics questions correctly.", unlocked: true },
-        { icon: <FaBrain />, title: "Quant Whiz", description: "Achieved 90% in a Quants quiz.", unlocked: false },
-        { icon: <FaStar />, title: "Perfect Score", description: "Scored 100% on a practice exam.", unlocked: true },
-        { icon: <FaCheckCircle />, title: "FSA Specialist", description: "Answered 20 FSA questions correctly.", unlocked: false },
-        { icon: <FaStar />, title: "Century Club", description: "Answered 100 total questions.", unlocked: true },
-    ];
+    const { achievements } = useContext(AppContext);
+    
+    // Assign icons based on title or ID, making it more dynamic
+    const getIcon = (id) => {
+        switch(id) {
+            case 1: return <FaCheckCircle />;
+            case 2: return <FaBrain />;
+            case 3: return <FaBrain />;
+            case 4: return <FaStar />;
+            case 5: return <FaFire />;
+            default: return <FaTrophy />;
+        }
+    };
 
     const containerVariants = {
       hidden: { opacity: 0 },
@@ -43,14 +49,14 @@ function Achievements() {
               variants={containerVariants}
               className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
             >
-                {achievements.map((ach, index) => (
+                {achievements.map((ach) => (
                     <motion.div 
-                      key={index} 
+                      key={ach.id} 
                       variants={itemVariants}
                       className={`bg-surface dark:bg-dark-surface p-6 rounded-xl shadow-md text-center transition-all duration-300 ${ach.unlocked ? 'border-2 border-warning dark:border-yellow-400' : 'opacity-60'}`}
                     >
                         <div className={`text-6xl mx-auto mb-4 ${ach.unlocked ? 'text-warning dark:text-yellow-400' : 'text-gray-400'}`}>
-                            {ach.icon}
+                            {getIcon(ach.id)}
                         </div>
                         <h3 className="text-xl font-bold text-text-primary dark:text-dark-text-primary mb-2">{ach.title}</h3>
                         <p className="text-text-secondary dark:text-dark-text-secondary text-sm">{ach.description}</p>
