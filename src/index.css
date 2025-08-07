@@ -5,9 +5,14 @@
 @tailwind utilities;
 
 body {
+  @apply bg-background text-text-primary;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F8F9FA; /* Use the 'background' color from Tailwind config */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark body {
+  @apply bg-dark-background text-dark-text-primary;
 }
 
 /* Custom scrollbar for a cleaner look */
@@ -18,12 +23,21 @@ body {
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
+.dark ::-webkit-scrollbar-track {
+  background: #2c2c2c;
+}
 
 ::-webkit-scrollbar-thumb {
   background: #bdc3c7;
   border-radius: 10px;
 }
+.dark ::-webkit-scrollbar-thumb {
+  background: #4a4a4a;
+}
 
 ::-webkit-scrollbar-thumb:hover {
   background: #95a5a6;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #6a6a6a;
 }
