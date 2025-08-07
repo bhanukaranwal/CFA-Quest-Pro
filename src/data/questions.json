@@ -1,0 +1,1302 @@
+[
+  {
+    "id": 1,
+    "level": "Level I",
+    "topic": "Ethics",
+    "question": "An analyst, while on a business trip, pays for a client's expensive dinner with the client's knowledge and approval. According to the CFA Institute Standards of Professional Conduct, this action is:",
+    "options": [
+      "A violation of the Standard on Independence and Objectivity.",
+      "Acceptable as it was disclosed to the client.",
+      "A violation of the Standard on Misconduct."
+    ],
+    "correctAnswer": "Acceptable as it was disclosed to the client.",
+    "explanation": "Standard I(B) Independence and Objectivity is not violated if the gift is disclosed and does not compromise the analyst's objectivity. Since the client approved, it is presumed the gift was not intended to impair independence."
+  },
+  {
+    "id": 2,
+    "level": "Level I",
+    "topic": "Quantitative Methods",
+    "question": "Which of the following is the most appropriate measure of central tendency for a dataset with significant outliers?",
+    "options": [
+      "Arithmetic mean",
+      "Median",
+      "Mode"
+    ],
+    "correctAnswer": "Median",
+    "explanation": "The median is the middle value of a dataset and is less affected by extreme values (outliers) than the arithmetic mean. The mode represents the most frequent value and may not be central."
+  },
+  {
+    "id": 3,
+    "level": "Level I",
+    "topic": "Economics",
+    "question": "A country's central bank decides to sell government securities on the open market. This action is most likely to:",
+    "options": [
+      "Increase the money supply and lower interest rates.",
+      "Decrease the money supply and raise interest rates.",
+      "Increase the money supply and raise interest rates."
+    ],
+    "correctAnswer": "Decrease the money supply and raise interest rates.",
+    "explanation": "Selling government securities is a form of contractionary monetary policy. The central bank receives money from commercial banks in exchange for the securities, which reduces the reserves available for lending, thus decreasing the money supply and putting upward pressure on interest rates."
+  },
+  {
+    "id": 4,
+    "level": "Level I",
+    "topic": "Financial Statement Analysis",
+    "question": "Which of the following would most likely result in a deferred tax liability?",
+    "options": [
+      "Taxable income is greater than pretax income.",
+      "An asset is depreciated more slowly for tax purposes than for financial reporting.",
+      "An asset is depreciated more quickly for tax purposes than for financial reporting."
+    ],
+    "correctAnswer": "An asset is depreciated more quickly for tax purposes than for financial reporting.",
+    "explanation": "A deferred tax liability arises when tax expense reported on the income statement is greater than taxes payable. This occurs when depreciation for tax purposes is higher than for financial reporting (accelerated depreciation), leading to lower taxable income today but higher taxable income in the future."
+  },
+  {
+    "id": 5,
+    "level": "Level I",
+    "topic": "Portfolio Management",
+    "question": "The security market line (SML) depicts the relationship between:",
+    "options": [
+        "An asset's expected return and its systematic risk (beta).",
+        "An asset's expected return and its total risk (standard deviation).",
+        "An asset's required return and the market risk premium."
+    ],
+    "correctAnswer": "An asset's expected return and its systematic risk (beta).",
+    "explanation": "The SML is a graphical representation of the Capital Asset Pricing Model (CAPM), showing the expected return of an asset as a function of its beta, the risk-free rate, and the market risk premium."
+  },
+  {
+    "id": 6,
+    "level": "Level I",
+    "topic": "Fixed Income",
+    "question": "For a premium bond, the relationship between its coupon rate, current yield, and yield to maturity (YTM) is best described as:",
+    "options": [
+      "Coupon Rate > Current Yield > YTM",
+      "YTM > Current Yield > Coupon Rate",
+      "Current Yield > Coupon Rate > YTM"
+    ],
+    "correctAnswer": "Coupon Rate > Current Yield > YTM",
+    "explanation": "A premium bond trades at a price above its par value. This occurs when its coupon rate is higher than the market interest rate (YTM). The current yield (Annual Coupon / Price) will be lower than the coupon rate because the price is higher than par, but it will be higher than the YTM."
+  },
+  {
+    "id": 7,
+    "level": "Level I",
+    "topic": "Derivatives",
+    "question": "An investor who is long a call option has the:",
+    "options": [
+      "Right to sell the underlying asset at the strike price.",
+      "Obligation to buy the underlying asset at the strike price.",
+      "Right to buy the underlying asset at the strike price."
+    ],
+    "correctAnswer": "Right to buy the underlying asset at the strike price.",
+    "explanation": "A call option gives its holder the right, but not the obligation, to purchase the underlying asset at a specified strike price on or before the expiration date. The obligation rests with the writer (seller) of the option."
+  },
+  {
+    "id": 8,
+    "level": "Level I",
+    "topic": "Equity Investments",
+    "question": "Which of the following is most likely a characteristic of a non-callable, non-convertible preferred stock?",
+    "options": [
+      "It has a specified maturity date.",
+      "Its dividends are a contractual obligation for the company.",
+      "It has a higher claim on assets than common stock."
+    ],
+    "correctAnswer": "It has a higher claim on assets than common stock.",
+    "explanation": "Preferred stock is a form of equity that has priority over common stock in the event of liquidation (higher claim on assets) and for dividend payments. However, unlike bond interest, preferred dividends are not a contractual obligation and the company can skip them without defaulting."
+  },
+  {
+    "id": 9,
+    "level": "Level I",
+    "topic": "Alternative Investments",
+    "question": "Compared to traditional investments, alternative investments are most likely to be characterized by:",
+    "options": [
+      "High liquidity and transparent pricing.",
+      "Low management fees and high correlation with equities.",
+      "Low liquidity and the use of leverage."
+    ],
+    "correctAnswer": "Low liquidity and the use of leverage.",
+    "explanation": "Alternative investments, such as private equity, hedge funds, and real estate, are often characterized by illiquidity, less regulation, unique legal structures, and the use of leverage to enhance returns. They typically have high management fees and aim for low correlation with traditional asset classes."
+  },
+  {
+    "id": 10,
+    "level": "Level I",
+    "topic": "Ethics",
+    "question": "A CFA member is part of a team that produces a research report. The member does not agree with the final recommendation. According to the CFA Institute Standards, the member should most appropriately:",
+    "options": [
+      "Refuse to have their name associated with the report.",
+      "Change the recommendation to match their own conclusion.",
+      "Sign the report but add a dissenting opinion."
+    ],
+    "correctAnswer": "Refuse to have their name associated with the report.",
+    "explanation": "Standard V(A) Diligence and Reasonable Basis requires members to have a reasonable and adequate basis for any analysis. If a member does not agree with the report's conclusion, they cannot be associated with it. They should dissociate from the report, which may involve refusing to have their name listed."
+  },
+  {
+    "id": 11,
+    "level": "Level I",
+    "topic": "Quantitative Methods",
+    "question": "A portfolio's returns are normally distributed with a mean of 12% and a standard deviation of 15%. What is the probability of a return less than -18%?",
+    "options": [
+      "2.5%",
+      "5.0%",
+      "16.0%"
+    ],
+    "correctAnswer": "2.5%",
+    "explanation": "A return of -18% is two standard deviations below the mean (12% - 2 * 15% = -18%). For a normal distribution, approximately 95% of observations fall within two standard deviations of the mean, leaving 5% in the tails. Since the distribution is symmetric, 2.5% of returns will be less than -18%."
+  },
+  {
+    "id": 12,
+    "level": "Level I",
+    "topic": "Financial Statement Analysis",
+    "question": "Under IFRS, a company revalues its property, plant, and equipment upwards. The revaluation surplus is most likely reported in:",
+    "options": [
+      "Net income.",
+      "Other comprehensive income.",
+      "Retained earnings."
+    ],
+    "correctAnswer": "Other comprehensive income.",
+    "explanation": "Under IFRS, revaluation surpluses on PP&E are recognized in other comprehensive income (OCI) and accumulated in equity in a revaluation surplus account. They do not flow through the income statement unless they are reversing a previously recognized impairment loss."
+  },
+  {
+    "id": 13,
+    "level": "Level I",
+    "topic": "Fixed Income",
+    "question": "The 'yield curve' most commonly refers to a plot of yields on:",
+    "options": [
+      "Corporate bonds with different credit ratings.",
+      "Government bonds with different maturities.",
+      "Municipal bonds from different states."
+    ],
+    "correctAnswer": "Government bonds with different maturities.",
+    "explanation": "The yield curve, or the term structure of interest rates, plots the yields of bonds with equal credit quality but different maturity dates. The most common yield curve is the one for U.S. Treasury securities."
+  },
+  {
+    "id": 14,
+    "level": "Level I",
+    "topic": "Equity Investments",
+    "question": "The industry life-cycle stage characterized by slowing growth, intense competition, and declining profitability is the:",
+    "options": [
+      "Pioneer stage.",
+      "Growth stage.",
+      "Mature stage."
+    ],
+    "correctAnswer": "Mature stage.",
+    "explanation": "In the mature stage, the market has become saturated. Growth slows to the rate of general economic growth, competition becomes fierce (often based on price), and profit margins tend to decline as companies fight for market share."
+  },
+  {
+    "id": 15,
+    "level": "Level II",
+    "topic": "Equity Valuation",
+    "question": "An analyst is using the Free Cash Flow to Equity (FCFE) model. A significant, unexpected increase in a company's net borrowing would most likely:",
+    "options": [
+      "Decrease the current year's FCFE.",
+      "Increase the current year's FCFE.",
+      "Have no impact on the current year's FCFE."
+    ],
+    "correctAnswer": "Increase the current year's FCFE.",
+    "explanation": "The formula for FCFE is: Net Income + NCC - FCInv - WCInv + Net Borrowing. A direct increase in net borrowing will increase the calculated FCFE for that period, all else being equal."
+  },
+  {
+    "id": 16,
+    "level": "Level II",
+    "topic": "Financial Statement Analysis",
+    "question": "A company switches its pension plan assumption for the discount rate from 6% to 7%. This change will most likely:",
+    "options": [
+      "Increase the company's pension obligation and increase periodic pension cost.",
+      "Decrease the company's pension obligation and decrease periodic pension cost.",
+      "Increase the company's pension obligation and decrease periodic pension cost."
+    ],
+    "correctAnswer": "Decrease the company's pension obligation and decrease periodic pension cost.",
+    "explanation": "Increasing the discount rate used to calculate the present value of future pension obligations will decrease the Pension Benefit Obligation (PBO). A lower PBO reduces the service cost component of the periodic pension cost, thus decreasing the overall pension cost recognized in the income statement."
+  },
+  {
+    "id": 17,
+    "level": "Level II",
+    "topic": "Fixed Income",
+    "question": "A bond's effective duration is 7.5 and its effective convexity is 60. If interest rates decrease by 50 basis points (0.50%), the estimated percentage price change of the bond is closest to:",
+    "options": [
+      "3.75%",
+      "3.83%",
+      "4.50%"
+    ],
+    "correctAnswer": "3.83%",
+    "explanation": "The estimated percentage price change is calculated as: (-Duration × ΔYield) + (0.5 × Convexity × (ΔYield)^2).  Change = (-7.5 × -0.0050) + (0.5 × 60 × (-0.0050)^2) = 0.0375 + (30 × 0.000025) = 0.0375 + 0.00075 = 0.03825, or 3.83%."
+  },
+  {
+    "id": 18,
+    "level": "Level II",
+    "topic": "Derivatives",
+    "question": "The value of a forward contract at initiation is:",
+    "options": [
+      "Equal to the spot price of the underlying asset.",
+      "Equal to the forward price.",
+      "Zero."
+    ],
+    "correctAnswer": "Zero.",
+    "explanation": "A key characteristic of a forward contract is that it is structured so that its value is zero to both the long and short positions at the time the contract is initiated. No cash changes hands at initiation. The forward price is set to make this happen."
+  },
+  {
+    "id": 19,
+    "level": "Level II",
+    "topic": "Portfolio Management",
+    "question": "According to the Treynor-Black model, active portfolio management is most appropriate for securities that have:",
+    "options": [
+      "High unsystematic risk.",
+      "A high degree of mispricing.",
+      "A beta equal to 1.0."
+    ],
+    "correctAnswer": "A high degree of mispricing.",
+    "explanation": "The Treynor-Black model is an active portfolio management model that seeks to combine an actively managed portfolio of mispriced securities with a passively managed market index portfolio. The model's goal is to identify securities with a non-zero alpha (mispricing) and overweight them."
+  },
+  {
+    "id": 20,
+    "level": "Level II",
+    "topic": "Economics",
+    "question": "Under the Mundell-Fleming model, with high capital mobility, expansionary fiscal policy is most effective at influencing aggregate demand under a:",
+    "options": [
+      "Fixed exchange rate regime.",
+      "Floating exchange rate regime.",
+      "Managed float regime."
+    ],
+    "correctAnswer": "Fixed exchange rate regime.",
+    "explanation": "With high capital mobility and a fixed exchange rate, expansionary fiscal policy (e.g., government spending) increases income and money demand, putting upward pressure on interest rates. This attracts foreign capital, and to prevent the currency from appreciating, the central bank must buy foreign currency, which increases the money supply, reinforcing the initial expansion."
+  },
+  {
+    "id": 21,
+    "level": "Level II",
+    "topic": "Alternative Investments",
+    "question": "In the context of private equity, a 'clawback' provision is designed to:",
+    "options": [
+      "Allow the fund manager to take a larger share of profits in later years.",
+      "Protect limited partners from overpayment of carried interest to the general partner.",
+      "Force limited partners to contribute additional capital when called upon."
+    ],
+    "correctAnswer": "Protect limited partners from overpayment of carried interest to the general partner.",
+    "explanation": "A clawback provision requires the general partner (GP) to return capital to the limited partners (LPs) if the GP has received more in carried interest than they are ultimately entitled to over the life of the fund. This can happen if early investments are very successful but later ones are not."
+  },
+  {
+    "id": 22,
+    "level": "Level II",
+    "topic": "Ethics",
+    "question": "A portfolio manager directs a large portion of her trades to a specific broker who provides her with detailed market analysis and research reports. This arrangement is most likely:",
+    "options": [
+      "A violation of her duty to clients.",
+      "Acceptable if the research benefits the clients and execution is good.",
+      "Acceptable only if it is the cheapest broker available."
+    ],
+    "correctAnswer": "Acceptable if the research benefits the clients and execution is good.",
+    "explanation": "This describes a soft dollar arrangement. Under Standard III(A) Loyalty, Prudence, and Care, using client brokerage ('soft dollars') to pay for research is permissible as long as the research provides a demonstrable benefit to the clients whose commissions are being used, and the manager secures best execution for the trades."
+  },
+  {
+    "id": 23,
+    "level": "Level II",
+    "topic": "Equity Valuation",
+    "question": "When using a residual income model, a company's intrinsic value is least likely to be affected by:",
+    "options": [
+      "Its dividend policy.",
+      "Its cost of equity.",
+      "Its book value per share."
+    ],
+    "correctAnswer": "Its dividend policy.",
+    "explanation": "Residual income models (like DDM and FCFE) measure value based on the company's ability to generate earnings in excess of its cost of capital. Dividend policy only affects the timing of cash flows to shareholders, not the underlying value creation, which is captured by earnings and book value."
+  },
+  {
+    "id": 24,
+    "level": "Level II",
+    "topic": "Fixed Income",
+    "question": "A key advantage of using a binomial interest rate tree to value a callable bond is its ability to:",
+    "options": [
+      "Incorporate changing credit spreads.",
+      "Model the path-dependency of interest rates.",
+      "Account for the issuer's call option at each node."
+    ],
+    "correctAnswer": "Account for the issuer's call option at each node.",
+    "explanation": "The primary advantage of a binomial tree for valuing bonds with embedded options is that it allows for cash flows to be path-dependent. At each node, the bond's value is checked against the call price. If the calculated value is higher than the call price, the value is replaced with the call price, reflecting the issuer's incentive to call the bond."
+  },
+  {
+    "id": 25,
+    "level": "Level III",
+    "topic": "Portfolio Management",
+    "question": "A 65-year-old retired individual has a low risk tolerance and relies on his portfolio for living expenses. His investment portfolio's ability to take risk is best described as:",
+    "options": [
+      "High, due to a long time horizon in retirement.",
+      "Low, because his financial goals depend heavily on the portfolio.",
+      "Average, as he has no dependents."
+    ],
+    "correctAnswer": "Low, because his financial goals depend heavily on the portfolio.",
+    "explanation": "Ability to take risk is an assessment of an investor's financial situation. Because this individual relies on the portfolio for essential living expenses, a significant loss would severely impact his standard of living. Therefore, his financial ability to withstand risk is low, regardless of his psychological willingness."
+  },
+  {
+    "id": 26,
+    "level": "Level III",
+    "topic": "Fixed Income",
+    "question": "A portfolio manager wishes to hedge a long position in a corporate bond against a rise in interest rates. The most appropriate strategy would be to:",
+    "options": [
+      "Enter a long position in a Treasury bond futures contract.",
+      "Enter a short position in an interest rate swap (pay fixed, receive floating).",
+      "Buy a call option on a bond index."
+    ],
+    "correctAnswer": "Enter a short position in an interest rate swap (pay fixed, receive floating).",
+    "explanation": "To hedge against rising rates (which cause bond prices to fall), the manager needs a position that profits from rising rates. In a pay-fixed interest rate swap, the manager's payments are fixed, but the floating payments they receive will increase as interest rates rise, offsetting the loss on the bond position."
+  },
+  {
+    "id": 27,
+    "level": "Level III",
+    "topic": "Equity Portfolio Management",
+    "question": "Which of the following is the most significant disadvantage of a passive, full-replication indexing strategy for a large-cap equity index?",
+    "options": [
+      "High tracking error.",
+      "High transaction costs from frequent rebalancing.",
+      "The need for sophisticated risk modeling."
+    ],
+    "correctAnswer": "High transaction costs from frequent rebalancing.",
+    "explanation": "Full replication involves buying every security in the index in its correct proportion. For a large index like the S&P 500, this requires buying many securities. When the index rebalances (e.g., a stock is added or removed), the fund must trade, incurring transaction costs. While tracking error is low, the costs can be a significant drag on performance."
+  },
+  {
+    "id": 28,
+    "level": "Level III",
+    "topic": "Derivatives and Currency Management",
+    "question": "A U.S.-based portfolio has a large exposure to Japanese equities, and the manager is concerned about the JPY depreciating against the USD. To hedge this currency risk, the manager should:",
+    "options": [
+      "Enter a forward contract to buy JPY.",
+      "Enter a forward contract to sell JPY.",
+      "Enter a forward contract to buy USD."
+    ],
+    "correctAnswer": "Enter a forward contract to sell JPY.",
+    "explanation": "The risk is that the JPY will be worth fewer USD in the future. To hedge, the manager needs to lock in a future JPY/USD exchange rate. By selling JPY forward, the manager agrees to exchange JPY for USD at a predetermined rate, protecting the portfolio's value in USD terms if the JPY depreciates."
+  },
+  {
+    "id": 29,
+    "level": "Level III",
+    "topic": "Behavioral Finance",
+    "question": "An investor refuses to sell a stock that has lost 50% of its value, stating, 'I'll sell it when I break even.' This investor is most likely exhibiting:",
+    "options": [
+      "Hindsight bias.",
+      "Confirmation bias.",
+      "Disposition effect."
+    ],
+    "correctAnswer": "Disposition effect.",
+    "explanation": "The disposition effect is a cognitive bias where investors tend to sell winning positions too early and hold losing positions too long. The 'get-even-itis' described is a classic example of this, driven by loss aversion and a desire to avoid realizing a loss."
+  },
+  {
+    "id": 30,
+    "level": "Level III",
+    "topic": "Asset Allocation",
+    "question": "A tactical asset allocation (TAA) strategy is best described as:",
+    "options": [
+      "Maintaining a constant, long-term strategic mix of assets.",
+      "Making short-term adjustments to the asset mix based on market expectations.",
+      "Allocating assets based on the investor's age and risk tolerance."
+    ],
+    "correctAnswer": "Making short-term adjustments to the asset mix based on market expectations.",
+    "explanation": "TAA is an active management strategy that deviates from a portfolio's long-term strategic asset allocation (SAA) to capitalize on short-term market opportunities. It is based on the view that market inefficiencies can be exploited."
+  },
+  {
+    "id": 31,
+    "level": "Level III",
+    "topic": "Ethics",
+    "question": "The GIPS standards are best described as:",
+    "options": [
+      "A mandatory set of legal requirements for investment firms.",
+      "A set of ethical principles for calculating and presenting investment performance.",
+      "A framework for ensuring portfolio diversification."
+    ],
+    "correctAnswer": "A set of ethical principles for calculating and presenting investment performance.",
+    "explanation": "The Global Investment Performance Standards (GIPS) are a voluntary set of standardized, industry-wide ethical principles that guide investment firms on how to calculate and present their historical investment results to prospective clients. The goal is to ensure fair representation and full disclosure."
+  },
+  {
+    "id": 32,
+    "level": "Level III",
+    "topic": "Private Wealth Management",
+    "question": "When developing an investment policy statement (IPS) for a private client, which of the following is best classified as a constraint?",
+    "options": [
+      "Return objective of 8% per year.",
+      "High willingness to take risk.",
+      "The need for liquidity to purchase a home in one year."
+    ],
+    "correctAnswer": "The need for liquidity to purchase a home in one year.",
+    "explanation": "Constraints are limitations on the investor's ability to pursue certain strategies. Liquidity needs, time horizon, taxes, legal/regulatory factors, and unique circumstances are all constraints. Return objectives and risk tolerance are objectives, not constraints."
+  },
+  {
+    "id": 33,
+    "level": "Level III",
+    "topic": "Trading and Execution",
+    "question": "A trader uses an algorithm that submits small orders at random times to minimize market impact. This type of algorithm is best described as:",
+    "options": [
+      "A participation algorithm (e.g., VWAP).",
+      "An implementation shortfall algorithm.",
+      "A stealth/guerilla algorithm."
+    ],
+    "correctAnswer": "A stealth/guerilla algorithm.",
+    "explanation": "Stealth or guerilla algorithms are designed to disguise a trader's intentions by breaking large orders into many small, randomly timed pieces to avoid detection by other market participants who might trade against them. VWAP algorithms aim to match the volume-weighted average price, and implementation shortfall algorithms aim to minimize the total cost of trading relative to a benchmark price."
+  },
+  {
+    "id": 34,
+    "level": "Level III",
+    "topic": "Behavioral Finance",
+    "question": "A financial advisor notices that her clients are much more concerned about the risk of losing money than they are excited about the prospect of equivalent gains. This is a classic example of:",
+    "options": [
+      "Anchoring bias.",
+      "Loss aversion.",
+      "Mental accounting."
+    ],
+    "correctAnswer": "Loss aversion.",
+    "explanation": "Loss aversion is a cornerstone of prospect theory. It describes the tendency for people to feel the pain of a loss more strongly than the pleasure of an equivalent gain. This often leads to risk-averse behavior when facing potential losses."
+  },
+  {
+    "id": 35,
+    "level": "Level I",
+    "topic": "Corporate Finance",
+    "question": "When two projects are mutually exclusive, the project that should be chosen is the one with the highest:",
+    "options": [
+      "Internal Rate of Return (IRR).",
+      "Net Present Value (NPV).",
+      "Payback Period."
+    ],
+    "correctAnswer": "Net Present Value (NPV).",
+    "explanation": "When comparing mutually exclusive projects, the NPV rule should always be used. NPV measures the absolute increase in shareholder wealth. The IRR can sometimes give conflicting rankings, especially if the projects have different scales or cash flow patterns."
+  },
+  {
+    "id": 36,
+    "level": "Level I",
+    "topic": "Financial Statement Analysis",
+    "question": "In a period of rising prices, which inventory valuation method will generally result in the highest reported net income?",
+    "options": [
+      "First-In, First-Out (FIFO).",
+      "Last-In, First-Out (LIFO).",
+      "Weighted-Average Cost."
+    ],
+    "correctAnswer": "First-In, First-Out (FIFO).",
+    "explanation": "In an inflationary environment, FIFO matches the oldest, cheapest inventory costs against revenue, resulting in a lower Cost of Goods Sold (COGS), and therefore higher gross profit and net income compared to LIFO or weighted-average."
+  },
+  {
+    "id": 37,
+    "level": "Level I",
+    "topic": "Economics",
+    "question": "A market structure characterized by a single seller of a unique product with significant barriers to entry is a(n):",
+    "options": [
+      "Oligopoly.",
+      "Monopoly.",
+      "Perfect competition."
+    ],
+    "correctAnswer": "Monopoly.",
+    "explanation": "A monopoly is defined by a single firm dominating the market for a product with no close substitutes. High barriers to entry prevent other firms from competing, allowing the monopolist to have significant pricing power."
+  },
+  {
+    "id": 38,
+    "level": "Level I",
+    "topic": "Ethics",
+    "question": "An analyst owns stock in a company she is recommending to clients. According to the Standard on Disclosure of Conflicts, she must:",
+    "options": [
+      "Sell the stock before making the recommendation.",
+      "Disclose the ownership to clients and her employer.",
+      "Only recommend the stock to clients who also own it."
+    ],
+    "correctAnswer": "Disclose the ownership to clients and her employer.",
+    "explanation": "Standard VI(A) Disclosure of Conflicts requires members to make full and fair disclosure of all matters that could reasonably be expected to impair their independence and objectivity. Owning stock in a recommended company is a clear conflict that must be disclosed."
+  },
+  {
+    "id": 39,
+    "level": "Level II",
+    "topic": "Equity Valuation",
+    "question": "According to Porter's Five Forces, which of the following would most likely increase the intensity of industry rivalry?",
+    "options": [
+      "A high degree of product differentiation.",
+      "High industry concentration.",
+      "A large number of competitors of similar size."
+    ],
+    "correctAnswer": "A large number of competitors of similar size.",
+    "explanation": "Industry rivalry is more intense when there are many firms of roughly equal size competing for market share. High product differentiation and high concentration (a few dominant firms) tend to decrease the intensity of rivalry."
+  },
+  {
+    "id": 40,
+    "level": "Level II",
+    "topic": "Financial Statement Analysis",
+    "question": "When translating the financial statements of a foreign subsidiary operating in a hyperinflationary economy, which method is most appropriate under both IFRS and US GAAP?",
+    "options": [
+      "The current rate method.",
+      "The temporal method.",
+      "The current rate method for assets and the temporal method for liabilities."
+    ],
+    "correctAnswer": "The temporal method.",
+    "explanation": "For subsidiaries in hyperinflationary economies, US GAAP requires the temporal method. IFRS first requires the financial statements to be restated for inflation and then translated using the current rate. However, if the functional currency is not the parent's presentation currency, the temporal method is used before the IFRS restatement process, making it the common underlying method."
+  },
+  {
+    "id": 41,
+    "level": "Level II",
+    "topic": "Fixed Income",
+    "question": "The option-adjusted spread (OAS) on a callable bond is best described as the spread that:",
+    "options": [
+      "Is added to the Treasury spot curve to price the bond.",
+      "Removes the component of the spread related to the call option.",
+      "Is equal to the Z-spread for an option-free bond."
+    ],
+    "correctAnswer": "Removes the component of the spread related to the call option.",
+    "explanation": "The OAS is the constant spread that, when added to the interest rates on a benchmark yield curve (like the Treasury curve), makes the theoretical price of a bond equal to its market price. For a callable bond, the OAS is lower than the Z-spread, with the difference representing the cost of the embedded call option (OAS = Z-spread - Option Cost)."
+  },
+  {
+    "id": 42,
+    "level": "Level II",
+    "topic": "Derivatives",
+    "question": "In a plain vanilla interest rate swap, the party that pays a fixed rate and receives a floating rate will profit if interest rates:",
+    "options": [
+      "Rise.",
+      "Fall.",
+      "Remain unchanged."
+    ],
+    "correctAnswer": "Rise.",
+    "explanation": "The pay-fixed party has fixed outflows but variable inflows. If interest rates rise, the floating rate they receive will increase, while their fixed payments remain the same. This increases the net cash flow to the pay-fixed party, making the swap position profitable."
+  },
+  {
+    "id": 43,
+    "level": "Level III",
+    "topic": "Asset Allocation",
+    "question": "A primary criticism of using mean-variance optimization (MVO) for strategic asset allocation is its high sensitivity to:",
+    "options": [
+      "Transaction costs.",
+      "Small changes in input assumptions.",
+      "Investor risk tolerance."
+    ],
+    "correctAnswer": "Small changes in input assumptions.",
+    "explanation": "MVO is known for its 'error maximization' problem. Small changes in the inputs for expected returns, standard deviations, and correlations can lead to large, often unintuitive, changes in the resulting optimal portfolio allocations."
+  },
+  {
+    "id": 44,
+    "level": "Level III",
+    "topic": "Private Wealth Management",
+    "question": "For a university endowment fund, which of the following is the most important investment objective?",
+    "options": [
+      "Maximizing short-term returns.",
+      "Preserving the real (inflation-adjusted) value of the assets in perpetuity.",
+      "Minimizing portfolio volatility."
+    ],
+    "correctAnswer": "Preserving the real (inflation-adjusted) value of the assets in perpetuity.",
+    "explanation": "The primary objective of most endowment funds is intergenerational equity. This means the fund must generate sufficient returns to cover its annual spending needs while also growing at a rate at least equal to inflation, thereby preserving its purchasing power for future generations."
+  },
+  {
+    "id": 45,
+    "level": "Level III",
+    "topic": "Equity Portfolio Management",
+    "question": "An active portfolio manager has a high information ratio. This most likely indicates that the manager:",
+    "options": [
+      "Has a high portfolio beta.",
+      "Generates high active returns relative to the active risk taken.",
+      "Has a low degree of tracking error."
+    ],
+    "correctAnswer": "Generates high active returns relative to the active risk taken.",
+    "explanation": "The information ratio (IR) is calculated as (Active Return) / (Active Risk or Tracking Error). A high IR signifies a manager's skill in generating excess returns consistently, relative to the volatility of those excess returns."
+  },
+  {
+    "id": 46,
+    "level": "Level III",
+    "topic": "Fixed Income Portfolio Management",
+    "question": "A pension fund has a liability with a Macaulay duration of 10 years. To immunize this liability with a single zero-coupon bond, the bond should have a maturity of:",
+    "options": [
+      "Less than 10 years.",
+      "Exactly 10 years.",
+      "More than 10 years."
+    ],
+    "correctAnswer": "Exactly 10 years.",
+    "explanation": "For a single liability, single-period immunization requires matching the duration of the assets to the duration of the liability. The Macaulay duration of a zero-coupon bond is always equal to its time to maturity. Therefore, a zero-coupon bond with a 10-year maturity is needed."
+  },
+  {
+    "id": 47,
+    "level": "Level I",
+    "topic": "Quantitative Methods",
+    "question": "A distribution that is more peaked than a normal distribution is best described as:",
+    "options": [
+      "Platykurtic.",
+      "Megalokurtic.",
+      "Leptokurtic."
+    ],
+    "correctAnswer": "Leptokurtic.",
+    "explanation": "A leptokurtic distribution has positive excess kurtosis, meaning it has fatter tails and is more peaked at the mean compared to a normal distribution. Platykurtic distributions have negative excess kurtosis and are less peaked."
+  },
+  {
+    "id": 48,
+    "level": "Level I",
+    "topic": "Financial Statement Analysis",
+    "question": "Which of the following is an example of an operating activity on the statement of cash flows?",
+    "options": [
+      "Issuing common stock.",
+      "Paying dividends to shareholders.",
+      "Cash received from customers."
+    ],
+    "correctAnswer": "Cash received from customers.",
+    "explanation": "Cash flows from operating activities are related to the principal revenue-producing activities of the firm. Cash received from customers is a primary operating inflow. Issuing stock and paying dividends are financing activities."
+  },
+  {
+    "id": 49,
+    "level": "Level II",
+    "topic": "Alternative Investments",
+    "question": "A hedge fund that uses a 'merger arbitrage' strategy is most likely to:",
+    "options": [
+      "Buy the stock of an acquiring company and short the stock of the target company.",
+      "Buy the stock of a target company and short the stock of the acquiring company.",
+      "Take long positions in undervalued companies and short positions in overvalued companies."
+    ],
+    "correctAnswer": "Buy the stock of a target company and short the stock of the acquiring company.",
+    "explanation": "In a typical stock-for-stock merger, the merger arbitrageur buys the stock of the company being acquired (the target) and shorts the stock of the acquiring company. The goal is to profit from the convergence of the target's stock price to the offer price."
+  },
+  {
+    "id": 50,
+    "level": "Level II",
+    "topic": "Equity Valuation",
+    "question": "A firm has a dividend payout ratio of 40%, a return on equity (ROE) of 15%, and a required rate of return of 12%. The firm's sustainable growth rate is closest to:",
+    "options": [
+      "6.0%",
+      "9.0%",
+      "15.0%"
+    ],
+    "correctAnswer": "9.0%",
+    "explanation": "The sustainable growth rate (g) is calculated as g = ROE * (1 - Dividend Payout Ratio). In this case, g = 15% * (1 - 0.40) = 15% * 0.60 = 9.0%."
+  },
+  {
+    "id": 51,
+    "level": "Level III",
+    "topic": "Trading and Execution",
+    "question": "The difference between the execution price of a trade and the benchmark price at the time the trade decision was made is best known as:",
+    "options": [
+      "Market impact cost.",
+      "Delay cost (slippage).",
+      "Opportunity cost."
+    ],
+    "correctAnswer": "Delay cost (slippage).",
+    "explanation": "Delay cost, or slippage, measures the price movement between the time the investment decision is made (the 'paper' portfolio) and the time the order is actually submitted to the market. Market impact cost is the effect the trade itself has on the execution price."
+  },
+  {
+    "id": 52,
+    "level": "Level III",
+    "topic": "Behavioral Finance",
+    "question": "An investor who overestimates her ability to predict future market movements is most likely exhibiting:",
+    "options": [
+      "Conservatism bias.",
+      "Overconfidence bias.",
+      "Representativeness bias."
+    ],
+    "correctAnswer": "Overconfidence bias.",
+    "explanation": "Overconfidence bias is an emotional bias where an individual has unwarranted faith in their own intuitive reasoning, judgments, and cognitive abilities. This can lead to under-diversification and excessive trading."
+  },
+  {
+    "id": 53,
+    "level": "Level I",
+    "topic": "Fixed Income",
+    "question": "A bond's price is most likely to be volatile when it has a:",
+    "options": [
+      "Low coupon and long maturity.",
+      "High coupon and long maturity.",
+      "Low coupon and short maturity."
+    ],
+    "correctAnswer": "Low coupon and long maturity.",
+    "explanation": "Bond price volatility (interest rate risk) is positively related to maturity and negatively related to the coupon rate. Therefore, a bond with a long maturity and a low coupon will have the highest duration and be most sensitive to changes in interest rates."
+  },
+  {
+    "id": 54,
+    "level": "Level II",
+    "topic": "Financial Statement Analysis",
+    "question": "A company capitalizes an expenditure that should have been expensed. In the year of the expenditure, this error will most likely cause the company's cash flow from operations (CFO) to be:",
+    "options": [
+      "Overstated.",
+      "Understated.",
+      "Unaffected."
+    ],
+    "correctAnswer": "Overstated.",
+    "explanation": "Capitalizing an expenditure means it is classified as a cash flow from investing (CFI) outflow. If it had been correctly expensed, it would have reduced net income and thus been an operating (CFO) outflow (after adjusting for non-cash charges). By misclassifying it as CFI, the CFO is artificially inflated."
+  },
+  {
+    "id": 55,
+    "level": "Level III",
+    "topic": "Asset Allocation",
+    "question": "Which of the following is the most likely reason for an institutional investor to use a liability-driven investing (LDI) approach?",
+    "options": [
+      "To maximize the portfolio's Sharpe ratio.",
+      "To outperform a broad market benchmark.",
+      "To ensure the portfolio can meet a specific set of future obligations."
+    ],
+    "correctAnswer": "To ensure the portfolio can meet a specific set of future obligations.",
+    "explanation": "LDI is an investment strategy that focuses on managing the assets of a portfolio in relation to its liabilities. It is commonly used by pension funds and insurance companies to ensure that future cash flows from assets will be sufficient to cover future liabilities, such as pension payments."
+  },
+  {
+    "id": 56,
+    "level": "Level I",
+    "topic": "Ethics",
+    "question": "A research analyst is preparing a buy recommendation for a stock. Just before publication, the analyst's uncle calls and asks for a stock tip. The analyst tells his uncle about the upcoming recommendation. This action is a violation of which CFA Institute Standard?",
+    "options": [
+      "Standard II(A) Material Nonpublic Information.",
+      "Standard V(A) Diligence and Reasonable Basis.",
+      "Standard VI(B) Priority of Transactions."
+    ],
+    "correctAnswer": "Standard II(A) Material Nonpublic Information.",
+    "explanation": "The upcoming buy recommendation is material nonpublic information until it is disseminated to the public. Sharing this information with the uncle constitutes acting on material nonpublic information, which is a clear violation of Standard II(A)."
+  },
+  {
+    "id": 57,
+    "level": "Level I",
+    "topic": "Quantitative Methods",
+    "question": "The process of continually adding compound interest to a principal amount to calculate its future value is best known as:",
+    "options": [
+      "Discounting.",
+      "Annuity calculation.",
+      "Compounding."
+    ],
+    "correctAnswer": "Compounding.",
+    "explanation": "Compounding is the process where interest is earned on both the initial principal and the accumulated interest from previous periods. It is the fundamental concept behind the growth of an investment over time."
+  },
+  {
+    "id": 58,
+    "level": "Level I",
+    "topic": "Economics",
+    "question": "If the demand for a product is price inelastic, a decrease in the product's price will cause the total revenue from that product to:",
+    "options": [
+      "Increase.",
+      "Decrease.",
+      "Remain the same."
+    ],
+    "correctAnswer": "Decrease.",
+    "explanation": "When demand is inelastic, the percentage change in quantity demanded is less than the percentage change in price. Therefore, a price decrease will not be offset by a sufficient increase in quantity sold, leading to a decrease in total revenue (Price x Quantity)."
+  },
+  {
+    "id": 59,
+    "level": "Level I",
+    "topic": "Corporate Finance",
+    "question": "A company's weighted average cost of capital (WACC) is best described as the:",
+    "options": [
+      "Required rate of return on a company's equity.",
+      "Rate at which the company can borrow money.",
+      "Required rate of return on a portfolio of all the company's securities."
+    ],
+    "correctAnswer": "Required rate of return on a portfolio of all the company's securities.",
+    "explanation": "WACC represents the blended cost of all capital sources (debt, equity, preferred stock) weighted by their respective proportions in the company's capital structure. It is the overall required return on the firm as a whole."
+  },
+  {
+    "id": 60,
+    "level": "Level II",
+    "topic": "Financial Statement Analysis",
+    "question": "Which of the following accounting choices is most likely to increase a company's reported financial performance in the short term?",
+    "options": [
+      "Changing from LIFO to FIFO during a period of rising prices.",
+      "Decreasing the estimated useful life of a depreciable asset.",
+      "Recognizing a litigation loss as probable and estimable."
+    ],
+    "correctAnswer": "Changing from LIFO to FIFO during a period of rising prices.",
+    "explanation": "Switching from LIFO to FIFO in an inflationary environment will decrease the Cost of Goods Sold (COGS), which in turn increases gross profit, operating profit, and net income, thereby improving reported performance."
+  },
+  {
+    "id": 61,
+    "level": "Level II",
+    "topic": "Equity Valuation",
+    "question": "An analyst is using the H-model to value a stock. This model is most appropriate for a company that is currently experiencing:",
+    "options": [
+      "A constant rate of growth indefinitely.",
+      "A high initial growth rate that declines linearly to a stable long-term rate.",
+      "A growth rate of zero."
+    ],
+    "correctAnswer": "A high initial growth rate that declines linearly to a stable long-term rate.",
+    "explanation": "The H-model is a two-stage dividend discount model that assumes a high initial growth rate which declines in a linear fashion over a specified period until it reaches a normal, long-term growth rate."
+  },
+  {
+    "id": 62,
+    "level": "Level II",
+    "topic": "Fixed Income",
+    "question": "A portfolio manager holds a floating-rate bond. To convert this position into a synthetic fixed-rate bond, the manager should:",
+    "options": [
+      "Enter into a swap to pay fixed and receive floating.",
+      "Enter into a swap to pay floating and receive fixed.",
+      "Buy a put option on the bond."
+    ],
+    "correctAnswer": "Enter into a swap to pay floating and receive fixed.",
+    "explanation": "The manager receives a floating rate from the bond. By entering a swap to pay a floating rate and receive a fixed rate, the floating-rate cash flows cancel each other out (the received floating rate from the bond is used to pay the floating leg of the swap), leaving the manager with a net fixed-rate receipt."
+  },
+  {
+    "id": 63,
+    "level": "Level II",
+    "topic": "Alternative Investments",
+    "question": "The '2 and 20' fee structure common in the hedge fund industry refers to:",
+    "options": [
+      "A 2% management fee and a 20% incentive fee.",
+      "A 20% management fee and a 2% incentive fee.",
+      "A 2% fee on assets and a 20% fee on liabilities."
+    ],
+    "correctAnswer": "A 2% management fee and a 20% incentive fee.",
+    "explanation": "The '2 and 20' structure is a common compensation model for hedge fund managers, consisting of a 2% annual management fee based on assets under management and a 20% incentive fee based on the fund's profits, often above a certain hurdle rate."
+  },
+  {
+    "id": 64,
+    "level": "Level III",
+    "topic": "Private Wealth Management",
+    "question": "A client's investment policy statement (IPS) specifies a required return of 7% and a risk tolerance that is 'below average'. The advisor constructs a portfolio with an expected return of 9% and a standard deviation significantly higher than the market. This portfolio is most likely:",
+    "options": [
+      "Appropriate because it exceeds the required return.",
+      "Inappropriate because it violates the risk tolerance constraint.",
+      "Appropriate because higher returns require higher risk."
+    ],
+    "correctAnswer": "Inappropriate because it violates the risk tolerance constraint.",
+    "explanation": "The IPS serves as the governing document for the client-advisor relationship. While the portfolio exceeds the return objective, it violates the stated risk tolerance constraint. The advisor must construct a portfolio that is consistent with ALL components of the IPS, including both objectives and constraints."
+  },
+  {
+    "id": 65,
+    "level": "Level III",
+    "topic": "Equity Portfolio Management",
+    "question": "A 'closet indexer' is a portfolio manager who:",
+    "options": [
+      "Claims to be an active manager but maintains a portfolio with very low active risk.",
+      "Manages a passive index fund with a very low tracking error.",
+      "Illegally uses nonpublic information to generate returns."
+    ],
+    "correctAnswer": "Claims to be an active manager but maintains a portfolio with very low active risk.",
+    "explanation": "A closet indexer is a fund manager who charges active management fees but constructs a portfolio that closely resembles its benchmark index. This results in low active share and low tracking error, meaning clients are paying for active management but receiving a quasi-passive product."
+  },
+  {
+    "id": 66,
+    "level": "Level III",
+    "topic": "Fixed Income Portfolio Management",
+    "question": "A bond portfolio has a duration of 8.0. The portfolio manager expects a non-parallel shift in the yield curve where short-term rates rise and long-term rates fall (a 'flattening' of the curve). This portfolio will most likely outperform if it is:",
+    "options": [
+      "A bullet portfolio.",
+      "A barbell portfolio.",
+      "A laddered portfolio."
+    ],
+    "correctAnswer": "A bullet portfolio.",
+    "explanation": "A bullet portfolio concentrates its holdings around a single point on the yield curve. In a flattening yield curve scenario, a bullet portfolio will outperform a barbell portfolio of the same duration because it has less exposure to the rising short-term rates and falling long-term rates compared to the barbell's heavy concentration at the short and long ends."
+  },
+  {
+    "id": 67,
+    "level": "Level III",
+    "topic": "Behavioral Finance",
+    "question": "An investor who judges the likelihood of an event based on how easily examples come to mind is exhibiting which behavioral bias?",
+    "options": [
+      "Availability bias.",
+      "Framing bias.",
+      "Anchoring and adjustment bias."
+    ],
+    "correctAnswer": "Availability bias.",
+    "explanation": "Availability bias is a cognitive bias where people overestimate the importance of information that is easy to recall. Recent, vivid, or frequently discussed events are more 'available' in memory and can unduly influence investment decisions."
+  },
+  {
+    "id": 68,
+    "level": "Level I",
+    "topic": "Portfolio Management",
+    "question": "The line representing all possible combinations of a single risky asset and the risk-free asset is the:",
+    "options": [
+      "Security Market Line (SML).",
+      "Capital Allocation Line (CAL).",
+      "Efficient Frontier."
+    ],
+    "correctAnswer": "Capital Allocation Line (CAL).",
+    "explanation": "The Capital Allocation Line (CAL) shows the possible risk-return combinations for a portfolio formed by combining a specific risky asset (or portfolio of risky assets) with the risk-free asset. The Capital Market Line (CML) is a special case of the CAL where the risky asset is the optimal market portfolio."
+  },
+  {
+    "id": 69,
+    "level": "Level I",
+    "topic": "Derivatives",
+    "question": "According to put-call parity, the value of a European call option can be replicated by a portfolio consisting of:",
+    "options": [
+      "A long put, a long position in the underlying stock, and a long position in a zero-coupon bond.",
+      "A long put, a short position in the underlying stock, and a long position in a zero-coupon bond.",
+      "A long put, a long position in the underlying stock, and a short position in a zero-coupon bond."
+    ],
+    "correctAnswer": "A long put, a long position in the underlying stock, and a short position in a zero-coupon bond.",
+    "explanation": "The put-call parity relationship is: C + PV(X) = P + S. Rearranging to solve for the call price (C) gives: C = P + S - PV(X). This translates to a long put, a long stock position, and borrowing the present value of the strike price (i.e., a short position in a zero-coupon bond that pays X at maturity)."
+  },
+  {
+    "id": 70,
+    "level": "Level II",
+    "topic": "Equity Valuation",
+    "question": "A company's justified forward P/E ratio is most likely to be positively related to its:",
+    "options": [
+      "Dividend payout ratio.",
+      "Required rate of return.",
+      "Risk-free rate."
+    ],
+    "correctAnswer": "Dividend payout ratio.",
+    "explanation": "The formula for the justified forward P/E is (D1/E1) / (k - g), which simplifies to (payout ratio) / (k - g). A higher dividend payout ratio, all else equal, will lead to a higher justified P/E ratio. A higher required return (k) would decrease the P/E ratio."
+  },
+  {
+    "id": 71,
+    "level": "Level II",
+    "topic": "Fixed Income",
+    "question": "Key rate duration is a measure used to assess a bond's sensitivity to:",
+    "options": [
+      "Changes in its credit spread.",
+      "Shifts in the overall level of interest rates.",
+      "Changes in the shape of the yield curve."
+    ],
+    "correctAnswer": "Changes in the shape of the yield curve.",
+    "explanation": "Key rate duration measures a bond's price sensitivity to a change in a specific point (a 'key rate') on the yield curve, holding all other rates constant. It is used to understand how a bond or portfolio will react to non-parallel shifts in the yield curve (e.g., steepening or flattening)."
+  },
+  {
+    "id": 72,
+    "level": "Level III",
+    "topic": "Asset Allocation",
+    "question": "In the context of mean-variance optimization, a 'corner portfolio' is a portfolio where:",
+    "options": [
+      "The allocation to a specific asset class first becomes zero.",
+      "It has the highest possible Sharpe ratio.",
+      "It lies at the point of maximum curvature on the efficient frontier."
+    ],
+    "correctAnswer": "The allocation to a specific asset class first becomes zero.",
+    "explanation": "Corner portfolios are special portfolios on the efficient frontier identified by a mean-variance optimization model. They are portfolios where the weight of an asset class either enters or leaves the portfolio (i.e., its weight becomes zero). Any efficient portfolio can be replicated as a combination of two adjacent corner portfolios."
+  },
+  {
+    "id": 73,
+    "level": "Level III",
+    "topic": "Ethics",
+    "question": "A firm claims compliance with the GIPS standards. For the firm to be verified, it must hire an independent third party to:",
+    "options": [
+      "Recalculate the performance of every composite.",
+      "Confirm that the firm has complied with all GIPS requirements on a firm-wide basis.",
+      "Attest to the accuracy of a specific composite's performance."
+    ],
+    "correctAnswer": "Confirm that the firm has complied with all GIPS requirements on a firm-wide basis.",
+    "explanation": "Verification is a firm-wide process. The verifier must attest that (1) the firm has complied with all the composite construction requirements of the GIPS standards on a firm-wide basis and (2) the firm’s processes and procedures are established to calculate and present performance in compliance with the GIPS standards. It is not a recalculation of performance."
+  },
+  {
+    "id": 74,
+    "level": "Level I",
+    "topic": "Financial Statement Analysis",
+    "question": "The LIFO reserve is best described as the amount by which:",
+    "options": [
+      "LIFO inventory exceeds FIFO inventory.",
+      "FIFO inventory exceeds LIFO inventory.",
+      "LIFO COGS exceeds FIFO COGS."
+    ],
+    "correctAnswer": "FIFO inventory exceeds LIFO inventory.",
+    "explanation": "The LIFO reserve is a disclosure required for firms using the LIFO method. It represents the amount by which the LIFO inventory valuation is lower than the FIFO inventory valuation. It can be used to adjust LIFO financial statements to a FIFO basis for comparability (FIFO Inventory = LIFO Inventory + LIFO Reserve)."
+  },
+  {
+    "id": 75,
+    "level": "Level II",
+    "topic": "Derivatives",
+    "question": "The delta of an at-the-money European call option on a non-dividend-paying stock is closest to:",
+    "options": [
+      "0.0",
+      "0.5",
+      "1.0"
+    ],
+    "correctAnswer": "0.5",
+    "explanation": "Delta measures the change in an option's price for a one-unit change in the price of the underlying stock. For an at-the-money call option, there is roughly a 50/50 chance it will finish in-the-money, so its delta is approximately 0.5. Deep in-the-money calls have deltas approaching 1.0, while deep out-of-the-money calls have deltas approaching 0.0."
+  },
+  {
+    "id": 76,
+    "level": "Level III",
+    "topic": "Private Wealth Management",
+    "question": "For a high-net-worth individual, which type of account is generally most favorable for holding assets expected to have high capital appreciation?",
+    "options": [
+      "A taxable brokerage account.",
+      "A tax-deferred account (e.g., traditional IRA).",
+      "A tax-exempt account (e.g., Roth IRA)."
+    ],
+    "correctAnswer": "A tax-exempt account (e.g., Roth IRA).",
+    "explanation": "A tax-exempt account, like a Roth IRA, is the most tax-efficient vehicle for assets with high growth potential. All growth and qualified withdrawals are tax-free. In a tax-deferred account, withdrawals are taxed as ordinary income. In a taxable account, capital gains are taxed upon realization."
+  },
+  {
+    "id": 77,
+    "level": "Level I",
+    "topic": "Economics",
+    "question": "Unemployment that occurs due to a mismatch between the skills of the workforce and the skills demanded by employers is best described as:",
+    "options": [
+      "Frictional unemployment.",
+      "Structural unemployment.",
+      "Cyclical unemployment."
+    ],
+    "correctAnswer": "Structural unemployment.",
+    "explanation": "Structural unemployment arises from long-term changes in the economy, such as technological shifts or changes in industry composition, that make certain job skills obsolete. Frictional unemployment is temporary and occurs when workers are between jobs. Cyclical unemployment is caused by downturns in the business cycle."
+  },
+  {
+    "id": 78,
+    "level": "Level II",
+    "topic": "Portfolio Management",
+    "question": "An active portfolio manager's performance should be evaluated based on the Sharpe ratio, while a security analyst's stock-picking skill should be evaluated based on the:",
+    "options": [
+      "Treynor ratio.",
+      "Information ratio.",
+      "Sortino ratio."
+    ],
+    "correctAnswer": "Information ratio.",
+    "explanation": "The Sharpe ratio measures risk-adjusted return using total risk (standard deviation) and is suitable for evaluating the overall portfolio. The information ratio measures the analyst's ability to generate excess return relative to the unsystematic risk taken (tracking error), which isolates the value added by their specific security selections."
+  },
+  {
+    "id": 79,
+    "level": "Level III",
+    "topic": "Trading and Execution",
+    "question": "A trader who wants to buy a large quantity of a stock immediately, with certainty of execution but uncertainty of price, should use a:",
+    "options": [
+      "Limit order.",
+      "Market order.",
+      "Stop order."
+    ],
+    "correctAnswer": "Market order.",
+    "explanation": "A market order is an instruction to execute a trade immediately at the best available price. It guarantees execution but does not guarantee the price, which is a risk for large orders that can have a significant market impact. A limit order specifies a price but does not guarantee execution."
+  },
+  {
+    "id": 80,
+    "level": "Level I",
+    "topic": "Equity Investments",
+    "question": "A company with a return on equity (ROE) that is consistently higher than its required rate of return on equity (k) is most likely:",
+    "options": [
+      "Destroying shareholder value.",
+      "Creating shareholder value.",
+      "A risk-free investment."
+    ],
+    "correctAnswer": "Creating shareholder value.",
+    "explanation": "When a company's ROE is greater than its cost of equity (k), it means the company is generating returns on its equity capital that exceed the return required by shareholders. This is the fundamental definition of creating shareholder value."
+  },
+  {
+    "id": 81,
+    "level": "Level II",
+    "topic": "Economics",
+    "question": "According to the theory of purchasing power parity (PPP), the exchange rate between two countries will adjust to reflect changes in the two countries':",
+    "options": [
+      "Interest rate differentials.",
+      "Price levels.",
+      "Gross domestic product (GDP)."
+    ],
+    "correctAnswer": "Price levels.",
+    "explanation": "Absolute purchasing power parity suggests that the exchange rate between two currencies should equal the ratio of the two countries' price levels for a fixed basket of goods. In other words, a unit of currency should have the same purchasing power in any country."
+  },
+  {
+    "id": 82,
+    "level": "Level III",
+    "topic": "Fixed Income Portfolio Management",
+    "question": "A 'butterfly spread' is a strategy that involves taking positions in short-, intermediate-, and long-term bonds. A long position in a butterfly spread (long the wings, short the body) will profit from:",
+    "options": [
+      "A parallel upward shift in the yield curve.",
+      "The yield curve becoming more curved (i.e., higher convexity).",
+      "The yield curve becoming flatter."
+    ],
+    "correctAnswer": "The yield curve becoming more curved (i.e., higher convexity).",
+    "explanation": "A long butterfly spread involves buying short- and long-term bonds (the 'wings') and shorting intermediate-term bonds (the 'body'). This position is a bet on increasing yield curve curvature, meaning the intermediate-term yields will fall relative to the short- and long-term yields, or rise less."
+  },
+  {
+    "id": 83,
+    "level": "Level I",
+    "topic": "Corporate Finance",
+    "question": "Which of the following is the best example of a stakeholder of a corporation?",
+    "options": [
+      "A competitor firm.",
+      "The company's employees.",
+      "A stock market index."
+    ],
+    "correctAnswer": "The company's employees.",
+    "explanation": "Stakeholders are any individuals or groups that have an interest in a company's operations and outcomes. This includes shareholders, employees, customers, suppliers, creditors, and the community. Competitors are not typically considered stakeholders in this context."
+  },
+  {
+    "id": 84,
+    "level": "Level II",
+    "topic": "Ethics",
+    "question": "An analyst changes his rating on a stock from 'buy' to 'sell'. He calls all his clients with large positions before the report is publicly released. This action is:",
+    "options": [
+      "Permissible as he is acting in his clients' best interest.",
+      "A violation of the Standard regarding Fair Dealing.",
+      "Acceptable if the clients are all institutional investors."
+    ],
+    "correctAnswer": "A violation of the Standard regarding Fair Dealing.",
+    "explanation": "Standard III(B) Fair Dealing requires members to deal fairly and objectively with all clients when disseminating investment recommendations. The analyst must ensure that all clients have a fair opportunity to act on the recommendation. Informing some clients before others is a violation, regardless of their size."
+  },
+  {
+    "id": 85,
+    "level": "Level III",
+    "topic": "Private Wealth Management",
+    "question": "A 'generation-skipping trust' is a legal structure primarily designed to:",
+    "options": [
+      "Provide income for the grantor's children.",
+      "Avoid gift and estate taxes for one or more generations.",
+      "Invest in assets suitable for younger beneficiaries."
+    ],
+    "correctAnswer": "Avoid gift and estate taxes for one or more generations.",
+    "explanation": "A generation-skipping trust (GST) is an estate planning tool used to pass assets to grandchildren or later generations. Its primary purpose is to minimize estate and gift taxes that would otherwise be incurred at each generational transfer."
+  },
+  {
+    "id": 86,
+    "level": "Level I",
+    "topic": "Quantitative Methods",
+    "question": "If two events are independent, the probability that they both occur is calculated by:",
+    "options": [
+      "Adding their individual probabilities.",
+      "Multiplying their individual probabilities.",
+      "Taking the average of their individual probabilities."
+    ],
+    "correctAnswer": "Multiplying their individual probabilities.",
+    "explanation": "The multiplication rule for independent events states that P(A and B) = P(A) * P(B). This is a fundamental concept in probability theory."
+  },
+  {
+    "id": 87,
+    "level": "Level II",
+    "topic": "Derivatives",
+    "question": "The gamma of an option is best described as the rate of change of the option's:",
+    "options": [
+      "Price with respect to the underlying stock's price.",
+      "Delta with respect to the underlying stock's price.",
+      "Price with respect to the passage of time."
+    ],
+    "correctAnswer": "Delta with respect to the underlying stock's price.",
+    "explanation": "Gamma is a second-order 'Greek' that measures how much an option's delta changes for a one-unit change in the price of the underlying asset. It is a measure of the convexity of the option's value."
+  },
+  {
+    "id": 88,
+    "level": "Level III",
+    "topic": "Equity Portfolio Management",
+    "question": "A portfolio manager using a 'core-satellite' approach would most likely allocate the largest portion of the portfolio to:",
+    "options": [
+      "A concentrated portfolio of high-conviction active bets.",
+      "A diversified portfolio of alternative investments.",
+      "A broad, low-cost passive index fund or ETF."
+    ],
+    "correctAnswer": "A broad, low-cost passive index fund or ETF.",
+    "explanation": "In a core-satellite strategy, the 'core' of the portfolio is invested in a passive, low-cost, and broadly diversified investment (like an S&P 500 ETF) to provide market returns. The smaller 'satellite' portion is then allocated to active managers or concentrated positions to seek alpha."
+  },
+  {
+    "id": 89,
+    "level": "Level I",
+    "topic": "Financial Statement Analysis",
+    "question": "A company decides to change an accounting estimate. Under IFRS and US GAAP, this change should be applied:",
+    "options": [
+      "Retrospectively, by restating prior period financial statements.",
+      "Prospectively, in the current and future periods.",
+      "By recording a cumulative adjustment to retained earnings."
+    ],
+    "correctAnswer": "Prospectively, in the current and future periods.",
+    "explanation": "Changes in accounting estimates (e.g., changing the estimated useful life of an asset) are a result of new information. They are applied prospectively, meaning they affect the financial statements of the current and future periods only. Prior periods are not restated."
+  },
+  {
+    "id": 90,
+    "level": "Level II",
+    "topic": "Portfolio Management",
+    "question": "The fundamental law of active management states that a manager's information ratio is primarily dependent on their:",
+    "options": [
+      "Skill and breadth.",
+      "Leverage and risk tolerance.",
+      "Portfolio beta and tracking error."
+    ],
+    "correctAnswer": "Skill and breadth.",
+    "explanation": "The fundamental law of active management states that Information Ratio ≈ Information Coefficient × √(Breadth). The Information Coefficient (IC) is a measure of manager skill (correlation between forecasts and actual outcomes), and Breadth (BR) is the number of independent investment decisions made per year."
+  },
+  {
+    "id": 91,
+    "level": "Level III",
+    "topic": "Behavioral Finance",
+    "question": "An investor continues to hold a concentrated position in her employer's stock, believing she has superior knowledge about the company's future prospects. This is most likely an example of:",
+    "options": [
+      "Self-control bias.",
+      "Illusion of control bias.",
+      "Endowment bias."
+    ],
+    "correctAnswer": "Illusion of control bias.",
+    "explanation": "Illusion of control is a cognitive bias where people believe they can control or at least influence outcomes that they demonstrably have no influence over. Familiarity with her employer's stock leads the investor to believe she has more control over its performance than she actually does, resulting in under-diversification."
+  },
+  {
+    "id": 92,
+    "level": "Level I",
+    "topic": "Alternative Investments",
+    "question": "Which of the following is the most likely reason for including real estate in a diversified portfolio?",
+    "options": [
+      "High liquidity.",
+      "Potential for inflation hedging.",
+      "Low transaction costs."
+    ],
+    "correctAnswer": "Potential for inflation hedging.",
+    "explanation": "Real estate, particularly direct property investments, often acts as a hedge against inflation because rents and property values tend to rise with general price levels. Liquidity is typically low and transaction costs are high."
+  },
+  {
+    "id": 93,
+    "level": "Level I",
+    "topic": "Portfolio Management",
+    "question": "An investor's willingness to take risk is primarily a function of their:",
+    "options": [
+      "Age and income.",
+      "Personality and psychological traits.",
+      "Number of dependents."
+    ],
+    "correctAnswer": "Personality and psychological traits.",
+    "explanation": "Willingness to take risk is a subjective measure based on an investor's psychology, personality, and attitude toward risk. In contrast, the ability to take risk is an objective measure based on financial circumstances like age, wealth, and time horizon."
+  },
+  {
+    "id": 94,
+    "level": "Level II",
+    "topic": "Fixed Income",
+    "question": "A credit rating agency downgrades a company's bonds from investment grade to non-investment grade. This is most likely to cause the bond's:",
+    "options": [
+      "Credit spread to narrow.",
+      "Yield to maturity to decrease.",
+      "Price to decrease."
+    ],
+    "correctAnswer": "Price to decrease.",
+    "explanation": "A downgrade signifies an increase in perceived credit risk. Investors will demand a higher yield to compensate for this additional risk. A higher yield (and wider credit spread) corresponds to a lower bond price."
+  },
+  {
+    "id": 95,
+    "level": "Level II",
+    "topic": "Financial Statement Analysis",
+    "question": "Under US GAAP, a firm that acquires another company must expense costs related to the acquisition, such as legal and advisory fees. These costs are most likely reported on the income statement as:",
+    "options": [
+      "Part of cost of goods sold.",
+      "A component of goodwill.",
+      "A general and administrative expense."
+    ],
+    "correctAnswer": "A general and administrative expense.",
+    "explanation": "Acquisition-related costs are not capitalized as part of the purchase price under US GAAP or IFRS. They are treated as expenses in the period they are incurred and are typically classified as part of selling, general, and administrative (SG&A) expenses."
+  },
+  {
+    "id": 96,
+    "level": "Level III",
+    "topic": "Asset Allocation",
+    "question": "Compared to a strategic asset allocation, a dynamic asset allocation strategy is best described as one that:",
+    "options": [
+      "Maintains constant asset class weights over time.",
+      "Sells assets that have performed well and buys assets that have performed poorly.",
+      "Buys assets that have performed well and sells assets that have performed poorly."
+    ],
+    "correctAnswer": "Buys assets that have performed well and sells assets that have performed poorly.",
+    "explanation": "Dynamic asset allocation is a momentum-based strategy. It involves systematically buying assets that are rising in price and selling those that are falling, which is a form of trend-following. This contrasts with a rebalancing strategy (often used with SAA) that sells winners and buys losers to return to target weights."
+  },
+  {
+    "id": 97,
+    "level": "Level III",
+    "topic": "Derivatives and Currency Management",
+    "question": "A portfolio manager wants to earn a premium by selling options, believing that the market will remain stable. The most appropriate strategy is a:",
+    "options": [
+      "Long straddle.",
+      "Short straddle.",
+      "Protective put."
+    ],
+    "correctAnswer": "Short straddle.",
+    "explanation": "A short straddle involves selling both a call and a put option with the same strike price and expiration date. The manager collects the premium from both options and profits if the underlying asset's price stays within a narrow range around the strike price, allowing the options to expire worthless. It is a bet on low volatility."
+  },
+  {
+    "id": 98,
+    "level": "Level I",
+    "topic": "Quantitative Methods",
+    "question": "An analyst is testing the null hypothesis that a portfolio's mean return is equal to zero. If the analyst rejects the null hypothesis when it is actually true, this is an example of a:",
+    "options": [
+      "Type I error.",
+      "Type II error.",
+      "Correct decision."
+    ],
+    "correctAnswer": "Type I error.",
+    "explanation": "A Type I error is the rejection of a true null hypothesis. A Type II error is the failure to reject a false null hypothesis. In this case, rejecting the true null (that the mean return is zero) is a Type I error."
+  },
+  {
+    "id": 99,
+    "level": "Level II",
+    "topic": "Equity Valuation",
+    "question": "Which of the following is the most appropriate valuation model for a company that is not expected to pay dividends in the foreseeable future?",
+    "options": [
+      "Dividend discount model (DDM).",
+      "Free cash flow to equity (FCFE) model.",
+      "Gordon growth model."
+    ],
+    "correctAnswer": "Free cash flow to equity (FCFE) model.",
+    "explanation": "FCFE represents the cash flow available to be distributed to equity holders after all expenses and reinvestment needs are met. It is a suitable model for valuing firms that do not pay dividends, as it is based on the capacity to pay dividends rather than the actual dividends paid. DDM and the Gordon growth model rely on dividend payments."
+  },
+  {
+    "id": 100,
+    "level": "Level III",
+    "topic": "Private Wealth Management",
+    "question": "A 40-year-old client has a high-paying, stable job and a significant amount of savings. Her children's college education is fully funded. Her ability to take risk is most likely:",
+    "options": [
+      "Low.",
+      "Average.",
+      "High."
+    ],
+    "correctAnswer": "High.",
+    "explanation": "Ability to take risk is an objective measure. This client has a long time horizon until retirement, a stable source of income, and has already met a major financial goal (college funding). These factors give her a high financial ability to withstand portfolio volatility and potential losses."
+  }
+]
