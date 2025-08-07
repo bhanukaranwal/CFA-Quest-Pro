@@ -1,20 +1,21 @@
 import React from 'react';
-import { Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement } from 'chart.js';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title } from 'chart.js';
 import { Pie, Bar } from 'react-chartjs-2';
 
-ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement);
+ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title);
 
 function Dashboard() {
-    // NOTE: In a real app, this data would come from user's history.
     const progressData = {
-        correct: 15,
-        incorrect: 5,
-        total: 20,
+        correct: 68,
+        incorrect: 23,
+        total: 91,
         topicPerformance: {
-            'Ethics': 0.8,
-            'Quantitative Methods': 0.6,
-            'Equity Valuation': 0.9,
-            'Portfolio Management': 0.7
+            'Ethics': 0.85,
+            'Quants': 0.65,
+            'Econ': 0.72,
+            'FSA': 0.78,
+            'Equity': 0.91,
+            'FI': 0.68,
         }
     };
 
@@ -22,52 +23,43 @@ function Dashboard() {
         labels: ['Correct Answers', 'Incorrect Answers'],
         datasets: [{
             data: [progressData.correct, progressData.incorrect],
-            backgroundColor: ['#4CAF50', '#F44336'],
-            hoverBackgroundColor: ['#66BB6A', '#EF5350']
+            backgroundColor: ['#1abc9c', '#e74c3c'],
+            borderColor: '#FFFFFF',
+            borderWidth: 4,
         }],
     };
-
+    
     const barData = {
         labels: Object.keys(progressData.topicPerformance),
         datasets: [{
-            label: 'Accuracy by Topic',
-            data: Object.values(progressData.topicPerformance).map(v => v*100),
-            backgroundColor: '#0052CC',
+            label: 'Accuracy',
+            data: Object.values(progressData.topicPerformance).map(v => v * 100),
+            backgroundColor: '#2c3e50',
+            borderRadius: 4,
         }]
     };
-
-    const barOptions = {
-        scales: {
-            y: {
-                beginAtZero: true,
-                ticks: {
-                    callback: function(value) {
-                        return value + '%'
-                    }
-                }
-            }
-        },
+    
+    const commonOptions = {
         plugins: {
-            legend: {
-                display: false
-            }
+            legend: { position: 'bottom' },
+            title: { display: true, font: { size: 18, weight: 'bold' }, color: '#212529' }
         }
     };
 
     return (
-        <div className="container mx-auto p-8">
-            <h2 className="text-3xl font-bold text-text-dark mb-8">Your Dashboard</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                    <h3 className="text-xl font-semibold text-text-dark mb-4">Overall Performance</h3>
-                    <div className="w-2/3 mx-auto">
-                        <Pie data={pieData} />
+        <div className="container mx-auto p-6 sm:p-8">
+            <h1 className="text-4xl font-extrabold text-text-primary mb-8">Your Progress Dashboard</h1>
+            <div className="grid lg:grid-cols-3 gap-8">
+                <div className="lg:col-span-1 bg-surface p-6 rounded-xl shadow-md flex flex-col justify-center items-center">
+                    <h3 className="text-xl font-bold text-text-primary mb-4">Overall Performance</h3>
+                    <div className="w-full max-w-xs">
+                        <Pie data={pieData} options={{...commonOptions, title: { ...commonOptions.plugins.title, text: 'Answer Breakdown' }}} />
                     </div>
-                    <p className="text-center mt-4 text-text-light">Total Questions Answered: {progressData.total}</p>
+                    <p className="text-center mt-6 text-text-secondary">Total Questions Answered: <span className="font-bold text-text-primary">{progressData.total}</span></p>
                 </div>
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                    <h3 className="text-xl font-semibold text-text-dark mb-4">Topic Mastery</h3>
-                    <Bar data={barData} options={barOptions} />
+                <div className="lg:col-span-2 bg-surface p-6 rounded-xl shadow-md">
+                    <h3 className="text-xl font-bold text-text-primary mb-4">Topic Mastery</h3>
+                    <Bar data={barData} options={{...commonOptions, indexAxis: 'y', scales: { x: { ticks: { callback: value => `${value}%` } } }, title: { ...commonOptions.plugins.title, text: 'Accuracy by Topic' }}} />
                 </div>
             </div>
         </div>
