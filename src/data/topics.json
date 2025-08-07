@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Ethics",
+    "subtopics": ["Code and Standards", "GIPS"]
+  },
+  {
+    "name": "Quantitative Methods",
+    "subtopics": ["TVM", "Probability", "Statistics", "Hypothesis Testing"]
+  },
+  {
+    "name": "Economics",
+    "subtopics": ["Microeconomics", "Macroeconomics", "Currency Exchange"]
+  },
+  {
+    "name": "Financial Statement Analysis",
+    "subtopics": ["Income Statements", "Balance Sheet", "Cash Flow Statement", "Financial Ratios", "Pensions"]
+  },
+  {
+    "name": "Corporate Finance",
+    "subtopics": ["Capital Budgeting", "WACC", "Corporate Governance"]
+  },
+  {
+    "name": "Equity Investments",
+    "subtopics": ["Market Organization", "Security Valuation", "Industry Analysis"]
+  },
+  {
+    "name": "Fixed Income",
+    "subtopics": ["Valuation Concepts", "Risk Analysis", "Credit Analysis"]
+  },
+  {
+    "name": "Derivatives",
+    "subtopics": ["Forwards & Futures", "Options", "Swaps"]
+  },
+  {
+    "name": "Alternative Investments",
+    "subtopics": ["Real Estate", "Private Equity", "Hedge Funds"]
+  },
+  {
+    "name": "Portfolio Management",
+    "subtopics": ["Risk Management", "Portfolio Theory", "IPS"]
+  }
+]
