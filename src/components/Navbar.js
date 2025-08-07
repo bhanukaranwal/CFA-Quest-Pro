@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { FaBookOpen, FaChartPie, FaTrophy, FaHome, FaGraduationCap } from 'react-icons/fa';
+import { FaBookOpen, FaChartPie, FaTrophy, FaHome, FaGraduationCap, FaFilePdf } from 'react-icons/fa';
 
 function Navbar() {
   const activeLinkClass = "bg-primary-hover text-white";
@@ -33,6 +33,10 @@ function Navbar() {
               <NavLink to="/achievements" className={({ isActive }) => `${isActive ? activeLinkClass : defaultLinkClass} px-3 py-2 rounded-md text-sm font-medium flex items-center space-x-2`}>
                 <FaTrophy />
                 <span>Achievements</span>
+              </NavLink>
+              <NavLink to="/formula-sheets" className={({ isActive }) => `${isActive ? activeLinkClass : defaultLinkClass} px-3 py-2 rounded-md text-sm font-medium flex items-center space-x-2`}>
+                <FaFilePdf />
+                <span>Formula Sheets</span>
               </NavLink>
             </div>
           </div>
