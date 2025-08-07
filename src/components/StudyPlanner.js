@@ -94,6 +94,3 @@ function StudyPlanner() {
 }
 
 export default StudyPlanner;
-```
-
-After you create the `src/components/StudyPlanner.js` file with this code, commit it and push it to your GitHub repository. This should resolve the build error on Verc
