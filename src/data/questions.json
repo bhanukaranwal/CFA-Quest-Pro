@@ -1300,3 +1300,421 @@
     "explanation": "Ability to take risk is an objective measure. This client has a long time horizon until retirement, a stable source of income, and has already met a major financial goal (college funding). These factors give her a high financial ability to withstand portfolio volatility and potential losses."
   }
 ]
+[
+  {
+    "id": 101,
+    "level": "Level I",
+    "topic": "Ethics",
+    "question": "An analyst, while on a business trip, pays for a client's expensive dinner with the client's knowledge and approval. According to the CFA Institute Standards of Professional Conduct, this action is:",
+    "options": [
+      "A violation of the Standard on Independence and Objectivity.",
+      "Acceptable as it was disclosed to the client.",
+      "A violation of the Standard on Misconduct."
+    ],
+    "correctAnswer": "Acceptable as it was disclosed to the client.",
+    "explanation": "Standard I(B) Independence and Objectivity is not violated if the gift is disclosed and does not compromise the analyst's objectivity. Since the client approved, it is presumed the gift was not intended to impair independence."
+  },
+  {
+    "id": 102,
+    "level": "Level I",
+    "topic": "Quantitative Methods",
+    "question": "An investment has the following annual returns over four years: 10%, -5%, 15%, and 8%. The geometric mean return is closest to:",
+    "options": [
+      "6.8%",
+      "7.0%",
+      "7.2%"
+    ],
+    "correctAnswer": "6.8%",
+    "explanation": "Geometric Mean = [(1 + 0.10) * (1 - 0.05) * (1 + 0.15) * (1 + 0.08)]^(1/4) - 1.  Calculation: [(1.10) * (0.95) * (1.15) * (1.08)]^(1/4) - 1 = [1.30059]^(0.25) - 1 = 1.0678 - 1 = 0.0678 or 6.8%."
+  },
+  {
+    "id": 103,
+    "level": "Level I",
+    "topic": "Economics",
+    "question": "If a country's nominal GDP increased by 7% and the GDP deflator increased by 3%, the real GDP growth was closest to:",
+    "options": [
+      "4.0%",
+      "10.0%",
+      "3.9%"
+    ],
+    "correctAnswer": "3.9%",
+    "explanation": "Real GDP Growth ≈ Nominal GDP Growth - Inflation Rate. Real GDP Growth ≈ 7% - 3% = 4%. The more precise calculation is [(1 + Nominal Growth) / (1 + Inflation)] - 1 = (1.07 / 1.03) - 1 = 1.0388 - 1 = 3.88% or approximately 3.9%."
+  },
+  {
+    "id": 104,
+    "level": "Level I",
+    "topic": "Financial Statement Analysis",
+    "question": "A company purchases a machine for $200,000 with an estimated useful life of 5 years and a salvage value of $20,000. Using the straight-line method, the annual depreciation expense is:",
+    "options": [
+      "$40,000",
+      "$36,000",
+      "$44,000"
+    ],
+    "correctAnswer": "$36,000",
+    "explanation": "Straight-line depreciation = (Cost - Salvage Value) / Useful Life. Calculation: ($200,000 - $20,000) / 5 years = $180,000 / 5 = $36,000 per year."
+  },
+  {
+    "id": 105,
+    "level": "Level I",
+    "topic": "Portfolio Management",
+    "question": "The risk-free rate is 3%, and the market risk premium is 6%. According to the Capital Asset Pricing Model (CAPM), what is the expected return for a stock with a beta of 1.2?",
+    "options": [
+      "9.0%",
+      "10.2%",
+      "7.2%"
+    ],
+    "correctAnswer": "10.2%",
+    "explanation": "Expected Return = Risk-Free Rate + Beta * (Market Risk Premium). Calculation: 3% + 1.2 * 6% = 3% + 7.2% = 10.2%."
+  },
+  {
+    "id": 106,
+    "level": "Level I",
+    "topic": "Fixed Income",
+    "question": "A 5-year, 6% annual coupon bond with a par value of $1,000 is currently trading at $960. The bond's current yield is closest to:",
+    "options": [
+      "6.00%",
+      "6.25%",
+      "5.76%"
+    ],
+    "correctAnswer": "6.25%",
+    "explanation": "Current Yield = Annual Coupon Payment / Current Market Price. The annual coupon payment is 6% of $1,000, which is $60. Calculation: $60 / $960 = 0.0625 or 6.25%."
+  },
+  {
+    "id": 107,
+    "level": "Level I",
+    "topic": "Derivatives",
+    "question": "A stock is trading at $50. A call option with a strike price of $55 is trading for a premium of $2. What is the intrinsic value of the option?",
+    "options": [
+      "$5",
+      "$2",
+      "$0"
+    ],
+    "correctAnswer": "$0",
+    "explanation": "The intrinsic value of a call option is Max(0, Stock Price - Strike Price). Since the stock price ($50) is below the strike price ($55), the option is out-of-the-money. Calculation: Max(0, $50 - $55) = Max(0, -$5) = $0. The premium ($2) consists entirely of time value."
+  },
+  {
+    "id": 108,
+    "level": "Level I",
+    "topic": "Equity Investments",
+    "question": "A company has earnings per share (EPS) of $4.00 and pays out 60% of its earnings as dividends. If the stock is trading at $50 per share, the dividend yield is closest to:",
+    "options": [
+      "8.0%",
+      "4.8%",
+      "3.2%"
+    ],
+    "correctAnswer": "4.8%",
+    "explanation": "First, calculate the dividend per share (DPS): DPS = EPS * Payout Ratio = $4.00 * 0.60 = $2.40. Then, calculate the dividend yield: Dividend Yield = DPS / Stock Price = $2.40 / $50.00 = 0.048 or 4.8%."
+  },
+  {
+    "id": 109,
+    "level": "Level I",
+    "topic": "Corporate Finance",
+    "question": "A project has an initial outlay of $100,000. It is expected to generate after-tax cash flows of $30,000 per year for the next 5 years. If the company's cost of capital is 10%, the project's Net Present Value (NPV) is closest to:",
+    "options": [
+      "$13,724",
+      "$11,372",
+      "$15,849"
+    ],
+    "correctAnswer": "$13,724",
+    "explanation": "This is an annuity calculation. Using a financial calculator: N=5, I/Y=10, PMT=30000, FV=0. Compute PV = $113,723.50. The NPV is the present value of the cash inflows minus the initial outlay. NPV = $113,723.50 - $100,000 = $13,723.50."
+  },
+  {
+    "id": 110,
+    "level": "Level I",
+    "topic": "Ethics",
+    "question": "A CFA member is part of a team that produces a research report. The member does not agree with the final recommendation. According to the CFA Institute Standards, the member should most appropriately:",
+    "options": [
+      "Refuse to have their name associated with the report.",
+      "Change the recommendation to match their own conclusion.",
+      "Sign the report but add a dissenting opinion."
+    ],
+    "correctAnswer": "Refuse to have their name associated with the report.",
+    "explanation": "Standard V(A) Diligence and Reasonable Basis requires members to have a reasonable and adequate basis for any analysis. If a member does not agree with the report's conclusion, they cannot be associated with it. They should dissociate from the report, which may involve refusing to have their name listed."
+  },
+  {
+    "id": 111,
+    "level": "Level I",
+    "topic": "Quantitative Methods",
+    "question": "A portfolio has an expected return of 15% and a standard deviation of 20%. If the risk-free rate is 5%, what is the portfolio's Sharpe ratio?",
+    "options": [
+      "0.50",
+      "0.75",
+      "1.00"
+    ],
+    "correctAnswer": "0.50",
+    "explanation": "Sharpe Ratio = (Portfolio Return - Risk-Free Rate) / Portfolio Standard Deviation. Calculation: (15% - 5%) / 20% = 10% / 20% = 0.50."
+  },
+  {
+    "id": 112,
+    "level": "Level I",
+    "topic": "Financial Statement Analysis",
+    "question": "A company reports total assets of $500,000, total liabilities of $300,000, and sales of $1,000,000. Its total asset turnover ratio is:",
+    "options": [
+      "2.0x",
+      "0.6x",
+      "3.3x"
+    ],
+    "correctAnswer": "2.0x",
+    "explanation": "Total Asset Turnover = Sales / Average Total Assets. Assuming the ending total assets of $500,000 is representative, the calculation is: $1,000,000 / $500,000 = 2.0."
+  },
+  {
+    "id": 113,
+    "level": "Level II",
+    "topic": "Equity Valuation",
+    "question": "A company just paid a dividend of $2.00 per share. The dividend is expected to grow at 10% for the next two years, and then at a constant rate of 5% thereafter. If the required rate of return is 12%, the current value of the stock is closest to:",
+    "options": [
+      "$33.57",
+      "$35.04",
+      "$32.83"
+    ],
+    "correctAnswer": "$32.83",
+    "explanation": "This requires a two-stage DDM. D1 = 2.00 * 1.10 = $2.20. D2 = 2.20 * 1.10 = $2.42. D3 = 2.42 * 1.05 = $2.541. Terminal Value at end of Year 2 (P2) = D3 / (k - g) = $2.541 / (0.12 - 0.05) = $36.30. Stock Value = PV(D1) + PV(D2 + P2) = $2.20 / 1.12 + ($2.42 + $36.30) / (1.12)^2 = $1.964 + $38.72 / 1.2544 = $1.964 + $30.87 = $32.834."
+  },
+  {
+    "id": 114,
+    "level": "Level II",
+    "topic": "Fixed Income",
+    "question": "A 10-year, 8% annual coupon bond is callable in 5 years at a price of $1,040. The bond is currently trading at $1,060. The yield to call (YTC) is closest to:",
+    "options": [
+      "7.05%",
+      "8.00%",
+      "7.45%"
+    ],
+    "correctAnswer": "7.05%",
+    "explanation": "This is a bond yield calculation. Using a financial calculator: N=5 (years to call), PV=-1060 (current price), PMT=80 (annual coupon), FV=1040 (call price). Compute I/Y = 7.05%. This is the yield an investor would earn if they buy the bond today and it is called in 5 years."
+  },
+  {
+    "id": 115,
+    "level": "Level II",
+    "topic": "Financial Statement Analysis",
+    "question": "A company uses the LIFO inventory method. It reports a LIFO reserve of $50,000 at the start of the year and $65,000 at the end of the year. The company's tax rate is 30%. The increase in the LIFO reserve resulted in a tax savings of:",
+    "options": [
+      "$15,000",
+      "$4,500",
+      "$19,500"
+    ],
+    "correctAnswer": "$4,500",
+    "explanation": "The change in the LIFO reserve is $65,000 - $50,000 = $15,000. This increase represents additional COGS recognized under LIFO compared to FIFO, which reduces taxable income. Tax Savings = Change in LIFO Reserve * Tax Rate = $15,000 * 0.30 = $4,500."
+  },
+  {
+    "id": 116,
+    "level": "Level II",
+    "topic": "Derivatives",
+    "question": "A stock is priced at $100. The continuously compounded risk-free rate is 4%. A 6-month forward contract on this stock should have a forward price closest to:",
+    "options": [
+      "$102.00",
+      "$104.00",
+      "$102.02"
+    ],
+    "correctAnswer": "$102.02",
+    "explanation": "The no-arbitrage forward price is calculated as F = S * e^(rT), where S is the spot price, r is the risk-free rate, and T is the time in years. F = $100 * e^(0.04 * 0.5) = $100 * e^(0.02) = $100 * 1.0202 = $102.02."
+  },
+  {
+    "id": 117,
+    "level": "Level II",
+    "topic": "Equity Valuation",
+    "question": "A firm has a return on equity (ROE) of 18% and a dividend payout ratio of 40%. The firm's cost of equity is 13%. The justified price-to-book (P/B) ratio is closest to:",
+    "options": [
+      "2.77",
+      "3.27",
+      "1.38"
+    ],
+    "correctAnswer": "3.27",
+    "explanation": "First, calculate the sustainable growth rate (g) = ROE * (1 - payout ratio) = 18% * (1 - 0.40) = 10.8%. The justified P/B ratio = (ROE - g) / (k - g) = (0.18 - 0.108) / (0.13 - 0.108) = 0.072 / 0.022 = 3.27."
+  },
+  {
+    "id": 118,
+    "level": "Level III",
+    "topic": "Fixed Income Portfolio Management",
+    "question": "A portfolio manager holds a bond with a modified duration of 7.0. If the bond's yield is expected to increase by 25 basis points (0.25%), the expected percentage price change of the bond is closest to:",
+    "options": [
+      "-1.75%",
+      "+1.75%",
+      "-2.80%"
+    ],
+    "correctAnswer": "-1.75%",
+    "explanation": "Expected % Price Change ≈ -Modified Duration * ΔYield. Calculation: -7.0 * (+0.0025) = -0.0175 or -1.75%. An increase in yield leads to a decrease in price."
+  },
+  {
+    "id": 119,
+    "level": "Level III",
+    "topic": "Derivatives and Currency Management",
+    "question": "A portfolio manager wants to create a protective put position on a stock currently trading at $80. She buys a put option with a strike price of $75 for a premium of $3. What is the maximum possible loss on this combined position?",
+    "options": [
+      "$8",
+      "$5",
+      "Unlimited"
+    ],
+    "correctAnswer": "$8",
+    "explanation": "A protective put consists of a long stock and a long put. The maximum loss occurs if the stock price falls to or below the strike price at expiration. The loss is the initial cost of the stock minus the strike price, plus the cost of the put. Max Loss = (Stock Price - Strike Price) + Put Premium = ($80 - $75) + $3 = $5 + $3 = $8 per share."
+  },
+  {
+    "id": 120,
+    "level": "Level III",
+    "topic": "Equity Portfolio Management",
+    "question": "An active portfolio manager generates an active return of 2.5% with an active risk (tracking error) of 5.0%. What is the manager's information ratio?",
+    "options": [
+      "0.50",
+      "2.00",
+      "12.5"
+    ],
+    "correctAnswer": "0.50",
+    "explanation": "Information Ratio = Active Return / Active Risk. Calculation: 2.5% / 5.0% = 0.50. This measures the manager's ability to generate excess return per unit of unsystematic risk taken."
+  },
+  {
+    "id": 121,
+    "level": "Level I",
+    "topic": "Financial Statement Analysis",
+    "question": "A company has a cash conversion cycle of 50 days. Its payables turnover is 12. The number of days of payables is closest to:",
+    "options": [
+      "30.4",
+      "24.3",
+      "50.0"
+    ],
+    "correctAnswer": "30.4",
+    "explanation": "Number of days of payables = 365 / payables turnover = 365 / 12 = 30.4 days. The cash conversion cycle information is not needed for this calculation."
+  },
+  {
+    "id": 122,
+    "level": "Level I",
+    "topic": "Fixed Income",
+    "question": "A bond with a par value of $1,000 has a coupon rate of 5% paid semi-annually and a maturity of 10 years. If the bond's yield to maturity is 6%, its price is closest to:",
+    "options": [
+      "$925.61",
+      "$1,000.00",
+      "$1,077.95"
+    ],
+    "correctAnswer": "$925.61",
+    "explanation": "Using a financial calculator for a semi-annual bond: N = 10 * 2 = 20; I/Y = 6 / 2 = 3; PMT = (0.05 * 1000) / 2 = 25; FV = 1000. Compute PV = -$925.61. The bond is trading at a discount because its coupon rate is less than its yield."
+  },
+  {
+    "id": 123,
+    "level": "Level II",
+    "topic": "Equity Valuation",
+    "question": "A company has a Free Cash Flow to the Firm (FCFF) of $50 million in the current year. The FCFF is expected to grow at 4% indefinitely. The company's WACC is 9%. The total value of the firm is closest to:",
+    "options": [
+      "$1,000 million",
+      "$1,040 million",
+      "$555 million"
+    ],
+    "correctAnswer": "$1,040 million",
+    "explanation": "The value of the firm can be calculated using the constant-growth FCFF model: Firm Value = FCFF1 / (WACC - g). First, calculate FCFF1 = FCFF0 * (1 + g) = $50 * (1.04) = $52 million. Then, Firm Value = $52 / (0.09 - 0.04) = $52 / 0.05 = $1,040 million."
+  },
+  {
+    "id": 124,
+    "level": "Level II",
+    "topic": "Quantitative Methods",
+    "question": "An analyst runs a regression of a stock's returns against the market's returns. The regression yields an R-squared of 0.40. This means that:",
+    "options": [
+      "40% of the stock's returns are explained by the market's returns.",
+      "The correlation between the stock and the market is 0.40.",
+      "The stock has a beta of 0.40."
+    ],
+    "correctAnswer": "40% of the stock's returns are explained by the market's returns.",
+    "explanation": "R-squared, the coefficient of determination, measures the proportion of the variance in the dependent variable (stock returns) that is predictable from the independent variable (market returns). An R-squared of 0.40 means that 40% of the stock's risk is systematic (related to the market)."
+  },
+  {
+    "id": 125,
+    "level": "Level III",
+    "topic": "Private Wealth Management",
+    "question": "A client has $2,000,000 in a portfolio. Her annual living expenses are $80,000. Her required rate of return to maintain the portfolio's real value, assuming an inflation rate of 3%, is closest to:",
+    "options": [
+      "4.0%",
+      "7.0%",
+      "7.12%"
+    ],
+    "correctAnswer": "7.12%",
+    "explanation": "The required return has two components: covering living expenses and growing with inflation. The spending rate is $80,000 / $2,000,000 = 4%. The total required nominal return is calculated multiplicatively: (1 + Spending Rate) * (1 + Inflation Rate) - 1 = (1.04 * 1.03) - 1 = 1.0712 - 1 = 7.12%."
+  },
+  {
+    "id": 126,
+    "level": "Level III",
+    "topic": "Fixed Income Portfolio Management",
+    "question": "A bond portfolio has a dollar duration of $50,000. To fully hedge the portfolio against a change in interest rates using a futures contract with a dollar duration of $10,000, the manager should:",
+    "options": [
+      "Sell 5 futures contracts.",
+      "Buy 5 futures contracts.",
+      "Sell 0.2 futures contracts."
+    ],
+    "correctAnswer": "Sell 5 futures contracts.",
+    "explanation": "The hedge ratio is calculated as (Dollar Duration of Portfolio) / (Dollar Duration of Hedge Instrument). Hedge Ratio = $50,000 / $10,000 = 5. Since the manager is long the bond portfolio and wants to hedge against interest rate risk (i.e., rising rates), they must take a short position in the futures. Therefore, they should sell 5 futures contracts."
+  },
+  {
+    "id": 127,
+    "level": "Level I",
+    "topic": "Economics",
+    "question": "Which of the following best describes a Giffen good?",
+    "options": [
+      "An inferior good where the income effect outweighs the substitution effect.",
+      "A normal good with a high price elasticity of demand.",
+      "A good for which demand increases as its price increases."
+    ],
+    "correctAnswer": "An inferior good where the income effect outweighs the substitution effect.",
+    "explanation": "A Giffen good is a rare type of inferior good. When its price increases, the negative income effect (consumers feel poorer and buy less) is so strong that it overpowers the substitution effect (consumers switch to cheaper alternatives), leading to an increase in quantity demanded."
+  },
+  {
+    "id": 128,
+    "level": "Level I",
+    "topic": "Equity Investments",
+    "question": "A company has a book value per share of $20. Its return on equity (ROE) is 15% and its cost of equity is 10%. Based on this information, the stock should trade at a price-to-book (P/B) multiple that is:",
+    "options": [
+      "Less than 1.0x.",
+      "Equal to 1.0x.",
+      "Greater than 1.0x."
+    ],
+    "correctAnswer": "Greater than 1.0x.",
+    "explanation": "When a company's ROE is greater than its cost of equity (k), it is creating value for shareholders. This means the market value of its equity should be higher than its book value, resulting in a P/B ratio greater than 1.0."
+  },
+  {
+    "id": 129,
+    "level": "Level II",
+    "topic": "Financial Statement Analysis",
+    "question": "A company acquires a subsidiary for $10 million. The fair value of the subsidiary's identifiable net assets is $8 million. The company should record:",
+    "options": [
+      "$2 million as an extraordinary gain.",
+      "$2 million as goodwill.",
+      "$10 million as an investment asset."
+    ],
+    "correctAnswer": "$2 million as goodwill.",
+    "explanation": "Goodwill is the excess of the purchase price over the fair value of the identifiable net assets acquired in a business combination. Calculation: $10 million (purchase price) - $8 million (fair value of net assets) = $2 million in goodwill, which is recorded as an intangible asset."
+  },
+  {
+    "id": 130,
+    "level": "Level II",
+    "topic": "Derivatives",
+    "question": "An investor buys a futures contract at a price of $120. At the end of the day, the settlement price is $123. The investor's margin account will be:",
+    "options": [
+      "Credited with $3.",
+      "Debited with $3.",
+      "Unaffected until the contract is closed."
+    ],
+    "correctAnswer": "Credited with $3.",
+    "explanation": "Futures contracts are marked-to-market daily. Since the investor is long the contract and the price increased, they have a profit. The profit of $3 per contract ($123 - $120) will be credited to their margin account."
+  },
+  {
+    "id": 131,
+    "level": "Level III",
+    "topic": "Behavioral Finance",
+    "question": "An investor allocates capital to different 'mental accounts' (e.g., 'safe money' vs. 'risk money') and applies different risk tolerances to each. This behavior is best described as:",
+    "options": [
+      "Framing bias.",
+      "Mental accounting.",
+      "Anchoring bias."
+    ],
+    "correctAnswer": "Mental accounting.",
+    "explanation": "Mental accounting is a cognitive bias where individuals treat various sums of money differently depending on their source or intended use, rather than viewing their assets as a single, fungible portfolio. This can lead to suboptimal asset allocation decisions."
+  },
+  {
+    "id": 132,
+    "level": "Level III",
+    "topic": "Asset Allocation",
+    "question": "A portfolio has an expected return of 10% and a standard deviation of 15%. If the risk-free rate is 2%, the portfolio's Roy's Safety-First ratio, assuming a minimum acceptable return of 4%, is closest to:",
+    "options": [
+      "0.40",
+      "0.53",
+      "0.67"
+    ],
+    "correctAnswer": "0.40",
+    "explanation": "Roy's Safety-First Ratio (SFRatio) = [E(Rp) - MAR] / σp, where MAR is the minimum acceptable return. Calculation: (10% - 4%) / 15% = 6% / 15% = 0.40. The goal is to choose the portfolio with the highest SFRatio."
+  }
+]
