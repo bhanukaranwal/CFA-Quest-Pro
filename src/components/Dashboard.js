@@ -1,87 +1,141 @@
-import React from 'react';
-import { Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title } from 'chart.js';
-import { Pie, Bar } from 'react-chartjs-2';
+import React, { useContext, useMemo } from 'react';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title, LineElement, PointElement } from 'chart.js';
+import { Pie, Bar, Line } from 'react-chartjs-2';
 import { motion } from 'framer-motion';
+import { AppContext } from '../contexts/AppContext';
+import { FaArrowUp, FaArrowDown, FaMinus } from 'react-icons/fa';
 
-ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title);
+ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title, LineElement, PointElement);
 
 function Dashboard() {
-    const progressData = {
-        correct: 68,
-        incorrect: 23,
-        total: 91,
-        topicPerformance: {
-            'Ethics': 0.85,
-            'Quants': 0.65,
-            'Econ': 0.72,
-            'FSA': 0.78,
-            'Equity': 0.91,
-            'FI': 0.68,
-        }
-    };
+    const { examHistory } = useContext(AppContext);
 
-    const pieData = {
-        labels: ['Correct Answers', 'Incorrect Answers'],
+    const analytics = useMemo(() => {
+        if (examHistory.length === 0) return null;
+
+        let totalQuestions = 0;
+        let correctAnswers = 0;
+        const topicPerformance = {};
+        const confidenceAnalysis = { High: { correct: 0, total: 0 }, Medium: { correct: 0, total: 0 }, Low: { correct: 0, total: 0 } };
+
+        examHistory.forEach(exam => {
+            exam.answeredQuestions.forEach(q => {
+                totalQuestions++;
+                if (q.isCorrect) correctAnswers++;
+
+                const topicName = q.topic || "Review";
+                if (!topicPerformance[topicName]) topicPerformance[topicName] = { correct: 0, total: 0 };
+                topicPerformance[topicName].total++;
+                if (q.isCorrect) topicPerformance[topicName].correct++;
+
+                const confidence = q.confidence || 'Not Set';
+                if (confidenceAnalysis[confidence]) {
+                    confidenceAnalysis[confidence].total++;
+                    if (q.isCorrect) confidenceAnalysis[confidence].correct++;
+                }
+            });
+        });
+
+        const performanceOverTime = examHistory.map(exam => ({
+            date: new Date(exam.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+            score: exam.percentage,
+        }));
+
+        return {
+            totalQuestions,
+            correctAnswers,
+            overallAccuracy: totalQuestions > 0 ? (correctAnswers / totalQuestions) * 100 : 0,
+            topicPerformance,
+            performanceOverTime,
+            confidenceAnalysis,
+        };
+    }, [examHistory]);
+
+    if (!analytics) {
+        return (
+            <div className="text-center p-10 container mx-auto mt-10 bg-surface dark:bg-dark-surface rounded-xl shadow-md">
+                <h2 className="text-2xl font-bold text-text-primary dark:text-dark-text-primary">No Data Yet</h2>
+                <p className="text-text-secondary dark:text-dark-text-secondary mt-2">Complete a practice exam to see your performance analytics.</p>
+            </div>
+        );
+    }
+
+    const lineChartData = {
+        labels: analytics.performanceOverTime.map(p => p.date),
         datasets: [{
-            data: [progressData.correct, progressData.incorrect],
-            backgroundColor: ['#1abc9c', '#e74c3c'],
-            borderColor: '#FFFFFF',
-            borderWidth: 4,
+            label: 'Exam Score (%)',
+            data: analytics.performanceOverTime.map(p => p.score),
+            borderColor: '#1abc9c',
+            backgroundColor: 'rgba(26, 188, 156, 0.1)',
+            fill: true,
+            tension: 0.4,
         }],
     };
-    
-    const barData = {
-        labels: Object.keys(progressData.topicPerformance),
+
+    const confidenceData = {
+        labels: ['Low', 'Medium', 'High'],
         datasets: [{
-            label: 'Accuracy',
-            data: Object.values(progressData.topicPerformance).map(v => v * 100),
-            backgroundColor: '#2c3e50',
-            borderRadius: 4,
+            label: 'Accuracy by Confidence',
+            data: ['Low', 'Medium', 'High'].map(level => {
+                const { correct, total } = analytics.confidenceAnalysis[level];
+                return total > 0 ? (correct / total) * 100 : 0;
+            }),
+            backgroundColor: ['#e74c3c', '#f39c12', '#2ecc71'],
         }]
     };
-    
-    const commonOptions = {
-        plugins: {
-            legend: { position: 'bottom' },
-            title: { display: true, font: { size: 18, weight: 'bold' }, color: '#212529' }
-        }
-    };
-
-    const studyFocusTopics = Object.entries(progressData.topicPerformance)
-      .sort(([,a],[,b]) => a-b)
-      .slice(0, 3);
 
     return (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="container mx-auto p-6 sm:p-8">
-            <h1 className="text-4xl font-extrabold text-text-primary dark:text-dark-text-primary mb-8">Your Progress Dashboard</h1>
-            <div className="grid lg:grid-cols-3 gap-8">
-                <motion.div whileHover={{ y: -5 }} className="lg:col-span-1 bg-surface dark:bg-dark-surface p-6 rounded-xl shadow-md flex flex-col justify-center items-center">
-                    <h3 className="text-xl font-bold text-text-primary dark:text-dark-text-primary mb-4">Overall Performance</h3>
-                    <div className="w-full max-w-xs">
-                        <Pie data={pieData} options={{...commonOptions, title: { ...commonOptions.plugins.title, text: 'Answer Breakdown' }}} />
-                    </div>
-                    <p className="text-center mt-6 text-text-secondary dark:text-dark-text-secondary">Total Questions Answered: <span className="font-bold text-text-primary dark:text-dark-text-primary">{progressData.total}</span></p>
+            <h1 className="text-4xl font-extrabold text-text-primary dark:text-dark-text-primary mb-8">Performance Dashboard</h1>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+                <StatCard title="Overall Accuracy" value={`${analytics.overallAccuracy.toFixed(1)}%`} />
+                <StatCard title="Total Questions" value={analytics.totalQuestions} />
+                <StatCard title="Exams Completed" value={examHistory.length} />
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <motion.div whileHover={{ y: -5 }} className="bg-surface dark:bg-dark-surface p-6 rounded-xl shadow-md">
+                    <h3 className="text-xl font-bold text-text-primary dark:text-dark-text-primary mb-4">Performance Over Time</h3>
+                    <Line data={lineChartData} />
                 </motion.div>
-                <motion.div whileHover={{ y: -5 }} className="lg:col-span-2 bg-surface dark:bg-dark-surface p-6 rounded-xl shadow-md">
-                    <h3 className="text-xl font-bold text-text-primary dark:text-dark-text-primary mb-4">Topic Mastery</h3>
-                    <Bar data={barData} options={{...commonOptions, indexAxis: 'y', scales: { x: { ticks: { callback: value => `${value}%` } } }, title: { ...commonOptions.plugins.title, text: 'Accuracy by Topic' }}} />
-                </motion.div>
-                <motion.div whileHover={{ y: -5 }} className="lg:col-span-3 bg-surface dark:bg-dark-surface p-6 rounded-xl shadow-md">
-                    <h3 className="text-xl font-bold text-text-primary dark:text-dark-text-primary mb-4">Recommended Study Focus</h3>
-                    <p className="text-text-secondary dark:text-dark-text-secondary mb-4">Based on your performance, we recommend focusing on these topics:</p>
-                    <div className="grid sm:grid-cols-3 gap-4">
-                        {studyFocusTopics.map(([topic, accuracy]) => (
-                            <div key={topic} className="bg-background dark:bg-dark-background p-4 rounded-lg text-center">
-                                <h4 className="font-bold text-text-primary dark:text-dark-text-primary">{topic}</h4>
-                                <p className="text-2xl font-bold text-danger mt-2">{(accuracy * 100).toFixed(0)}%</p>
-                                <p className="text-xs text-text-secondary dark:text-dark-text-secondary">Accuracy</p>
-                            </div>
-                        ))}
-                    </div>
+                <motion.div whileHover={{ y: -5 }} className="bg-surface dark:bg-dark-surface p-6 rounded-xl shadow-md">
+                    <h3 className="text-xl font-bold text-text-primary dark:text-dark-text-primary mb-4">Accuracy by Confidence</h3>
+                    <Bar data={confidenceData} options={{ indexAxis: 'y', scales: { x: { max: 100 } } }}/>
                 </motion.div>
             </div>
+
+            <motion.div whileHover={{ y: -5 }} className="mt-8 bg-surface dark:bg-dark-surface p-6 rounded-xl shadow-md">
+                <h3 className="text-xl font-bold text-text-primary dark:text-dark-text-primary mb-4">Topic Heatmap</h3>
+                <p className="text-sm text-text-secondary dark:text-dark-text-secondary mb-4">Your accuracy across all completed exams. Focus on the red areas!</p>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                    {Object.entries(analytics.topicPerformance).map(([topic, data]) => {
+                        const accuracy = data.total > 0 ? (data.correct / data.total) * 100 : 0;
+                        let bgColor = 'bg-gray-200 dark:bg-gray-700';
+                        if (accuracy > 85) bgColor = 'bg-green-500';
+                        else if (accuracy > 70) bgColor = 'bg-green-300 dark:bg-green-800';
+                        else if (accuracy > 50) bgColor = 'bg-yellow-300 dark:bg-yellow-800';
+                        else if (accuracy > 0) bgColor = 'bg-red-300 dark:bg-red-800';
+
+                        return (
+                            <div key={topic} className="p-4 rounded-lg text-center text-white" style={{ backgroundColor: accuracy > 85 ? '#2ecc71' : accuracy > 70 ? '#1abc9c' : accuracy > 50 ? '#f39c12' : '#e74c3c' }}>
+                                <div className="font-bold">{topic}</div>
+                                <div className="text-2xl font-extrabold mt-1">{accuracy.toFixed(0)}%</div>
+                                <div className="text-xs opacity-80">{data.correct}/{data.total}</div>
+                            </div>
+                        );
+                    })}
+                </div>
+            </motion.div>
         </motion.div>
     );
 }
+
+const StatCard = ({ title, value }) => (
+    <motion.div whileHover={{ y: -5 }} className="bg-surface dark:bg-dark-surface p-6 rounded-xl shadow-md text-center">
+        <h3 className="text-md font-medium text-text-secondary dark:text-dark-text-secondary">{title}</h3>
+        <p className="text-4xl font-extrabold text-text-primary dark:text-dark-text-primary mt-2">{value}</p>
+    </motion.div>
+);
 
 export default Dashboard;
