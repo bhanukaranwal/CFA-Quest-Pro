@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaArrowRight, FaBook, FaChartBar, FaTrophy, FaCalendarAlt } from 'react-icons/fa';
+import { FaArrowRight, FaBook, FaChartBar, FaTrophy, FaCalendarAlt, FaSyncAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 function Home() {
@@ -37,9 +37,9 @@ function Home() {
               description="Visualize your performance with an interactive dashboard and monitor topic mastery."
             />
             <FeatureCard
-              icon={<FaCalendarAlt className="h-10 w-10 text-accent dark:text-dark-accent" />}
-              title="Study Planner"
-              description="Organize your study schedule with a personalized planner to stay on track."
+              icon={<FaSyncAlt className="h-10 w-10 text-accent dark:text-dark-accent" />}
+              title="Review Mode"
+              description="Launch practice sessions with questions you've previously answered incorrectly or marked for review."
             />
             <FeatureCard
               icon={<FaTrophy className="h-10 w-10 text-accent dark:text-dark-accent" />}
