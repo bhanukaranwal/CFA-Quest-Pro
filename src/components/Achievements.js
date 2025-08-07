@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { FaFire, FaCheckCircle, FaBrain, FaStar } from 'react-icons/fa';
+import { FaFire, FaCheckCircle, FaBrain, FaStar, FaTrophy } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { AppContext } from '../contexts/AppContext';
 
