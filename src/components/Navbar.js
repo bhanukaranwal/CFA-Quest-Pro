@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
-import { FaBookOpen, FaChartPie, FaTrophy, FaHome, FaGraduationCap, FaFilePdf, FaCalendarAlt, FaCog, FaSun, FaMoon } from 'react-icons/fa';
+import { FaBookOpen, FaChartPie, FaTrophy, FaHome, FaGraduationCap, FaFilePdf, FaCalendarAlt, FaCog, FaSun, FaMoon, FaSyncAlt } from 'react-icons/fa';
 import { ThemeContext } from '../contexts/ThemeContext';
 
 function Navbar() {
@@ -22,9 +22,9 @@ function Navbar() {
             <NavLink to="/" className={({ isActive }) => `${isActive ? activeLinkClass : defaultLinkClass} px-3 py-2 rounded-md text-sm font-medium`}>Home</NavLink>
             <NavLink to="/exam" className={({ isActive }) => `${isActive ? activeLinkClass : defaultLinkClass} px-3 py-2 rounded-md text-sm font-medium`}>Exam</NavLink>
             <NavLink to="/dashboard" className={({ isActive }) => `${isActive ? activeLinkClass : defaultLinkClass} px-3 py-2 rounded-md text-sm font-medium`}>Dashboard</NavLink>
+            <NavLink to="/review" className={({ isActive }) => `${isActive ? activeLinkClass : defaultLinkClass} px-3 py-2 rounded-md text-sm font-medium`}>Review</NavLink>
             <NavLink to="/study-planner" className={({ isActive }) => `${isActive ? activeLinkClass : defaultLinkClass} px-3 py-2 rounded-md text-sm font-medium`}>Planner</NavLink>
             <NavLink to="/achievements" className={({ isActive }) => `${isActive ? activeLinkClass : defaultLinkClass} px-3 py-2 rounded-md text-sm font-medium`}>Achievements</NavLink>
-            <NavLink to="/formula-sheets" className={({ isActive }) => `${isActive ? activeLinkClass : defaultLinkClass} px-3 py-2 rounded-md text-sm font-medium`}>Formulas</NavLink>
           </div>
           <div className="flex items-center">
             <button onClick={toggleTheme} className="p-2 rounded-full text-gray-300 hover:bg-primary-hover hover:text-white dark:text-dark-text-secondary dark:hover:bg-dark-primary-hover">
