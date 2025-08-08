@@ -8,8 +8,9 @@ function Settings() {
 
   return (
     <motion.div 
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
       className="container mx-auto max-w-2xl p-6 sm:p-8 mt-10"
     >
       <div className="bg-surface dark:bg-dark-surface p-8 rounded-xl shadow-lg">
