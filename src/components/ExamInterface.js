@@ -6,7 +6,6 @@ import questionsData from '../data/questions.json';
 import topicsData from '../data/topics.json';
 
 function ExamInterface({ reviewQuestions = null, reviewTitle = "Review Session" }) {
-  // FIX: Added 'examHistory' to the context import
   const { addExamResult, examHistory } = useContext(AppContext);
 
   // State for exam configuration
