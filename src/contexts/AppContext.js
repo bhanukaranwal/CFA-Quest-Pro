@@ -31,8 +31,11 @@ export const AppProvider = ({ children }) => {
 
   // Function to add a completed exam to the history
   const addExamResult = (result) => {
-    setExamHistory(prevHistory => [...prevHistory, { ...result, date: new Date().toISOString() }]);
-    checkAchievements(result, [...examHistory, result]);
+    // Add a unique ID and a timestamp to each new result
+    const newResult = { ...result, id: Date.now(), date: new Date().toISOString() };
+    const updatedHistory = [...examHistory, newResult];
+    setExamHistory(updatedHistory);
+    checkAchievements(newResult, updatedHistory);
   };
 
   // Function to check and unlock achievements
@@ -40,7 +43,7 @@ export const AppProvider = ({ children }) => {
     let updatedAchievements = [...achievements];
 
     // Achievement 1: First Step
-    if (!updatedAchievements.find(a => a.id === 1).unlocked) {
+    if (allHistory.length > 0 && !updatedAchievements.find(a => a.id === 1).unlocked) {
       updatedAchievements = updatedAchievements.map(a => a.id === 1 ? { ...a, unlocked: true } : a);
     }
     
