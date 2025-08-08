@@ -118,9 +118,79 @@ function ExamInterface({ reviewQuestions = null, reviewTitle = "Review Session" 
     setExamStarted(false);
   };
 
+  // Renders the setup or results screen when the exam is not active
   if (!examStarted) {
-    // ... (Setup and Results JSX remains the same)
-    return <div>...</div>
+    if (showResults) {
+      const { score, total, percentage, answeredQuestions } = examHistory[examHistory.length - 1];
+      return (
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="container mx-auto max-w-4xl p-6 sm:p-8 mt-10">
+          <div className="bg-surface dark:bg-dark-surface p-8 rounded-xl shadow-lg">
+            <h2 className="text-3xl font-bold text-text-primary dark:text-dark-text-primary mb-4 text-center">Exam Results</h2>
+            <div className="text-center mb-8 p-6 bg-background dark:bg-dark-background rounded-lg">
+              <p className="text-xl text-text-secondary dark:text-dark-text-secondary">Your Score</p>
+              <p className={`text-5xl font-extrabold ${percentage >= 70 ? 'text-success' : 'text-danger'}`}>{percentage.toFixed(1)}%</p>
+              <p className="text-text-secondary dark:text-dark-text-secondary mt-2">({score} out of {total} correct)</p>
+            </div>
+            <h3 className="text-2xl font-bold text-text-primary dark:text-dark-text-primary mb-4">Mistake Review</h3>
+            <div className="space-y-6">
+              {answeredQuestions.filter(q => !q.isCorrect).map(q => (
+                <div key={q.id} className="p-4 rounded-lg border-l-4 border-danger bg-red-50 dark:bg-opacity-10">
+                  <p className="font-semibold text-text-primary dark:text-dark-text-primary">{q.question}</p>
+                  <p className="mt-2 font-medium flex items-center text-red-800 dark:text-danger"><FaTimesCircle className="mr-2" />Your answer: {q.userAnswer}</p>
+                  <p className="mt-1 font-medium text-green-800 dark:text-success flex items-center"><FaCheckCircle className="mr-2" />Correct answer: {q.correctAnswer}</p>
+                  <p className="mt-3 text-sm text-text-secondary dark:text-dark-text-secondary italic bg-gray-100 dark:bg-dark-surface p-2 rounded">{q.explanation}</p>
+                </div>
+              ))}
+            </div>
+            <button onClick={() => { setShowResults(false); setExamStarted(false); }} className="w-full mt-8 bg-primary dark:bg-dark-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover dark:hover:bg-dark-primary-hover transition duration-300">
+              Back to Exam Setup
+            </button>
+          </div>
+        </motion.div>
+      );
+    }
+
+    return (
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="container mx-auto max-w-2xl p-6 sm:p-8 mt-10">
+        <div className="bg-surface dark:bg-dark-surface p-8 rounded-xl shadow-lg">
+          <h2 className="text-3xl font-bold text-text-primary dark:text-dark-text-primary mb-2 text-center">Configure Your Practice Exam</h2>
+          <p className="text-center text-text-secondary dark:text-dark-text-secondary mb-8">Customize your session to focus on what matters most.</p>
+          <div className="space-y-6">
+            <div>
+              <label className="block text-sm font-medium text-text-secondary dark:text-dark-text-secondary mb-2">CFA Level:</label>
+              <select onChange={(e) => setLevel(e.target.value)} value={level} className="w-full border-gray-300 dark:border-gray-600 bg-background dark:bg-dark-background p-3 rounded-lg shadow-sm focus:ring-accent focus:border-accent">
+                <option>Level I</option>
+                <option>Level II</option>
+                <option>Level III</option>
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-text-secondary dark:text-dark-text-secondary mb-2">Topic:</label>
+              <select onChange={(e) => setTopic(e.target.value)} value={topic} className="w-full border-gray-300 dark:border-gray-600 bg-background dark:bg-dark-background p-3 rounded-lg shadow-sm focus:ring-accent focus:border-accent">
+                <option>All</option>
+                {topicsData.map(t => <option key={t.name}>{t.name}</option>)}
+              </select>
+            </div>
+            {availableSubtopics.length > 0 && (
+              <div>
+                <label className="block text-sm font-medium text-text-secondary dark:text-dark-text-secondary mb-2">Sub-Topic:</label>
+                <select onChange={(e) => setSubtopic(e.target.value)} value={subtopic} className="w-full border-gray-300 dark:border-gray-600 bg-background dark:bg-dark-background p-3 rounded-lg shadow-sm focus:ring-accent focus:border-accent">
+                  <option>All</option>
+                  {availableSubtopics.map(st => <option key={st}>{st}</option>)}
+                </select>
+              </div>
+            )}
+             <div>
+              <label className="block text-sm font-medium text-text-secondary dark:text-dark-text-secondary mb-2">Number of Questions: {numQuestions}</label>
+              <input type="range" min="5" max="50" step="5" value={numQuestions} onChange={(e) => setNumQuestions(e.target.value)} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 accent-accent" />
+            </div>
+          </div>
+          <button onClick={startExam} className="w-full mt-8 bg-accent dark:bg-dark-accent text-white font-bold py-3 px-6 rounded-lg hover:bg-accent-hover dark:hover:bg-dark-accent-hover transition duration-300 transform hover:scale-105 shadow-md">
+            Start Exam
+          </button>
+        </div>
+      </motion.div>
+    );
   }
 
   const currentQuestion = examQuestions[currentQuestionIndex];
@@ -133,7 +203,7 @@ function ExamInterface({ reviewQuestions = null, reviewTitle = "Review Session" 
 
       <div className="bg-surface dark:bg-dark-surface p-8 rounded-xl shadow-lg">
         <div className="flex justify-between items-center mb-2">
-          <h2 className="text-xl font-bold">Question {currentQuestionIndex + 1} of {examQuestions.length}</h2>
+          <h2 className="text-xl font-bold text-text-primary dark:text-dark-text-primary">Question {currentQuestionIndex + 1} of {examQuestions.length}</h2>
           <div className="flex items-center gap-4">
             <button onClick={() => setShowStickyNote(p => !p)} className="tool-btn"><FaStickyNote /></button>
             <button onClick={() => setShowCalculator(p => !p)} className="tool-btn"><FaCalculator /></button>
@@ -144,7 +214,7 @@ function ExamInterface({ reviewQuestions = null, reviewTitle = "Review Session" 
         
         <AnimatePresence mode="wait">
           <motion.div key={currentQuestion.id} initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -50 }} transition={{ duration: 0.3 }}>
-            <p className="text-lg font-semibold my-6">{currentQuestion.question}</p>
+            <p className="text-lg font-semibold my-6 text-text-primary dark:text-dark-text-primary">{currentQuestion.question}</p>
             <div className="space-y-3">
               {currentQuestion.options.map(option => (
                 <button key={option} onClick={() => handleAnswerSelect(currentQuestion.id, option)} className={`option-btn ${userAnswers[currentQuestion.id]?.answer === option ? 'option-btn-selected' : ''}`}>{option}</button>
@@ -155,7 +225,7 @@ function ExamInterface({ reviewQuestions = null, reviewTitle = "Review Session" 
 
         <div className="mt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-2">
-            <span className="text-sm font-medium">Confidence:</span>
+            <span className="text-sm font-medium text-text-secondary dark:text-dark-text-secondary">Confidence:</span>
             {['Low', 'Medium', 'High'].map(level => (
               <button key={level} onClick={() => handleConfidenceSelect(currentQuestion.id, level)} className={`confidence-btn ${userAnswers[currentQuestion.id]?.confidence === level ? 'confidence-btn-selected' : ''}`}>{level}</button>
             ))}
@@ -175,19 +245,5 @@ function ExamInterface({ reviewQuestions = null, reviewTitle = "Review Session" 
     </div>
   );
 }
-
-// Add these utility classes to src/index.css for the new buttons
-/*
-@layer components {
-  .tool-btn { @apply text-text-secondary dark:text-dark-text-secondary hover:text-accent dark:hover:text-dark-accent transition-colors; }
-  .option-btn { @apply block w-full text-left p-4 rounded-lg border-2 transition duration-200 bg-background dark:bg-dark-background hover:bg-gray-200 dark:hover:bg-gray-700 border-gray-200 dark:border-gray-600; }
-  .option-btn-selected { @apply bg-teal-100 dark:bg-teal-900 border-accent dark:border-dark-accent font-semibold; }
-  .confidence-btn { @apply px-3 py-1 text-xs font-bold rounded-full transition-colors bg-gray-200 dark:bg-gray-700 text-text-secondary dark:text-dark-text-secondary; }
-  .confidence-btn-selected { @apply bg-primary text-white; }
-  .review-btn { @apply flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors text-text-secondary dark:text-dark-text-secondary hover:bg-gray-100 dark:hover:bg-gray-700; }
-  .review-btn-marked { @apply bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200; }
-  .nav-btn { @apply flex items-center px-6 py-2 rounded-lg font-bold transition-colors border-2 border-transparent; }
-}
-*/
 
 export default ExamInterface;
