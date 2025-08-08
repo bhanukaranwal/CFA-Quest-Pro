@@ -16,7 +16,7 @@ function Dashboard() {
         let totalQuestions = 0;
         let correctAnswers = 0;
         const topicPerformance = {};
-        const confidenceAnalysis = { High: { correct: 0, total: 0 }, Medium: { correct: 0, total: 0 }, Low: { correct: 0, total: 0 } };
+        const confidenceAnalysis = { High: { correct: 0, total: 0 }, Medium: { correct: 0, total: 0 }, Low: { correct: 0, total: 0 }, 'Not Set': { correct: 0, total: 0 } };
 
         examHistory.forEach(exam => {
             exam.answeredQuestions.forEach(q => {
@@ -118,7 +118,7 @@ function Dashboard() {
                         else if (accuracy > 0) bgColor = 'bg-red-300 dark:bg-red-800';
 
                         return (
-                            <div key={topic} className="p-4 rounded-lg text-center text-white" style={{ backgroundColor: accuracy > 85 ? '#2ecc71' : accuracy > 70 ? '#1abc9c' : accuracy > 50 ? '#f39c12' : '#e74c3c' }}>
+                            <div key={topic} className="p-4 rounded-lg text-white" style={{ backgroundColor: accuracy > 85 ? '#2ecc71' : accuracy > 70 ? '#1abc9c' : accuracy > 50 ? '#f39c12' : '#e74c3c' }}>
                                 <div className="font-bold">{topic}</div>
                                 <div className="text-2xl font-extrabold mt-1">{accuracy.toFixed(0)}%</div>
                                 <div className="text-xs opacity-80">{data.correct}/{data.total}</div>
