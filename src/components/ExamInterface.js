@@ -102,7 +102,7 @@ function ExamInterface({ reviewQuestions = null, reviewTitle = "Review Session" 
     const result = {
       score,
       total: examQuestions.length,
-      percentage: (score / examQuestions.length) * 100,
+      percentage: examQuestions.length > 0 ? (score / examQuestions.length) * 100 : 0,
       topic: reviewQuestions ? reviewTitle : topic,
       level: reviewQuestions ? "" : level,
       answeredQuestions: examQuestions.map(q => ({
@@ -120,7 +120,10 @@ function ExamInterface({ reviewQuestions = null, reviewTitle = "Review Session" 
 
   if (!examStarted) {
     if (showResults) {
-      const { score, total, percentage, answeredQuestions } = examHistory[examHistory.length - 1];
+      const latestResult = examHistory[examHistory.length - 1];
+      if (!latestResult) return null; // Handle case where there are no results yet
+
+      const { score, total, percentage, answeredQuestions } = latestResult;
       return (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="container mx-auto max-w-4xl p-6 sm:p-8 mt-10">
           <div className="bg-surface dark:bg-dark-surface p-8 rounded-xl shadow-lg">
@@ -133,7 +136,7 @@ function ExamInterface({ reviewQuestions = null, reviewTitle = "Review Session" 
             <h3 className="text-2xl font-bold text-text-primary dark:text-dark-text-primary mb-4">Mistake Review</h3>
             <div className="space-y-6">
               {answeredQuestions.filter(q => !q.isCorrect).map(q => (
-                <div key={q.id} className="p-4 rounded-lg border-l-4 border-danger bg-red-50 dark:bg-opacity-10">
+                <div key={q.id} className="p-4 rounded-lg border-l-4 border-danger bg-red-50 dark:bg-red-500/10">
                   <p className="font-semibold text-text-primary dark:text-dark-text-primary">{q.question}</p>
                   <p className="mt-2 font-medium flex items-center text-red-800 dark:text-danger"><FaTimesCircle className="mr-2" />Your answer: {q.userAnswer}</p>
                   <p className="mt-1 font-medium text-green-800 dark:text-success flex items-center"><FaCheckCircle className="mr-2" />Correct answer: {q.correctAnswer}</p>
@@ -247,11 +250,11 @@ function ExamInterface({ reviewQuestions = null, reviewTitle = "Review Session" 
           </button>
         </div>
 
-        <div className="flex justify-between mt-8 border-t dark:border-gray-700 pt-6">
+        <div className="flex justify-between items-center mt-8 border-t dark:border-gray-700 pt-6">
           <button 
             onClick={handlePreviousQuestion} 
             disabled={currentQuestionIndex === 0} 
-            className="flex items-center px-6 py-2 rounded-lg font-bold transition-colors border-2 border-transparent text-text-secondary dark:text-dark-text-secondary hover:bg-gray-100 dark:hover:bg-gray-700 disabled:opacity-50"
+            className="flex items-center px-6 py-2 rounded-lg font-bold transition-colors border-2 border-gray-300 dark:border-gray-600 text-text-secondary dark:text-dark-text-secondary hover:bg-gray-100 dark:hover:bg-gray-700 disabled:opacity-50"
           >
             <FaArrowLeft className="mr-2" /> Previous
           </button>
