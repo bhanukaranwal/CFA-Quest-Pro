@@ -118,7 +118,6 @@ function ExamInterface({ reviewQuestions = null, reviewTitle = "Review Session" 
     setExamStarted(false);
   };
 
-  // Renders the setup or results screen when the exam is not active
   if (!examStarted) {
     if (showResults) {
       const { score, total, percentage, answeredQuestions } = examHistory[examHistory.length - 1];
@@ -236,9 +235,9 @@ function ExamInterface({ reviewQuestions = null, reviewTitle = "Review Session" 
         <div className="flex justify-between mt-8 border-t dark:border-gray-700 pt-6">
           <button onClick={handlePreviousQuestion} disabled={currentQuestionIndex === 0} className="nav-btn disabled:opacity-50"><FaArrowLeft className="mr-2" /> Previous</button>
           {currentQuestionIndex < examQuestions.length - 1 ? (
-            <button onClick={handleNextQuestion} className="nav-btn bg-primary text-white"><FaArrowRight className="mr-2" /> Next</button>
+            <button onClick={handleNextQuestion} className="nav-btn bg-primary text-white hover:bg-primary-hover dark:bg-dark-primary dark:hover:bg-dark-primary-hover"><FaArrowRight className="mr-2" /> Next</button>
           ) : (
-            <button onClick={handleShowResults} className="nav-btn bg-success text-white">Finish Exam</button>
+            <button onClick={handleShowResults} className="nav-btn bg-success text-white hover:bg-green-600">Finish Exam</button>
           )}
         </div>
       </div>
