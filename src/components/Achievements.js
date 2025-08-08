@@ -6,7 +6,7 @@ import { AppContext } from '../contexts/AppContext';
 function Achievements() {
     const { achievements } = useContext(AppContext);
     
-    // Assign icons based on title or ID, making it more dynamic
+    // This function dynamically assigns an icon based on the achievement's ID.
     const getIcon = (id) => {
         switch(id) {
             case 1: return <FaCheckCircle />;
@@ -18,6 +18,7 @@ function Achievements() {
         }
     };
 
+    // Animation variants for the container to stagger the children's animations.
     const containerVariants = {
       hidden: { opacity: 0 },
       visible: {
@@ -28,6 +29,7 @@ function Achievements() {
       },
     };
 
+    // Animation variants for each individual achievement card.
     const itemVariants = {
       hidden: { y: 20, opacity: 0 },
       visible: {
