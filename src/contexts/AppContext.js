@@ -59,13 +59,9 @@ export const AppProvider = ({ children }) => {
         updatedAchievements = updatedAchievements.map(a => a.id === 5 ? { ...a, unlocked: true } : a);
     }
 
-    // You could add more complex checks here, like for Quant Master
-    // by summing up all correct quant questions across all exams.
-
     setAchievements(updatedAchievements);
   };
   
-  // Provide state and functions to children components
   const value = {
     examHistory,
     addExamResult,
