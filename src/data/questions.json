@@ -446,5 +446,579 @@
     ],
     "correctAnswer": "0.40",
     "explanation": "Roy's Safety-First Ratio (SFRatio) = [E(Rp) - MAR] / σp, where MAR is the minimum acceptable return. Calculation: (10% - 4%) / 15% = 6% / 15% = 0.40. The goal is to choose the portfolio with the highest SFRatio."
+  },
+  {
+    "id": 113,
+    "level": "Level I",
+    "topic": "Quantitative Methods",
+    "subtopic": "TVM",
+    "question": "An investor deposits $5,000 today into an account that earns 6% compounded annually. The value of the investment after 10 years will be closest to:",
+    "options": [
+      "$8,954",
+      "$8,000",
+      "$9,210"
+    ],
+    "correctAnswer": "$8,954",
+    "explanation": "This is a future value calculation. Using a financial calculator: N=10, I/Y=6, PV=-5000, PMT=0. Compute FV = $8,954.24. The formula is FV = PV * (1 + r)^N."
+  },
+  {
+    "id": 114,
+    "level": "Level II",
+    "topic": "Financial Statement Analysis",
+    "subtopic": "Pensions",
+    "question": "A company's defined benefit pension plan has a funded status of -$50 million (underfunded). If the company makes a $10 million contribution to the plan, what is the immediate impact on the company's balance sheet?",
+    "options": [
+      "Total assets decrease by $10 million.",
+      "Total liabilities decrease by $10 million.",
+      "There is no net change in total assets."
+    ],
+    "correctAnswer": "There is no net change in total assets.",
+    "explanation": "The contribution is a transfer of assets. The company's cash (an asset) decreases by $10 million, and the pension plan assets increase by $10 million. Because the pension plan's assets and liabilities are netted on the balance sheet, the net pension liability decreases by $10 million. The decrease in cash is offset by the decrease in the net pension liability, resulting in no change to total assets or total liabilities."
+  },
+  {
+    "id": 115,
+    "level": "Level III",
+    "topic": "Trading and Execution",
+    "subtopic": "Trading Costs",
+    "question": "A trader decides to buy 10,000 shares of a stock when the price is $50.00. The order is executed at an average price of $50.10. The market impact cost for this trade is:",
+    "options": [
+      "$1,000",
+      "$0.10 per share",
+      "Cannot be determined from the information given."
+    ],
+    "correctAnswer": "$0.10 per share",
+    "explanation": "Market impact cost is the deviation of the execution price from the benchmark price (the price when the order was submitted) caused by the trade itself. In this case, the impact was $50.10 - $50.00 = $0.10 per share. The total cost is $0.10 * 10,000 = $1,000."
+  },
+  {
+    "id": 116,
+    "level": "Level I",
+    "topic": "Alternative Investments",
+    "subtopic": "Hedge Funds",
+    "question": "A hedge fund's fee structure is '2 and 20' with a high-water mark. The fund value begins at $100, rises to $120, then falls to $90. In the next period, it rises to $110. The incentive fee in the final period is based on the profit above:",
+    "options": [
+      "$90",
+      "$100",
+      "$120"
+    ],
+    "correctAnswer": "$120",
+    "explanation": "A high-water mark ensures that the manager only earns an incentive fee on new profits. Since the fund value previously reached a high of $120, the manager will not earn any new incentive fees until the fund value exceeds this previous peak. The profit will be calculated on the gains above $120."
+  },
+  {
+    "id": 117,
+    "level": "Level II",
+    "topic": "Corporate Finance",
+    "subtopic": "WACC",
+    "question": "A company has a target capital structure of 40% debt and 60% equity. Its before-tax cost of debt is 7%, and its cost of equity is 12%. If the marginal tax rate is 30%, the company's Weighted Average Cost of Capital (WACC) is closest to:",
+    "options": [
+      "8.0%",
+      "9.16%",
+      "9.40%"
+    ],
+    "correctAnswer": "9.16%",
+    "explanation": "WACC = (wd * rd * (1 - t)) + (we * re). First, calculate the after-tax cost of debt: 7% * (1 - 0.30) = 4.9%. Then, calculate WACC: (0.40 * 4.9%) + (0.60 * 12%) = 1.96% + 7.2% = 9.16%."
+  },
+  {
+    "id": 118,
+    "level": "Level III",
+    "topic": "Portfolio Management",
+    "subtopic": "IPS",
+    "question": "A foundation has a spending rate of 5% and expects inflation to be 2.5%. The foundation's investment management fees are 0.5%. To maintain the real value of its assets in perpetuity, the foundation's required nominal return is closest to:",
+    "options": [
+      "8.00%",
+      "8.13%",
+      "7.50%"
+    ],
+    "correctAnswer": "8.13%",
+    "explanation": "The required nominal return must cover spending, inflation, and fees. The additive method is a common approximation: 5% + 2.5% + 0.5% = 8.0%. The more precise multiplicative method is: (1 + spending) * (1 + inflation) * (1 + fees) - 1 = (1.05 * 1.025 * 1.005) - 1 = 1.0813 - 1 = 8.13%."
+  },
+  {
+    "id": 119,
+    "level": "Level I",
+    "topic": "Financial Statement Analysis",
+    "subtopic": "Cash Flow Statement",
+    "question": "A company sells a piece of equipment with a book value of $50,000 for $60,000 in cash. On the statement of cash flows, this transaction will be reported as:",
+    "options": [
+      "A $60,000 cash inflow from investing activities.",
+      "A $50,000 cash inflow from investing and a $10,000 inflow from operating.",
+      "A $10,000 cash inflow from investing activities."
+    ],
+    "correctAnswer": "A $60,000 cash inflow from investing activities.",
+    "explanation": "The entire cash proceeds from the sale of long-term assets, such as equipment, are classified as a cash inflow from investing activities. The gain on the sale ($10,000) is an accounting profit, and it will be subtracted from net income in the operating activities section (under the indirect method) to avoid double-counting."
+  },
+  {
+    "id": 120,
+    "level": "Level II",
+    "topic": "Fixed Income",
+    "subtopic": "Credit Analysis",
+    "question": "Which of the following would most likely lead to a narrowing of the credit spread on a corporate bond?",
+    "options": [
+      "An improvement in the issuer's credit rating.",
+      "A decrease in the risk-free interest rate.",
+      "An increase in expected inflation."
+    ],
+    "correctAnswer": "An improvement in the issuer's credit rating.",
+    "explanation": "A credit spread is the difference in yield between a corporate bond and a benchmark government bond of similar maturity. It represents the compensation for credit risk. An improvement in the issuer's credit rating signifies lower credit risk, which would cause the credit spread to narrow (decrease)."
+  },
+  {
+    "id": 121,
+    "level": "Level I",
+    "topic": "Corporate Finance",
+    "subtopic": "Corporate Governance",
+    "question": "A one-tier board structure is best described as one where:",
+    "options": [
+      "All directors are executives of the company.",
+      "There is a separate supervisory board and management board.",
+      "Both independent and executive directors serve on a single board."
+    ],
+    "correctAnswer": "Both independent and executive directors serve on a single board.",
+    "explanation": "A one-tier board consists of a single board of directors, which includes both internal (executive) and external (independent) directors. This is common in the U.S. and U.K. A two-tier structure, common in Germany, has a separate supervisory board and a management board."
+  },
+  {
+    "id": 122,
+    "level": "Level II",
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Theory",
+    "question": "An analyst is evaluating a portfolio with a Sharpe ratio of 0.8 and a Treynor ratio of 6.5. If the risk-free rate is 2% and the portfolio's beta is 1.2, the portfolio's standard deviation is closest to:",
+    "options": [
+      "12.25%",
+      "15.00%",
+      "9.75%"
+    ],
+    "correctAnswer": "9.75%",
+    "explanation": "First, use the Treynor ratio to find the portfolio's return. Treynor Ratio = (Rp - Rf) / Beta => 6.5 = (Rp - 2%) / 1.2 => Rp = (6.5 * 1.2) + 2% = 7.8% + 2% = 9.8%. Now, use the Sharpe ratio to find the standard deviation. Sharpe Ratio = (Rp - Rf) / σp => 0.8 = (9.8% - 2%) / σp => σp = 7.8% / 0.8 = 9.75%."
+  },
+  {
+    "id": 123,
+    "level": "Level III",
+    "topic": "Behavioral Finance",
+    "subtopic": "Emotional Biases",
+    "question": "An investor who holds onto a winning stock for too long, believing it will continue to rise indefinitely, despite evidence to the contrary, is most likely exhibiting which bias?",
+    "options": [
+      "Confirmation bias.",
+      "Regret-aversion bias.",
+      "Affinity bias."
+    ],
+    "correctAnswer": "Confirmation bias.",
+    "explanation": "Confirmation bias is the tendency to search for, interpret, favor, and recall information that confirms or supports one's prior beliefs or values. The investor is focusing on information that supports their belief that the stock will continue to rise, while ignoring negative signals."
+  },
+  {
+    "id": 124,
+    "level": "Level I",
+    "topic": "Quantitative Methods",
+    "subtopic": "Probability",
+    "question": "A portfolio consists of two stocks, A and B. The probability of a recession is 30%. In a recession, Stock A will return -10% and Stock B will return 5%. In an expansion, Stock A will return 20% and Stock B will return 15%. The expected return of an equally weighted portfolio is closest to:",
+    "options": [
+      "12.25%",
+      "10.75%",
+      "11.50%"
+    ],
+    "correctAnswer": "11.50%",
+    "explanation": "Expected Return (Recession) = 0.5*(-10%) + 0.5*(5%) = -2.5%. Expected Return (Expansion) = 0.5*(20%) + 0.5*(15%) = 17.5%. Overall Expected Return = P(Recession)*E(R|Recession) + P(Expansion)*E(R|Expansion) = 0.30*(-2.5%) + 0.70*(17.5%) = -0.75% + 12.25% = 11.50%."
+  },
+  {
+    "id": 125,
+    "level": "Level II",
+    "topic": "Equity Valuation",
+    "subtopic": "Industry Analysis",
+    "question": "A company operates in an industry with high barriers to entry, high supplier power, and low buyer power. The industry is most likely in which life-cycle stage?",
+    "options": [
+      "Pioneering",
+      "Growth",
+      "Mature"
+    ],
+    "correctAnswer": "Growth",
+    "explanation": "High barriers to entry and low buyer power are characteristic of the growth stage, where demand is strong and companies can exert pricing power. High supplier power can exist in this stage if inputs are specialized. In the mature stage, competition intensifies and buyer power typically increases."
+  },
+  {
+    "id": 126,
+    "level": "Level III",
+    "topic": "Derivatives",
+    "subtopic": "Swaps",
+    "question": "A company enters into a 3-year plain vanilla interest rate swap to pay a fixed rate of 4% and receive a floating rate (LIBOR). The notional principal is $10 million. If, at the end of the first year, LIBOR is 5%, the net cash flow settlement for the company is:",
+    "options": [
+      "A payment of $100,000.",
+      "A receipt of $100,000.",
+      "A receipt of $400,000."
+    ],
+    "correctAnswer": "A receipt of $100,000.",
+    "explanation": "The company pays fixed and receives floating. Floating payment received = $10M * 5% = $500,000. Fixed payment made = $10M * 4% = $400,000. Net cash flow = $500,000 - $400,000 = $100,000 receipt."
+  },
+  {
+    "id": 127,
+    "level": "Level I",
+    "topic": "Financial Statement Analysis",
+    "subtopic": "Balance Sheet",
+    "question": "A company issues $1 million of bonds at par. The immediate effect on the company's balance sheet will be an increase in:",
+    "options": [
+      "Assets and an increase in liabilities.",
+      "Assets and an increase in equity.",
+      "Liabilities and a decrease in equity."
+    ],
+    "correctAnswer": "Assets and an increase in liabilities.",
+    "explanation": "When a company issues bonds, it receives cash, which increases assets. At the same time, it creates a long-term debt obligation, which increases liabilities. There is no immediate impact on the equity section of the balance sheet."
+  },
+  {
+    "id": 128,
+    "level": "Level II",
+    "topic": "Economics",
+    "subtopic": "Currency Exchange",
+    "question": "The spot EUR/USD exchange rate is 1.2000. The 1-year risk-free rate in the Eurozone is 1%, and in the U.S. it is 2%. According to interest rate parity, the 1-year forward EUR/USD exchange rate is closest to:",
+    "options": [
+      "1.1881",
+      "1.2120",
+      "1.2000"
+    ],
+    "correctAnswer": "1.1881",
+    "explanation": "Forward Rate = Spot Rate * [(1 + Price Currency Interest Rate) / (1 + Base Currency Interest Rate)]. F = 1.2000 * (1.01 / 1.02) = 1.2000 * 0.990196 = 1.1882. The currency with the higher interest rate (USD) is expected to depreciate."
+  },
+  {
+    "id": 129,
+    "level": "Level III",
+    "topic": "Ethics",
+    "subtopic": "GIPS",
+    "question": "A GIPS-compliant firm must present at least how many years of annual investment performance?",
+    "options": [
+      "3 years, or since firm inception if less than 3 years.",
+      "5 years, or since firm inception if less than 5 years.",
+      "10 years, or since firm inception if less than 10 years."
+    ],
+    "correctAnswer": "5 years, or since firm inception if less than 5 years.",
+    "explanation": "The GIPS standards require firms to present a minimum of five years of annual investment performance, or performance since the firm's or composite's inception if it has been in existence for less than five years. After presenting five years, the firm must add one additional year of performance each year, building to a 10-year track record."
+  },
+  {
+    "id": 130,
+    "level": "Level I",
+    "topic": "Financial Statement Analysis",
+    "subtopic": "Cash Flow Statement",
+    "question": "Which of the following is most likely to be classified as a financing activity on the statement of cash flows?",
+    "options": [
+      "Purchase of a competitor's stock.",
+      "Payment of dividends to shareholders.",
+      "Interest received on a loan made to another company."
+    ],
+    "correctAnswer": "Payment of dividends to shareholders.",
+    "explanation": "Financing activities involve transactions with the owners and creditors of the company. Paying dividends is a return of capital to shareholders and is a cash outflow from financing. Purchasing stock is an investing activity. Interest received is an operating activity."
+  },
+  {
+    "id": 131,
+    "level": "Level II",
+    "topic": "Alternative Investments",
+    "subtopic": "Real Estate",
+    "question": "An analyst is valuing a commercial property with a net operating income (NOI) of $500,000. If the market capitalization rate (cap rate) for similar properties is 8%, the estimated value of the property is closest to:",
+    "options": [
+      "$4,000,000",
+      "$6,250,000",
+      "$5,000,000"
+    ],
+    "correctAnswer": "$6,250,000",
+    "explanation": "The value of a property using the direct capitalization method is calculated as: Value = Net Operating Income / Capitalization Rate. Calculation: $500,000 / 0.08 = $6,250,000."
+  },
+  {
+    "id": 132,
+    "level": "Level III",
+    "topic": "Fixed Income",
+    "subtopic": "Risk Management",
+    "question": "A portfolio manager wants to increase a bond portfolio's duration from 5.0 to 7.0. The portfolio value is $100 million. The manager will use a futures contract with a dollar duration of $8,000. The number of futures contracts needed is closest to:",
+    "options": [
+      "Buy 250 contracts.",
+      "Sell 250 contracts.",
+      "Buy 2,500 contracts."
+    ],
+    "correctAnswer": "Buy 250 contracts.",
+    "explanation": "Number of Contracts = [(Target Duration - Portfolio Duration) * Portfolio Value] / Dollar Duration of Futures. First, find the target dollar duration change: (7.0 - 5.0) * $100,000,000 = $2,000,000. Then, Number of Contracts = $2,000,000 / $8,000 = 250. Since the manager wants to increase duration, they must buy futures contracts."
+  },
+  {
+    "id": 133,
+    "level": "Level I",
+    "topic": "Equity Investments",
+    "subtopic": "Market Organization",
+    "question": "An order to buy a stock that is executed only if the price is at or below a specified limit is a:",
+    "options": [
+      "Market order.",
+      "Limit order.",
+      "Stop order."
+    ],
+    "correctAnswer": "Limit order.",
+    "explanation": "A limit order is an order to buy or sell a stock at a specific price or better. A buy limit order can only be executed at the limit price or lower, and a sell limit order can only be executed at the limit price or higher."
+  },
+  {
+    "id": 134,
+    "level": "Level II",
+    "topic": "Financial Statement Analysis",
+    "subtopic": "Pensions",
+    "question": "A company's periodic pension cost is $5 million. During the year, the company contributed $7 million to its pension plan. The company's financial statements will report a(n):",
+    "options": [
+      "Pension expense of $7 million.",
+      "Pension expense of $5 million and a $2 million increase in the net pension asset.",
+      "Pension expense of $5 million and a $2 million decrease in the net pension liability."
+    ],
+    "correctAnswer": "Pension expense of $5 million and a $2 million decrease in the net pension liability.",
+    "explanation": "The pension expense reported on the income statement is the periodic pension cost, which is $5 million. The contribution of $7 million is a cash flow that reduces the plan's underfunded status (net pension liability) or increases its overfunded status (net pension asset). Since the contribution ($7M) is greater than the expense ($5M), the net pension liability decreases by the $2 million difference."
+  },
+  {
+    "id": 135,
+    "level": "Level III",
+    "topic": "Private Wealth Management",
+    "subtopic": "IPS",
+    "question": "A client in a high tax bracket is considering two bonds: a tax-exempt municipal bond yielding 4% and a taxable corporate bond yielding 6%. The client's marginal tax rate is 35%. To maximize her after-tax yield, she should choose:",
+    "options": [
+      "The municipal bond.",
+      "The corporate bond.",
+      "She would be indifferent between the two."
+    ],
+    "correctAnswer": "The municipal bond.",
+    "explanation": "To compare the bonds, calculate the tax-equivalent yield of the municipal bond or the after-tax yield of the corporate bond. After-tax yield of corporate bond = 6% * (1 - 0.35) = 3.9%. Since 4% (municipal) is greater than 3.9% (corporate after-tax), she should choose the municipal bond."
+  },
+  {
+    "id": 136,
+    "level": "Level I",
+    "topic": "Quantitative Methods",
+    "subtopic": "Hypothesis Testing",
+    "question": "If an analyst fails to reject a null hypothesis that is false, the analyst has made a:",
+    "options": [
+      "Type I error.",
+      "Type II error.",
+      "Correct decision."
+    ],
+    "correctAnswer": "Type II error.",
+    "explanation": "A Type II error occurs when one fails to reject a null hypothesis that is actually false. A Type I error is rejecting a true null hypothesis."
+  },
+  {
+    "id": 137,
+    "level": "Level II",
+    "topic": "Equity Valuation",
+    "subtopic": "Security Valuation",
+    "question": "A firm has a Free Cash Flow to Equity (FCFE) of $3.00 per share. The company's cost of equity is 11% and its FCFE is expected to grow at 5% indefinitely. The value per share is closest to:",
+    "options": [
+      "$27.27",
+      "$50.00",
+      "$52.50"
+    ],
+    "correctAnswer": "$52.50",
+    "explanation": "Using the constant-growth FCFE model: Value = FCFE1 / (k - g). First, calculate next year's FCFE (FCFE1) = FCFE0 * (1 + g) = $3.00 * (1.05) = $3.15. Then, Value = $3.15 / (0.11 - 0.05) = $3.15 / 0.06 = $52.50."
+  },
+  {
+    "id": 138,
+    "level": "Level III",
+    "topic": "Asset Allocation",
+    "subtopic": "Asset Allocation",
+    "question": "A 'core-satellite' approach to portfolio construction is best described as combining:",
+    "options": [
+      "A passive core with actively managed satellite portfolios.",
+      "A core of domestic assets with satellites of international assets.",
+      "A core of equity assets with satellites of fixed income assets."
+    ],
+    "correctAnswer": "A passive core with actively managed satellite portfolios.",
+    "explanation": "The core-satellite strategy involves investing the majority of the portfolio (the 'core') in passive, low-cost, and broadly diversified investments (like index funds). The smaller 'satellite' portion is then allocated to active managers or concentrated positions in an attempt to generate alpha."
+  },
+  {
+    "id": 139,
+    "level": "Level I",
+    "topic": "Economics",
+    "subtopic": "Macroeconomics",
+    "question": "The Taylor rule is used by central banks to determine a target for the:",
+    "options": [
+      "Money supply growth rate.",
+      "Official unemployment rate.",
+      "Overnight policy interest rate."
+    ],
+    "correctAnswer": "Overnight policy interest rate.",
+    "explanation": "The Taylor rule is a guideline for monetary policy that stipulates how much a central bank should change its target policy interest rate in response to deviations of actual inflation from target inflation, and of actual output from potential output."
+  },
+  {
+    "id": 140,
+    "level": "Level II",
+    "topic": "Fixed Income",
+    "subtopic": "Credit Analysis",
+    "question": "A company has an EBITDA of $200 million, interest expense of $40 million, and a tax rate of 30%. Its debt-to-EBITDA ratio is 3.0x. The company's total debt is closest to:",
+    "options": [
+      "$600 million",
+      "$120 million",
+      "$667 million"
+    ],
+    "correctAnswer": "$600 million",
+    "explanation": "The debt-to-EBITDA ratio is calculated as Total Debt / EBITDA. To find the total debt, rearrange the formula: Total Debt = Debt-to-EBITDA Ratio * EBITDA. Calculation: 3.0 * $200 million = $600 million."
+  },
+  {
+    "id": 141,
+    "level": "Level III",
+    "topic": "Portfolio Management",
+    "subtopic": "Risk Management",
+    "question": "A portfolio has a Value at Risk (VaR) of $1.5 million at the 5% level over one day. This means that:",
+    "options": [
+      "The portfolio is expected to lose $1.5 million every 20 days.",
+      "There is a 5% probability that the portfolio will lose $1.5 million or more in one day.",
+      "The maximum loss the portfolio can experience in one day is $1.5 million."
+    ],
+    "correctAnswer": "There is a 5% probability that the portfolio will lose $1.5 million or more in one day.",
+    "explanation": "Value at Risk (VaR) is a statistical measure of the potential loss in value of a portfolio over a defined period for a given confidence interval. A 5% one-day VaR of $1.5 million means that on any given day, there is a 5% chance of the portfolio losing at least $1.5 million."
+  },
+  {
+    "id": 142,
+    "level": "Level I",
+    "topic": "Financial Statement Analysis",
+    "subtopic": "Financial Ratios",
+    "question": "A company has a current ratio of 2.0 and a quick ratio of 1.5. If its current liabilities are $100,000, the value of its inventory is:",
+    "options": [
+      "$50,000",
+      "$100,000",
+      "$200,000"
+    ],
+    "correctAnswer": "$50,000",
+    "explanation": "Current Ratio = Current Assets / Current Liabilities => 2.0 = CA / $100,000 => CA = $200,000. Quick Ratio = (Current Assets - Inventory) / Current Liabilities => 1.5 = ($200,000 - Inventory) / $100,000 => $150,000 = $200,000 - Inventory => Inventory = $50,000."
+  },
+  {
+    "id": 143,
+    "level": "Level II",
+    "topic": "Derivatives",
+    "subtopic": "Options",
+    "question": "The price of a European call option is most likely to increase with an increase in:",
+    "options": [
+      "The strike price.",
+      "The time to expiration.",
+      "The dividend yield of the underlying."
+    ],
+    "correctAnswer": "The time to expiration.",
+    "explanation": "Longer time to expiration increases the probability that the underlying stock price will move above the strike price, making the option more valuable. A higher strike price or a higher dividend yield would decrease the value of a call option."
+  },
+  {
+    "id": 144,
+    "level": "Level III",
+    "topic": "Private Wealth Management",
+    "subtopic": "IPS",
+    "question": "A 70-year-old retiree is in the distribution phase of her life. Her primary investment objective is most likely:",
+    "options": [
+      "Capital appreciation.",
+      "Capital preservation.",
+      "Current income generation."
+    ],
+    "correctAnswer": "Current income generation.",
+    "explanation": "In the distribution phase, an individual is no longer accumulating assets but is drawing down their portfolio to cover living expenses. Therefore, the primary objective shifts from growth (capital appreciation) to generating a reliable stream of income, while also considering capital preservation."
+  },
+  {
+    "id": 145,
+    "level": "Level I",
+    "topic": "Ethics",
+    "subtopic": "GIPS",
+    "question": "Which of the following is a key characteristic of the GIPS standards?",
+    "options": [
+      "They are mandatory for all investment management firms.",
+      "They ensure the fair representation and full disclosure of investment performance.",
+      "They guarantee a minimum level of investment return."
+    ],
+    "correctAnswer": "They ensure the fair representation and full disclosure of investment performance.",
+    "explanation": "The GIPS standards are a voluntary set of ethical principles for standardized performance presentation. Their main purpose is to ensure that investment performance is presented in a way that is fair, accurate, and comparable across different firms."
+  },
+  {
+    "id": 146,
+    "level": "Level II",
+    "topic": "Financial Statement Analysis",
+    "subtopic": "Income Statements",
+    "question": "A company reports net income of $100 million. It has 10 million weighted-average common shares outstanding. It also has 1 million convertible preferred shares outstanding, which pay a dividend of $2 per share and are convertible into 500,000 common shares. The company's diluted EPS is closest to:",
+    "options": [
+      "$9.71",
+      "$10.00",
+      "$9.52"
+    ],
+    "correctAnswer": "$9.52",
+    "explanation": "First, calculate Basic EPS = (Net Income - Preferred Dividends) / Weighted-Average Shares = ($100M - $2M) / 10M = $9.80. To check for dilution, calculate the per-share effect of conversion: $2M / 0.5M shares = $4.00. Since $4.00 is less than Basic EPS, it is dilutive. Diluted EPS = Net Income / (Weighted-Average Shares + New Shares from Conversion) = $100M / (10M + 0.5M) = $9.52."
+  },
+  {
+    "id": 147,
+    "level": "Level III",
+    "topic": "Fixed Income",
+    "subtopic": "Credit Analysis",
+    "question": "A bond's credit spread is 200 basis points. An analyst expects the spread to widen to 250 basis points. If the bond's spread duration is 4.5, the expected price change of the bond due to this spread widening is closest to:",
+    "options": [
+      "-2.25%",
+      "+2.25%",
+      "-1.13%"
+    ],
+    "correctAnswer": "-2.25%",
+    "explanation": "Expected Price Change ≈ -Spread Duration * ΔSpread. The spread widens by 50 basis points (0.50%). Calculation: -4.5 * (0.0050) = -0.0225 or -2.25%. A widening of the credit spread implies higher risk and results in a lower bond price."
+  },
+  {
+    "id": 148,
+    "level": "Level I",
+    "topic": "Corporate Finance",
+    "subtopic": "Capital Budgeting",
+    "question": "A project requires an initial investment of $50,000 and is expected to generate a single cash flow of $75,000 in 3 years. The project's Internal Rate of Return (IRR) is closest to:",
+    "options": [
+      "14.47%",
+      "16.67%",
+      "50.00%"
+    ],
+    "correctAnswer": "14.47%",
+    "explanation": "The IRR is the discount rate that makes the NPV equal to zero. Set up the equation: $50,000 = $75,000 / (1 + IRR)^3. Rearrange: (1 + IRR)^3 = 75,000 / 50,000 = 1.5. (1 + IRR) = (1.5)^(1/3) = 1.1447. IRR = 0.1447 or 14.47%."
+  },
+  {
+    "id": 149,
+    "level": "Level II",
+    "topic": "Alternative Investments",
+    "subtopic": "Private Equity",
+    "question": "A private equity firm is valuing a target company using the discounted cash flow (DCF) method. Which of the following discount rates is most appropriate to value the target company's cash flows?",
+    "options": [
+      "The private equity firm's cost of capital.",
+      "The target company's weighted average cost of capital (WACC).",
+      "The risk-free rate plus a standard risk premium."
+    ],
+    "correctAnswer": "The target company's weighted average cost of capital (WACC).",
+    "explanation": "When valuing a company using a DCF analysis of its free cash flows to the firm (FCFF), the appropriate discount rate is the WACC of the company being valued. This rate reflects the riskiness of the target company's cash flows, not the acquirer's."
+  },
+  {
+    "id": 150,
+    "level": "Level III",
+    "topic": "Behavioral Finance",
+    "subtopic": "Cognitive Biases",
+    "question": "An analyst revises her earnings forecast for a company downward but only by a small amount, even after the company released significantly negative news. She is reluctant to deviate too far from her original, more optimistic forecast. This is a classic example of:",
+    "options": [
+      "Conservatism bias.",
+      "Anchoring and adjustment bias.",
+      "Hindsight bias."
+    ],
+    "correctAnswer": "Anchoring and adjustment bias.",
+    "explanation": "Anchoring and adjustment is a cognitive bias where individuals rely too heavily on an initial piece of information (the 'anchor') when making decisions. The analyst is anchored to her original forecast and is only adjusting it insufficiently in response to the new information."
+  },
+  {
+    "id": 151,
+    "level": "Level I",
+    "topic": "Fixed Income",
+    "subtopic": "Risk Analysis",
+    "question": "A bond's Macauley duration is 8.0 years. If the bond's yield to maturity is 6%, its modified duration is closest to:",
+    "options": [
+      "7.55 years",
+      "8.00 years",
+      "8.48 years"
+    ],
+    "correctAnswer": "7.55 years",
+    "explanation": "Modified Duration = Macaulay Duration / (1 + YTM). Calculation: 8.0 / (1 + 0.06) = 8.0 / 1.06 = 7.547 years."
+  },
+  {
+    "id": 152,
+    "level": "Level II",
+    "topic": "Portfolio Management",
+    "subtopic": "Risk Management",
+    "question": "A portfolio has a beta of 1.1. The market return is 10% and the risk-free rate is 2%. The portfolio's actual return was 11%. The portfolio's alpha is closest to:",
+    "options": [
+      "0.2%",
+      "-0.2%",
+      "1.0%"
+    ],
+    "correctAnswer": "-0.2%",
+    "explanation": "First, calculate the expected return using CAPM: E(R) = Rf + Beta * (Rm - Rf) = 2% + 1.1 * (10% - 2%) = 2% + 1.1 * 8% = 2% + 8.8% = 10.8%. Alpha = Actual Return - Expected Return = 11% - 10.8% = 0.2%."
+  },
+  {
+    "id": 153,
+    "level": "Level III",
+    "topic": "Equity Portfolio Management",
+    "subtopic": "Security Valuation",
+    "question": "A portfolio manager is considering adding a stock to a well-diversified portfolio. Which risk measure is the most relevant for this decision?",
+    "options": [
+      "Standard deviation of the stock's returns.",
+      "The stock's beta.",
+      "The stock's total risk."
+    ],
+    "correctAnswer": "The stock's beta.",
+    "explanation": "For a well-diversified portfolio, unsystematic (firm-specific) risk has been diversified away. The only relevant risk is systematic risk, which is measured by beta. The addition of a new stock will impact the portfolio's overall systematic risk."
   }
 ]
