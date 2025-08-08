@@ -12,16 +12,14 @@ function ExamInterface({ reviewQuestions = null, reviewTitle = "Review Session" 
   const { addExamResult, examHistory } = useContext(AppContext);
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
-  const mode = searchParams.get('mode') || 'practice'; // Default to practice mode
+  const mode = searchParams.get('mode') || 'practice';
 
-  // State for exam configuration
   const [level, setLevel] = useState('Level I');
   const [topic, setTopic] = useState('All');
   const [subtopic, setSubtopic] = useState('All');
   const [numQuestions, setNumQuestions] = useState(10);
   const [availableSubtopics, setAvailableSubtopics] = useState([]);
   
-  // State for active exam session
   const [examQuestions, setExamQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState({});
@@ -29,11 +27,9 @@ function ExamInterface({ reviewQuestions = null, reviewTitle = "Review Session" 
   const [timeLeft, setTimeLeft] = useState(0);
   const [examStarted, setExamStarted] = useState(false);
 
-  // State for new tools
   const [showStickyNote, setShowStickyNote] = useState(false);
   const [showCalculator, setShowCalculator] = useState(false);
 
-  // Automatically start mock exam if the mode is set
   useEffect(() => {
     if (mode === 'mock') {
       startMockExam();
@@ -71,20 +67,19 @@ function ExamInterface({ reviewQuestions = null, reviewTitle = "Review Session" 
       .sort(() => 0.5 - Math.random())
       .slice(0, numQuestions);
     
-    setupAndStartExam(questions, "Practice Session");
+    setupAndStartExam(questions);
   };
 
   const startMockExam = () => {
-    // A real mock exam would have a fixed set of questions (e.g., 90 for Level I AM session)
     let questions = questionsData
       .filter(q => q.level === level)
       .sort(() => 0.5 - Math.random())
-      .slice(0, 45); // Using 45 as a shorter mock for demo
+      .slice(0, 45);
     
-    setupAndStartExam(questions, `Level ${level} Mock Exam`);
+    setupAndStartExam(questions);
   };
 
-  const setupAndStartExam = (questions, examTitle) => {
+  const setupAndStartExam = (questions) => {
     setExamQuestions(questions);
     setCurrentQuestionIndex(0);
     setUserAnswers({});
@@ -123,7 +118,7 @@ function ExamInterface({ reviewQuestions = null, reviewTitle = "Review Session" 
       score,
       total: examQuestions.length,
       percentage: examQuestions.length > 0 ? (score / examQuestions.length) * 100 : 0,
-      topic: mode === 'mock' ? `Level ${level} Mock Exam` : topic,
+      topic: reviewQuestions ? reviewTitle : (mode === 'mock' ? `Level ${level} Mock Exam` : topic),
       level: level,
       answeredQuestions: examQuestions.map(q => ({
         ...q,
@@ -134,67 +129,154 @@ function ExamInterface({ reviewQuestions = null, reviewTitle = "Review Session" 
       }))
     };
     const newExamId = addExamResult(result);
-    setShowResults(true);
-    setExamStarted(false);
-    navigate(`/results/${newExamId}`); // Navigate to the new detailed results page
+    navigate(`/results/${newExamId}`);
   };
 
-  // ... The rest of the component remains the same, handling the active exam UI ...
-  
-  if (examStarted) {
-    // ... Active Exam UI ...
-    return <div>...</div>
-  }
+  if (!examStarted) {
+    if (showResults) {
+      const latestResult = examHistory[examHistory.length - 1];
+      if (!latestResult) return null;
 
-  // Render setup screen for practice mode
-  return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="container mx-auto max-w-2xl p-6 sm:p-8 mt-10">
-      <div className="bg-surface dark:bg-dark-surface p-8 rounded-xl shadow-lg">
-        <h2 className="text-3xl font-bold text-text-primary dark:text-dark-text-primary mb-2 text-center">
-          {mode === 'mock' ? 'Mock Exam' : 'Practice Session'}
-        </h2>
-        <p className="text-center text-text-secondary dark:text-dark-text-secondary mb-8">
-          {mode === 'mock' ? `This is a timed, full-length mock exam for Level ${level}.` : 'Customize your session to focus on what matters most.'}
-        </p>
-        <div className="space-y-6">
-          <div>
-            <label className="block text-sm font-medium text-text-secondary dark:text-dark-text-secondary mb-2">CFA Level:</label>
-            <select onChange={(e) => setLevel(e.target.value)} value={level} className="w-full border-gray-300 dark:border-gray-600 bg-background dark:bg-dark-background p-3 rounded-lg shadow-sm focus:ring-accent focus:border-accent">
-              <option>Level I</option>
-              <option>Level II</option>
-              <option>Level III</option>
-            </select>
-          </div>
-          {mode === 'practice' && (
-            <>
-              <div>
-                <label className="block text-sm font-medium text-text-secondary dark:text-dark-text-secondary mb-2">Topic:</label>
-                <select onChange={(e) => setTopic(e.target.value)} value={topic} className="w-full border-gray-300 dark:border-gray-600 bg-background dark:bg-dark-background p-3 rounded-lg shadow-sm focus:ring-accent focus:border-accent">
-                  <option>All</option>
-                  {topicsData.map(t => <option key={t.name}>{t.name}</option>)}
-                </select>
-              </div>
-              {availableSubtopics.length > 0 && (
+      const { score, total, percentage, answeredQuestions } = latestResult;
+      return (
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="container mx-auto max-w-4xl p-6 sm:p-8 mt-10">
+          {/* ... Results JSX ... */}
+        </motion.div>
+      );
+    }
+
+    return (
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="container mx-auto max-w-2xl p-6 sm:p-8 mt-10">
+        <div className="bg-surface dark:bg-dark-surface p-8 rounded-xl shadow-lg">
+          <h2 className="text-3xl font-bold text-text-primary dark:text-dark-text-primary mb-2 text-center">
+            {mode === 'mock' ? 'Mock Exam' : 'Practice Session'}
+          </h2>
+          <p className="text-center text-text-secondary dark:text-dark-text-secondary mb-8">
+            {mode === 'mock' ? `This is a timed, full-length mock exam for Level ${level}.` : 'Customize your session to focus on what matters most.'}
+          </p>
+          <div className="space-y-6">
+            <div>
+              <label className="block text-sm font-medium text-text-secondary dark:text-dark-text-secondary mb-2">CFA Level:</label>
+              <select onChange={(e) => setLevel(e.target.value)} value={level} className="w-full border-gray-300 dark:border-gray-600 bg-background dark:bg-dark-background p-3 rounded-lg shadow-sm focus:ring-accent focus:border-accent">
+                <option>Level I</option>
+                <option>Level II</option>
+                <option>Level III</option>
+              </select>
+            </div>
+            {mode === 'practice' && (
+              <>
                 <div>
-                  <label className="block text-sm font-medium text-text-secondary dark:text-dark-text-secondary mb-2">Sub-Topic:</label>
-                  <select onChange={(e) => setSubtopic(e.target.value)} value={subtopic} className="w-full border-gray-300 dark:border-gray-600 bg-background dark:bg-dark-background p-3 rounded-lg shadow-sm focus:ring-accent focus:border-accent">
+                  <label className="block text-sm font-medium text-text-secondary dark:text-dark-text-secondary mb-2">Topic:</label>
+                  <select onChange={(e) => setTopic(e.target.value)} value={topic} className="w-full border-gray-300 dark:border-gray-600 bg-background dark:bg-dark-background p-3 rounded-lg shadow-sm focus:ring-accent focus:border-accent">
                     <option>All</option>
-                    {availableSubtopics.map(st => <option key={st}>{st}</option>)}
+                    {topicsData.map(t => <option key={t.name}>{t.name}</option>)}
                   </select>
                 </div>
-              )}
-               <div>
-                <label className="block text-sm font-medium text-text-secondary dark:text-dark-text-secondary mb-2">Number of Questions: {numQuestions}</label>
-                <input type="range" min="5" max="50" step="5" value={numQuestions} onChange={(e) => setNumQuestions(e.target.value)} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 accent-accent" />
-              </div>
-            </>
+                {availableSubtopics.length > 0 && (
+                  <div>
+                    <label className="block text-sm font-medium text-text-secondary dark:text-dark-text-secondary mb-2">Sub-Topic:</label>
+                    <select onChange={(e) => setSubtopic(e.target.value)} value={subtopic} className="w-full border-gray-300 dark:border-gray-600 bg-background dark:bg-dark-background p-3 rounded-lg shadow-sm focus:ring-accent focus:border-accent">
+                      <option>All</option>
+                      {availableSubtopics.map(st => <option key={st}>{st}</option>)}
+                    </select>
+                  </div>
+                )}
+                 <div>
+                  <label className="block text-sm font-medium text-text-secondary dark:text-dark-text-secondary mb-2">Number of Questions: {numQuestions}</label>
+                  <input type="range" min="5" max="50" step="5" value={numQuestions} onChange={(e) => setNumQuestions(e.target.value)} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 accent-accent" />
+                </div>
+              </>
+            )}
+          </div>
+          <button onClick={mode === 'mock' ? startMockExam : startPracticeExam} className="w-full mt-8 bg-accent dark:bg-dark-accent text-white font-bold py-3 px-6 rounded-lg hover:bg-accent-hover dark:hover:bg-dark-accent-hover transition duration-300 transform hover:scale-105 shadow-md">
+            {mode === 'mock' ? 'Start Mock Exam' : 'Start Practice Exam'}
+          </button>
+        </div>
+      </motion.div>
+    );
+  }
+
+  const currentQuestion = examQuestions[currentQuestionIndex];
+  const progress = ((currentQuestionIndex + 1) / examQuestions.length) * 100;
+
+  return (
+    <div className="container mx-auto max-w-4xl p-6 sm:p-8 mt-10 relative">
+      <StickyNote isVisible={showStickyNote} onClose={() => setShowStickyNote(false)} />
+      <Calculator isVisible={showCalculator} onClose={() => setShowCalculator(false)} />
+
+      <div className="bg-surface dark:bg-dark-surface p-8 rounded-xl shadow-lg">
+        <div className="flex justify-between items-center mb-2">
+          <h2 className="text-xl font-bold text-text-primary dark:text-dark-text-primary">Question {currentQuestionIndex + 1} of {examQuestions.length}</h2>
+          <div className="flex items-center gap-4">
+            <button onClick={() => setShowStickyNote(p => !p)} className="text-text-secondary dark:text-dark-text-secondary hover:text-accent dark:hover:text-dark-accent transition-colors"><FaStickyNote /></button>
+            <button onClick={() => setShowCalculator(p => !p)} className="text-text-secondary dark:text-dark-text-secondary hover:text-accent dark:hover:text-dark-accent transition-colors"><FaCalculator /></button>
+            <div className="flex items-center text-lg font-semibold text-danger"><FaClock className="mr-2" /><span>{Math.floor(timeLeft / 60)}:{('0' + timeLeft % 60).slice(-2)}</span></div>
+          </div>
+        </div>
+        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mb-6"><motion.div className="bg-accent h-2.5 rounded-full" animate={{ width: `${progress}%` }} /></div>
+        
+        <AnimatePresence mode="wait">
+          <motion.div key={currentQuestion.id} initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -50 }} transition={{ duration: 0.3 }}>
+            <p className="text-lg font-semibold my-6 text-text-primary dark:text-dark-text-primary">{currentQuestion.question}</p>
+            <div className="space-y-3">
+              {currentQuestion.options.map(option => (
+                <button 
+                  key={option} 
+                  onClick={() => handleAnswerSelect(currentQuestion.id, option)} 
+                  className={`block w-full text-left p-4 rounded-lg border-2 transition duration-200 text-text-primary dark:text-dark-text-primary ${userAnswers[currentQuestion.id]?.answer === option ? 'bg-teal-100 dark:bg-teal-900 border-accent dark:border-dark-accent font-semibold' : 'bg-background dark:bg-dark-background hover:bg-gray-200 dark:hover:bg-gray-700 border-gray-200 dark:border-gray-600'}`}
+                >
+                  {option}
+                </button>
+              ))}
+            </div>
+          </motion.div>
+        </AnimatePresence>
+
+        <div className="mt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div className="flex items-center gap-2">
+            <span className="text-sm font-medium text-text-secondary dark:text-dark-text-secondary">Confidence:</span>
+            {['Low', 'Medium', 'High'].map(level => (
+              <button 
+                key={level} 
+                onClick={() => handleConfidenceSelect(currentQuestion.id, level)} 
+                className={`px-3 py-1 text-xs font-bold rounded-full transition-colors ${userAnswers[currentQuestion.id]?.confidence === level ? 'bg-primary text-white' : 'bg-gray-200 dark:bg-gray-700 text-text-secondary dark:text-dark-text-secondary'}`}
+              >
+                {level}
+              </button>
+            ))}
+          </div>
+          <button onClick={() => handleMarkForReview(currentQuestion.id)} className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${userAnswers[currentQuestion.id]?.markedForReview ? 'bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200' : 'text-text-secondary dark:text-dark-text-secondary hover:bg-gray-100 dark:hover:bg-gray-700'}`}>
+            <FaFlag className={userAnswers[currentQuestion.id]?.markedForReview ? 'text-yellow-500' : ''} />
+            <span>Mark for Review</span>
+          </button>
+        </div>
+
+        <div className="flex justify-between items-center mt-8 border-t dark:border-gray-700 pt-6">
+          <button 
+            onClick={handlePreviousQuestion} 
+            disabled={currentQuestionIndex === 0} 
+            className="flex items-center px-6 py-2 rounded-lg font-bold transition-colors border-2 border-gray-300 dark:border-gray-600 text-text-secondary dark:text-dark-text-secondary hover:bg-gray-100 dark:hover:bg-gray-700 disabled:opacity-50"
+          >
+            <FaArrowLeft className="mr-2" /> Previous
+          </button>
+          {currentQuestionIndex < examQuestions.length - 1 ? (
+            <button 
+              onClick={handleNextQuestion} 
+              className="flex items-center px-6 py-2 rounded-lg font-bold transition-colors bg-primary text-white hover:bg-primary-hover dark:bg-dark-primary dark:hover:bg-dark-primary-hover"
+            >
+              Next <FaArrowRight className="ml-2" />
+            </button>
+          ) : (
+            <button 
+              onClick={handleShowResults} 
+              className="flex items-center px-6 py-2 rounded-lg font-bold transition-colors bg-success text-white hover:bg-green-600"
+            >
+              Finish Exam
+            </button>
           )}
         </div>
-        <button onClick={mode === 'mock' ? startMockExam : startPracticeExam} className="w-full mt-8 bg-accent dark:bg-dark-accent text-white font-bold py-3 px-6 rounded-lg hover:bg-accent-hover dark:hover:bg-dark-accent-hover transition duration-300 transform hover:scale-105 shadow-md">
-          {mode === 'mock' ? 'Start Mock Exam' : 'Start Practice Exam'}
-        </button>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
