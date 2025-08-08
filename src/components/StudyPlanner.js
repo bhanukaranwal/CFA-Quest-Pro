@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaPlus, FaTrash, FaCheckCircle } from 'react-icons/fa';
 
 function StudyPlanner() {
-  // State to hold the list of tasks. Pre-populated with examples.
+  // State to hold the list of tasks, pre-populated with examples.
   const [tasks, setTasks] = useState([
     { id: 1, text: 'Review Ethics Reading 3', completed: true },
     { id: 2, text: 'Complete 20 Quantitative Methods practice questions', completed: false },
@@ -15,8 +15,8 @@ function StudyPlanner() {
 
   // Function to handle adding a new task.
   const handleAddTask = (e) => {
-    e.preventDefault(); // Prevent form from reloading the page
-    if (newTask.trim() === '') return; // Don't add empty tasks
+    e.preventDefault(); // Prevent the form from reloading the page.
+    if (newTask.trim() === '') return; // Don't add empty tasks.
     
     // Create a new task object with a unique ID.
     const newId = tasks.length > 0 ? Math.max(...tasks.map(t => t.id)) + 1 : 1;
@@ -73,11 +73,11 @@ function StudyPlanner() {
                 exit={{ opacity: 0, x: -50, transition: { duration: 0.3 } }}
                 className="flex items-center justify-between bg-background dark:bg-dark-background p-4 rounded-lg"
               >
-                <div className="flex items-center cursor-pointer flex-grow" onClick={() => toggleTask(task.id)}>
+                <div className="flex items-center cursor-pointer flex-grow min-w-0" onClick={() => toggleTask(task.id)}>
                   <div className={`w-6 h-6 rounded-full border-2 ${task.completed ? 'bg-accent border-accent' : 'border-gray-400'} flex items-center justify-center mr-4 flex-shrink-0`}>
                     {task.completed && <FaCheckCircle className="text-white" size={16} />}
                   </div>
-                  <span className={`transition-colors ${task.completed ? 'line-through text-text-secondary dark:text-dark-text-secondary' : 'text-text-primary dark:text-dark-text-primary'}`}>
+                  <span className={`transition-colors truncate ${task.completed ? 'line-through text-text-secondary dark:text-dark-text-secondary' : 'text-text-primary dark:text-dark-text-primary'}`}>
                     {task.text}
                   </span>
                 </div>
