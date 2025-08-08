@@ -1004,7 +1004,7 @@
       "-0.2%",
       "1.0%"
     ],
-    "correctAnswer": "-0.2%",
+    "correctAnswer": "0.2%",
     "explanation": "First, calculate the expected return using CAPM: E(R) = Rf + Beta * (Rm - Rf) = 2% + 1.1 * (10% - 2%) = 2% + 1.1 * 8% = 2% + 8.8% = 10.8%. Alpha = Actual Return - Expected Return = 11% - 10.8% = 0.2%."
   },
   {
@@ -1020,5 +1020,131 @@
     ],
     "correctAnswer": "The stock's beta.",
     "explanation": "For a well-diversified portfolio, unsystematic (firm-specific) risk has been diversified away. The only relevant risk is systematic risk, which is measured by beta. The addition of a new stock will impact the portfolio's overall systematic risk."
+  },
+  {
+    "id": 154,
+    "level": "Level I",
+    "topic": "Financial Statement Analysis",
+    "subtopic": "Financial Ratios",
+    "question": "A company has a debt-to-equity ratio of 0.6. Its total assets are $1,000,000. What is the value of the company's total debt?",
+    "options": [
+      "$600,000",
+      "$375,000",
+      "$400,000"
+    ],
+    "correctAnswer": "$375,000",
+    "explanation": "Assets = Liabilities (Debt) + Equity. So, $1,000,000 = D + E. The debt-to-equity ratio is D/E = 0.6, so D = 0.6E. Substitute this into the accounting equation: $1,000,000 = 0.6E + E = 1.6E. Solve for Equity: E = $1,000,000 / 1.6 = $625,000. Now solve for Debt: D = 0.6 * $625,000 = $375,000."
+  },
+  {
+    "id": 155,
+    "level": "Level II",
+    "topic": "Economics",
+    "subtopic": "Macroeconomics",
+    "question": "The 'crowding-out effect' suggests that an increase in government borrowing will most likely:",
+    "options": [
+      "Increase private investment by boosting aggregate demand.",
+      "Decrease interest rates and stimulate private investment.",
+      "Increase interest rates and reduce private investment."
+    ],
+    "correctAnswer": "Increase interest rates and reduce private investment.",
+    "explanation": "When the government increases its borrowing, it increases the demand for loanable funds. This drives up the real interest rate, making it more expensive for private firms to borrow and invest. As a result, the increase in government spending is partially offset by a decrease in private investment."
+  },
+  {
+    "id": 156,
+    "level": "Level III",
+    "topic": "Derivatives",
+    "subtopic": "Options",
+    "question": "A portfolio manager writes a covered call on a stock. This strategy is most appropriate when the manager has a:",
+    "options": [
+      "Strongly bullish view on the stock.",
+      "Strongly bearish view on the stock.",
+      "Neutral to slightly bullish view on the stock."
+    ],
+    "correctAnswer": "Neutral to slightly bullish view on the stock.",
+    "explanation": "A covered call involves holding a long position in a stock and selling a call option on the same stock. The manager collects the option premium, which provides income. The strategy profits in a stable or slowly rising market but caps the upside potential if the stock price rises significantly above the strike price. It is not suitable for a strongly bullish outlook."
+  },
+  {
+    "id": 157,
+    "level": "Level I",
+    "topic": "Financial Statement Analysis",
+    "subtopic": "Income Statements",
+    "question": "A company reports revenue of $1,000,000, cost of goods sold of $600,000, and operating expenses of $200,000. Its gross profit margin is:",
+    "options": [
+      "20%",
+      "40%",
+      "80%"
+    ],
+    "correctAnswer": "40%",
+    "explanation": "Gross Profit = Revenue - Cost of Goods Sold = $1,000,000 - $600,000 = $400,000. Gross Profit Margin = Gross Profit / Revenue = $400,000 / $1,000,000 = 0.40 or 40%."
+  },
+  {
+    "id": 158,
+    "level": "Level II",
+    "topic": "Equity Valuation",
+    "subtopic": "Security Valuation",
+    "question": "A company's current stock price is $40. Its estimated earnings per share for the next year is $2.50. The industry average P/E ratio is 18. Based on the method of comparables, the stock is most likely:",
+    "options": [
+      "Undervalued.",
+      "Fairly valued.",
+      "Overvalued."
+    ],
+    "correctAnswer": "Undervalued.",
+    "explanation": "First, calculate the stock's P/E ratio: P/E = Current Price / EPS = $40 / $2.50 = 16. Since the stock's P/E ratio (16) is lower than the industry average (18), the stock is considered undervalued relative to its peers."
+  },
+  {
+    "id": 159,
+    "level": "Level III",
+    "topic": "Ethics",
+    "subtopic": "Code and Standards",
+    "question": "A portfolio manager is leaving her firm to start her own. Before she leaves, she uses her current employer's resources to solicit clients for her new firm. This action is a violation of which CFA Institute Standard?",
+    "options": [
+      "Standard IV(A) Loyalty.",
+      "Standard V(B) Communication with Clients and Prospective Clients.",
+      "Standard VI(A) Disclosure of Conflicts."
+    ],
+    "correctAnswer": "Standard IV(A) Loyalty.",
+    "explanation": "Standard IV(A) Loyalty requires members to act for the benefit of their employer and not deprive their employer of the advantage of their skills and abilities. Soliciting clients for a new venture while still employed is a direct violation of this duty of loyalty."
+  },
+  {
+    "id": 160,
+    "level": "Level I",
+    "topic": "Fixed Income",
+    "subtopic": "Risk Analysis",
+    "question": "Which of the following bonds has the highest reinvestment risk?",
+    "options": [
+      "A 10-year zero-coupon bond.",
+      "A 10-year, 8% coupon bond.",
+      "A 5-year, 8% coupon bond."
+    ],
+    "correctAnswer": "A 10-year, 8% coupon bond.",
+    "explanation": "Reinvestment risk is the risk that future cash flows (coupons) will have to be reinvested at a lower interest rate. This risk is highest for bonds with high coupons and long maturities because they have larger and more frequent cash flows to reinvest over a longer period. A zero-coupon bond has no reinvestment risk."
+  },
+  {
+    "id": 161,
+    "level": "Level II",
+    "topic": "Financial Statement Analysis",
+    "subtopic": "Cash Flow Statement",
+    "question": "A company's net income is $200 million. It has depreciation of $50 million, an increase in accounts receivable of $20 million, and a decrease in accounts payable of $10 million. The company's cash flow from operations (CFO) is:",
+    "options": [
+      "$220 million",
+      "$280 million",
+      "$240 million"
+    ],
+    "correctAnswer": "$220 million",
+    "explanation": "To calculate CFO from net income (indirect method): Start with Net Income, add back non-cash charges (Depreciation), subtract increases in working capital assets (A/R), and subtract decreases in working capital liabilities (A/P). CFO = $200M + $50M - $20M - $10M = $220M."
+  },
+  {
+    "id": 162,
+    "level": "Level III",
+    "topic": "Portfolio Management",
+    "subtopic": "Risk Management",
+    "question": "A portfolio manager uses a 'stop-loss' order to sell a stock if its price falls to $45. This is an example of which type of risk management strategy?",
+    "options": [
+      "Risk avoidance.",
+      "Risk transfer.",
+      "Risk mitigation."
+    ],
+    "correctAnswer": "Risk mitigation.",
+    "explanation": "Risk mitigation involves taking actions to reduce the potential impact of a risk. A stop-loss order doesn't avoid the risk entirely, nor does it transfer it to another party (like insurance would). Instead, it mitigates the risk of further losses by automatically selling the position at a predetermined price."
   }
 ]
