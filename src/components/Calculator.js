@@ -50,8 +50,96 @@ const TabButton = ({ icon, label, activeTab, onClick }) => (
 // Standard Calculator Logic and UI
 const StandardCalculator = () => {
   const [display, setDisplay] = useState('0');
-  // ... (Add the standard calculator logic from the previous response here)
-  return <div>... Standard Calculator UI ...</div>;
+  const [currentValue, setCurrentValue] = useState(null);
+  const [operator, setOperator] = useState(null);
+  const [waitingForOperand, setWaitingForOperand] = useState(false);
+
+  const handleDigitClick = (digit) => {
+    if (waitingForOperand) {
+      setDisplay(String(digit));
+      setWaitingForOperand(false);
+    } else {
+      setDisplay(display === '0' ? String(digit) : display + digit);
+    }
+  };
+
+  const handleOperatorClick = (nextOperator) => {
+    const inputValue = parseFloat(display);
+
+    if (currentValue === null) {
+      setCurrentValue(inputValue);
+    } else if (operator) {
+      const result = performCalculation();
+      setCurrentValue(result);
+      setDisplay(String(result));
+    }
+
+    setWaitingForOperand(true);
+    setOperator(nextOperator);
+  };
+
+  const performCalculation = () => {
+    const inputValue = parseFloat(display);
+    if (currentValue === null || operator === null) return inputValue;
+
+    const operations = {
+      '/': (prev, next) => prev / next,
+      '*': (prev, next) => prev * next,
+      '+': (prev, next) => prev + next,
+      '-': (prev, next) => prev - next,
+    };
+
+    return operations[operator](currentValue, inputValue);
+  };
+
+  const handleClear = () => {
+    setDisplay('0');
+    setCurrentValue(null);
+    setOperator(null);
+    setWaitingForOperand(false);
+  };
+
+  const handleEquals = () => {
+    if (operator) {
+      const result = performCalculation();
+      setCurrentValue(null); // Reset for new calculation
+      setDisplay(String(result));
+      setOperator(null);
+      setWaitingForOperand(true);
+    }
+  };
+  
+  const handleDecimal = () => {
+    if (!display.includes('.')) {
+      setDisplay(display + '.');
+    }
+  };
+
+  return (
+    <div className="p-2">
+      <div className="bg-white dark:bg-dark-background text-right rounded p-4 text-2xl font-mono text-text-primary dark:text-dark-text-primary mb-2 break-all">
+        {display}
+      </div>
+      <div className="grid grid-cols-4 gap-2">
+        <button onClick={() => handleClear()} className="calc-btn col-span-2">AC</button>
+        <button className="calc-btn">+/-</button>
+        <button onClick={() => handleOperatorClick('/')} className="calc-btn-op">/</button>
+        
+        {['7', '8', '9'].map(d => <button key={d} onClick={() => handleDigitClick(d)} className="calc-btn">{d}</button>)}
+        <button onClick={() => handleOperatorClick('*')} className="calc-btn-op">*</button>
+
+        {['4', '5', '6'].map(d => <button key={d} onClick={() => handleDigitClick(d)} className="calc-btn">{d}</button>)}
+        <button onClick={() => handleOperatorClick('-')} className="calc-btn-op">-</button>
+
+        {['1', '2', '3'].map(d => <button key={d} onClick={() => handleDigitClick(d)} className="calc-btn">{d}</button>)}
+        <button onClick={() => handleOperatorClick('+')} className="calc-btn-op">+</button>
+
+        <button onClick={() => handleDigitClick('0')} className="calc-btn col-span-2">0</button>
+        <button onClick={handleDecimal} className="calc-btn">.</button>
+        <button onClick={handleEquals} className="calc-btn-op">=</button>
+      </div>
+    </div>
+  );
 };
 
 // Financial Calculator Logic and UI
@@ -61,20 +149,27 @@ const FinancialCalculator = () => {
   const [result, setResult] = useState(null);
 
   const calculateNPV = () => {
-    const flows = cashFlows.split(',').map(Number);
-    const rate = parseFloat(discountRate) / 100;
-    if (flows.length === 0 || isNaN(rate)) return;
+    try {
+      const flows = cashFlows.split(',').map(Number);
+      const rate = parseFloat(discountRate) / 100;
+      if (flows.some(isNaN) || isNaN(rate)) {
+        setResult('Error: Invalid Input');
+        return;
+      }
 
-    const initialInvestment = flows[0];
-    const npv = flows.slice(1).reduce((acc, val, i) => acc + val / Math.pow(1 + rate, i + 1), 0);
-    setResult(`NPV: ${(npv + initialInvestment).toFixed(2)}`);
+      const initialInvestment = flows[0];
+      const npv = flows.slice(1).reduce((acc, val, i) => acc + val / Math.pow(1 + rate, i + 1), 0);
+      setResult(`NPV: ${(npv + initialInvestment).toFixed(2)}`);
+    } catch (error) {
+      setResult('Error: Calculation Failed');
+    }
   };
 
   return (
     <div className="p-2">
       <h4 className="font-bold text-center mb-2 text-text-primary dark:text-dark-text-primary">NPV Calculator</h4>
       <div>
-        <label className="text-xs text-text-secondary dark:text-dark-text-secondary">Cash Flows (comma separated, e.g., -100,20,30)</label>
+        <label className="text-xs text-text-secondary dark:text-dark-text-secondary">Cash Flows (e.g., -100,20,30)</label>
         <input type="text" value={cashFlows} onChange={e => setCashFlows(e.target.value)} className="w-full p-2 rounded bg-white dark:bg-dark-background mt-1" />
       </div>
       <div className="mt-2">
@@ -82,7 +177,7 @@ const FinancialCalculator = () => {
         <input type="number" value={discountRate} onChange={e => setDiscountRate(e.target.value)} className="w-full p-2 rounded bg-white dark:bg-dark-background mt-1" />
       </div>
       <button onClick={calculateNPV} className="w-full mt-3 bg-accent text-white p-2 rounded-lg hover:bg-accent-hover">Calculate NPV</button>
-      {result && <div className="mt-3 text-center font-bold text-lg text-text-primary dark:text-dark-text-primary bg-green-100 dark:bg-green-900 p-2 rounded">{result}</div>}
+      {result && <div className={`mt-3 text-center font-bold text-lg p-2 rounded ${result.includes('Error') ? 'bg-danger/20 text-danger' : 'bg-success/20 text-success'}`}>{result}</div>}
     </div>
   );
 };
