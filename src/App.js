@@ -9,6 +9,8 @@ import FormulaSheets from './components/FormulaSheets';
 import StudyPlanner from './components/StudyPlanner';
 import Settings from './components/Settings';
 import ReviewMode from './components/ReviewMode';
+import DetailedResults from './components/DetailedResults';
+import Profile from './components/Profile';
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
               <Route path="/study-planner" element={<StudyPlanner />} />
               <Route path="/settings" element={<Settings />} />
               <Route path="/review" element={<ReviewMode />} />
+              <Route path="/results/:examId" element={<DetailedResults />} />
+              <Route path="/profile" element={<Profile />} />
             </Routes>
           </main>
         </div>
