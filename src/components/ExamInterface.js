@@ -204,8 +204,8 @@ function ExamInterface({ reviewQuestions = null, reviewTitle = "Review Session" 
         <div className="flex justify-between items-center mb-2">
           <h2 className="text-xl font-bold text-text-primary dark:text-dark-text-primary">Question {currentQuestionIndex + 1} of {examQuestions.length}</h2>
           <div className="flex items-center gap-4">
-            <button onClick={() => setShowStickyNote(p => !p)} className="tool-btn"><FaStickyNote /></button>
-            <button onClick={() => setShowCalculator(p => !p)} className="tool-btn"><FaCalculator /></button>
+            <button onClick={() => setShowStickyNote(p => !p)} className="text-text-secondary dark:text-dark-text-secondary hover:text-accent dark:hover:text-dark-accent transition-colors"><FaStickyNote /></button>
+            <button onClick={() => setShowCalculator(p => !p)} className="text-text-secondary dark:text-dark-text-secondary hover:text-accent dark:hover:text-dark-accent transition-colors"><FaCalculator /></button>
             <div className="flex items-center text-lg font-semibold text-danger"><FaClock className="mr-2" /><span>{Math.floor(timeLeft / 60)}:{('0' + timeLeft % 60).slice(-2)}</span></div>
           </div>
         </div>
@@ -216,7 +216,13 @@ function ExamInterface({ reviewQuestions = null, reviewTitle = "Review Session" 
             <p className="text-lg font-semibold my-6 text-text-primary dark:text-dark-text-primary">{currentQuestion.question}</p>
             <div className="space-y-3">
               {currentQuestion.options.map(option => (
-                <button key={option} onClick={() => handleAnswerSelect(currentQuestion.id, option)} className={`option-btn ${userAnswers[currentQuestion.id]?.answer === option ? 'option-btn-selected' : ''}`}>{option}</button>
+                <button 
+                  key={option} 
+                  onClick={() => handleAnswerSelect(currentQuestion.id, option)} 
+                  className={`block w-full text-left p-4 rounded-lg border-2 transition duration-200 text-text-primary dark:text-dark-text-primary ${userAnswers[currentQuestion.id]?.answer === option ? 'bg-teal-100 dark:bg-teal-900 border-accent dark:border-dark-accent font-semibold' : 'bg-background dark:bg-dark-background hover:bg-gray-200 dark:hover:bg-gray-700 border-gray-200 dark:border-gray-600'}`}
+                >
+                  {option}
+                </button>
               ))}
             </div>
           </motion.div>
@@ -226,18 +232,43 @@ function ExamInterface({ reviewQuestions = null, reviewTitle = "Review Session" 
           <div className="flex items-center gap-2">
             <span className="text-sm font-medium text-text-secondary dark:text-dark-text-secondary">Confidence:</span>
             {['Low', 'Medium', 'High'].map(level => (
-              <button key={level} onClick={() => handleConfidenceSelect(currentQuestion.id, level)} className={`confidence-btn ${userAnswers[currentQuestion.id]?.confidence === level ? 'confidence-btn-selected' : ''}`}>{level}</button>
+              <button 
+                key={level} 
+                onClick={() => handleConfidenceSelect(currentQuestion.id, level)} 
+                className={`px-3 py-1 text-xs font-bold rounded-full transition-colors ${userAnswers[currentQuestion.id]?.confidence === level ? 'bg-primary text-white' : 'bg-gray-200 dark:bg-gray-700 text-text-secondary dark:text-dark-text-secondary'}`}
+              >
+                {level}
+              </button>
             ))}
           </div>
-          <button onClick={() => handleMarkForReview(currentQuestion.id)} className={`review-btn ${userAnswers[currentQuestion.id]?.markedForReview ? 'review-btn-marked' : ''}`}><FaFlag /><span>Mark for Review</span></button>
+          <button onClick={() => handleMarkForReview(currentQuestion.id)} className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${userAnswers[currentQuestion.id]?.markedForReview ? 'bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200' : 'text-text-secondary dark:text-dark-text-secondary hover:bg-gray-100 dark:hover:bg-gray-700'}`}>
+            <FaFlag className={userAnswers[currentQuestion.id]?.markedForReview ? 'text-yellow-500' : ''} />
+            <span>Mark for Review</span>
+          </button>
         </div>
 
         <div className="flex justify-between mt-8 border-t dark:border-gray-700 pt-6">
-          <button onClick={handlePreviousQuestion} disabled={currentQuestionIndex === 0} className="nav-btn disabled:opacity-50"><FaArrowLeft className="mr-2" /> Previous</button>
+          <button 
+            onClick={handlePreviousQuestion} 
+            disabled={currentQuestionIndex === 0} 
+            className="flex items-center px-6 py-2 rounded-lg font-bold transition-colors border-2 border-transparent text-text-secondary dark:text-dark-text-secondary hover:bg-gray-100 dark:hover:bg-gray-700 disabled:opacity-50"
+          >
+            <FaArrowLeft className="mr-2" /> Previous
+          </button>
           {currentQuestionIndex < examQuestions.length - 1 ? (
-            <button onClick={handleNextQuestion} className="nav-btn bg-primary text-white hover:bg-primary-hover dark:bg-dark-primary dark:hover:bg-dark-primary-hover"><FaArrowRight className="mr-2" /> Next</button>
+            <button 
+              onClick={handleNextQuestion} 
+              className="flex items-center px-6 py-2 rounded-lg font-bold transition-colors bg-primary text-white hover:bg-primary-hover dark:bg-dark-primary dark:hover:bg-dark-primary-hover"
+            >
+              Next <FaArrowRight className="ml-2" />
+            </button>
           ) : (
-            <button onClick={handleShowResults} className="nav-btn bg-success text-white hover:bg-green-600">Finish Exam</button>
+            <button 
+              onClick={handleShowResults} 
+              className="flex items-center px-6 py-2 rounded-lg font-bold transition-colors bg-success text-white hover:bg-green-600"
+            >
+              Finish Exam
+            </button>
           )}
         </div>
       </div>
